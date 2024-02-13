@@ -1,0 +1,41 @@
+@startuml
+hide circle
+hide methods
+
+class Vaccine{
+- designation
+- ageGroups
+- dosage
+- numberOfDoses
+- intervalBetweenDoses
+}
+
+class VaccineType{
+}
+
+class Center{
+-Name
+-Address
+-Phone number
+-E-mail address
+-Fax number
+-Website address
+-Opening and closing hours
+-Slot duration
+-Max number of vaccines given per slot
+-Type of center
+}
+
+
+class VaccineSchedule{
+- Time
+- Date
+- SNS Number
+}
+
+VaccineType"1..*" -left- "1..*"Center : > administered in
+Vaccine"1" -left- "1..*"VaccineType : > of
+Center"1"-left-"*"VaccineSchedule : > has
+VaccineSchedule"*" -- "1"VaccineType : > for taking
+
+@enduml

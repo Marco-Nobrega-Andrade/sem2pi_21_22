@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="400px" preserveAspectRatio="none" style="width:299px;height:400px;background:#FFFFFF;" version="1.1" viewBox="0 0 299 400" width="299px" zoomAndPan="magnify"><defs><filter height="300%" id="f12trd4bt4zhwd" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[02e4b9b7573f1156f41e60aa5b4e25a4]
+class Company--><rect codeLine="4" fill="#FEFECE" filter="url(#f12trd4bt4zhwd)" height="46.9297" id="Company" style="stroke:#A80036;stroke-width:1.5;" width="82" x="105" y="340"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="53" x="119.5" y="357.457">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="106" x2="186" y1="365.0938" y2="365.0938"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="113" y="373.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="56" x="125" y="380.5127">Designation</text><!--MD5=[03960189e81aa2c066c762ffabbee709]
+class Receptionist--><rect codeLine="7" fill="#FEFECE" filter="url(#f12trd4bt4zhwd)" height="33.0938" id="Receptionist" style="stroke:#A80036;stroke-width:1.5;" width="75" x="108.5" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="69" x="111.5" y="24.457">Receptionist</text><line style="stroke:#A80036;stroke-width:1.5;" x1="109.5" x2="182.5" y1="32.0938" y2="32.0938"/><!--MD5=[bc9474904c93394f6b59770801b96c22]
+class SNS User--><rect codeLine="10" fill="#FEFECE" filter="url(#f12trd4bt4zhwd)" height="143.7813" id="SNS User" style="stroke:#A80036;stroke-width:1.5;" width="122" x="7" y="118"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="55" x="40.5" y="135.457">SNS User</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="128" y1="143.0938" y2="143.0938"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="151.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="27" x="27" y="158.5127">Name</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="164.9297"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="42" x="27" y="172.3486">Address</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="178.7656"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="24" x="27" y="186.1846">Email</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="192.6016"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="19" x="27" y="200.0205">Sex</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="206.4375"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="27" y="213.8564">Phone number</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="220.2734"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="46" x="27" y="227.6924">Birth date</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="234.1094"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="86" x="27" y="241.5283">SNS User number</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="247.9453"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="96" x="27" y="255.3643">Citizen card number</text><!--MD5=[7421f545a0d8420c5bec41e74b387d9c]
+class Employee--><rect codeLine="22" fill="#FEFECE" filter="url(#f12trd4bt4zhwd)" height="116.1094" id="Employee" style="stroke:#A80036;stroke-width:1.5;" width="121" x="164.5" y="132"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="55" x="197.5" y="149.457">Employee</text><line style="stroke:#A80036;stroke-width:1.5;" x1="165.5" x2="284.5" y1="157.0938" y2="157.0938"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="172.5" y="165.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="8" x="184.5" y="172.5127">id</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="172.5" y="178.9297"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="26" x="184.5" y="186.3486">name</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="172.5" y="192.7656"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="40" x="184.5" y="200.1846">address</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="172.5" y="206.6016"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="184.5" y="214.0205">phone number</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="172.5" y="220.4375"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="28" x="184.5" y="227.8564">e-mail</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="172.5" y="234.2734"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="95" x="184.5" y="241.6924">citizen card number</text><!--MD5=[06bb7d2a85a007b79d10922b2d5e4cdd]
+link Receptionist to Employee--><path codeLine="31" d="M155.99,40.23 C161.31,48.87 167.8,59.86 173,70 C183.13,89.76 193.17,111.93 201.68,131.74 " fill="none" id="Receptionist-Employee" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="182.7665,74.7024,184.1776,84.1077,189.4364,81.482,182.7665,74.7024" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="49" x="194" y="84.4951">plays as</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="135.9868" y="61.6489">1..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="191.4113" y="121.1744">1</text><!--MD5=[d7ace9ce94145b54e26b24a174e1b7b9]
+link Employee to Company--><path codeLine="32" d="M198.69,248.11 C184.24,279.48 167.13,316.64 156.41,339.89 " fill="none" id="Employee-Company" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="185.092,296.6345,178.6382,303.6201,183.9768,306.0794,185.092,296.6345" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21" x="192" y="306.4951">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="174.2647" y="269.677">1..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="151.1807" y="329.3391">1</text><!--MD5=[08dccc1a29a516c72e0e44237ba55b7b]
+link Receptionist to SNS User--><path codeLine="33" d="M128.03,40.31 C119.71,48.46 110.3,58.99 104,70 C95.59,84.71 88.95,101.58 83.79,117.92 " fill="none" id="Receptionist-SNS User" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="106.5239,83.5196,113.5565,77.117,108.45,74.2061,106.5239,83.5196" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="118" y="84.4951">registers</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="114.4548" y="61.4427">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="64.3871" y="107.1863">1..*</text><!--MD5=[5d26d15145158d46bfb0397b8862c370]
+link SNS User to Company--><path codeLine="34" d="M100.4,262.24 C113.04,290.03 126.64,319.92 135.66,339.76 " fill="none" id="SNS User-Company" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="123.9298,296.6245,124.9996,306.0747,130.35,303.6411,123.9298,296.6245" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21" x="135" y="306.4951">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="82.465" y="283.1585">1..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="125.1135" y="329.1758">1</text><!--MD5=[aaead28bd6000b51c45e09a63660e1c4]
+@startuml
+hide methods
+hide circle
+
+class Company{
+- Designation
+}
+class Receptionist{
+}
+
+class "SNS User"{
+- Name
+- Address
+- Email
+- Sex
+- Phone number
+- Birth date
+- SNS User number
+- Citizen card number
+
+}
+
+class Employee{
+-id
+-name
+-address
+-phone number
+-e-mail
+-citizen card number
+}
+
+Receptionist"1..*" - - "1"Employee : < plays as
+Company"1" -up- "1..*"Employee : > has
+Receptionist"1" - - "1..*" "SNS User" : > registers
+Company"1" -up- "1..*""SNS User" : > has
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

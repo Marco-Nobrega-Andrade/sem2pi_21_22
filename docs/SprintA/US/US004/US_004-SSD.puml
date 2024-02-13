@@ -1,0 +1,7 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+"SNS User" -> System: 1: Authorizes the DGS to send a sms
+"SNS User" <-- System: 1.1: SMS message with information about the scheduled appointment
+
+@enduml

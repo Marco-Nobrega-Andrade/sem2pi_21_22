@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="386px" preserveAspectRatio="none" style="width:183px;height:386px;background:#FFFFFF;" version="1.1" viewBox="0 0 183 386" width="183px" zoomAndPan="magnify"><defs><filter height="300%" id="f49c6t3zm11y" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[da547346deef918ea16944ba046651ef]
+class Administrator--><rect codeLine="4" fill="#FEFECE" filter="url(#f49c6t3zm11y)" height="33.0938" id="Administrator" style="stroke:#A80036;stroke-width:1.5;" width="79" x="7" y="132"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="73" x="10" y="149.457">Administrator</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="85" y1="157.0938" y2="157.0938"/><!--MD5=[02e4b9b7573f1156f41e60aa5b4e25a4]
+class Company--><rect codeLine="7" fill="#FEFECE" filter="url(#f49c6t3zm11y)" height="46.9297" id="Company" style="stroke:#A80036;stroke-width:1.5;" width="82" x="60.5" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="53" x="75" y="24.457">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="61.5" x2="141.5" y1="32.0938" y2="32.0938"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="68.5" y="40.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="56" x="80.5" y="47.5127">Designation</text><!--MD5=[7421f545a0d8420c5bec41e74b387d9c]
+class Employee--><rect codeLine="11" fill="#FEFECE" filter="url(#f49c6t3zm11y)" height="129.9453" id="Employee" style="stroke:#A80036;stroke-width:1.5;" width="121" x="41" y="243"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="55" x="74" y="260.457">Employee</text><line style="stroke:#A80036;stroke-width:1.5;" x1="42" x2="161" y1="268.0938" y2="268.0938"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="49" y="276.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="8" x="61" y="283.5127">id</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="49" y="289.9297"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="26" x="61" y="297.3486">name</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="49" y="303.7656"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="40" x="61" y="311.1846">address</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="49" y="317.6016"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="61" y="325.0205">phone number</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="49" y="331.4375"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="28" x="61" y="338.8564">e-mail</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="49" y="345.2734"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="95" x="61" y="352.6924">citizen card number</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="49" y="359.1094"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="18" x="61" y="366.5283">role</text><!--MD5=[09366576ee87d48d594df10cacc83f45]
+link Company to Employee--><path codeLine="21" d="M116.44,54.07 C121.56,63.02 126.71,73.63 129.5,84 C144.41,139.39 142.87,156.41 133.5,213 C131.87,222.86 129.33,233.08 126.39,242.99 " fill="none" id="Company-Employee" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="145.763,153.6689,148.2221,144.4817,142.3524,144.7909,145.763,153.6689" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21" x="154.5" y="153.9951">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="112.2285" y="75.3117">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="108.1117" y="232.0668">1..*</text><!--MD5=[eaea43e34e45c5b9d20b595fc78f1f20]
+link Company to Administrator--><path codeLine="22" d="M90.76,54.14 C79.89,77.09 63.35,111.97 53.87,131.96 " fill="none" id="Company-Administrator" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="79.3582,97.6938,85.8884,90.7795,80.5771,88.2617,79.3582,97.6938" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="30" x="90.5" y="98.4951">owns</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="80.289" y="75.3988">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="32.9659" y="121.0638">1..*</text><!--MD5=[8f7dd94d56b58fc07b233ccd3dd98f8c]
+link Administrator to Employee--><path codeLine="23" d="M51.97,165.18 C58.31,183.31 69.13,214.31 79.05,242.71 " fill="none" id="Administrator-Employee" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="74.1487,208.8961,73.9407,199.3878,68.3916,201.326,74.1487,208.8961" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="43" x="81.5" y="209.4951">creates</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="45.5979" y="186.583">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="55.5008" y="232.2112">1..*</text><!--MD5=[32ae337dee7f461475c86c44178316e7]
+@startuml
+hide methods
+hide circles
+
+class Administrator{
+}
+
+class Company{
+- Designation
+}
+
+class Employee{
+-id
+-name
+-address
+-phone number
+-e-mail
+-citizen card number
+-role
+}
+
+Company"1" - - "1..*"Employee : > has
+Company"1" - - "1..*"Administrator: > owns
+Administrator"1" - -"1..*"Employee : > creates
+
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

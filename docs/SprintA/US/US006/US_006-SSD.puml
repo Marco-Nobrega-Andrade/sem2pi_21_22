@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+
+Receptionist -> System: 1 Request the confirmation of the appointment
+Receptionist <-- System: 1.1 Request data (SNS number)
+Receptionist -> System: 1 Type data
+Receptionist <-- System: 1.1 Confirmation response
+Receptionist -> System: 2 Confirm attendance of a sns user in the center vaccination
+Receptionist <-- System: 2.1 Register attendance.
+
+@enduml

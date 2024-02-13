@@ -1,0 +1,139 @@
+@startuml
+hide methods
+hide circle
+
+note "All changes introduced in Sprint B are colored blue" as N1
+class Administrator{
+}
+
+class Nurse{
+}
+
+class "SNS User"{
+- Name
+- Address
+- Email
+- Sex
+- Phone number
+- Birth date
+- SNS User number
+- Citizen card number
+}
+
+class Coordinator{
+}
+
+class Receptionist{
+}
+
+class Vaccine{
+- designation
+- ageGroups
+- dosage
+- numberOfDoses
+- intervalBetweenDoses
+}
+
+class VaccineType{
+}
+
+class VaccineSchedule{
+- Center
+- Time
+- Date
+- SNS Number
+}
+
+class Company{
+- Designation
+}
+
+class CommunityMassVaccinationCenter{
+}
+
+class HealthCareCenter{
+}
+
+class Employee{
+-id
+-name
+-address
+-phone number
+-e-mail
+-citizen card number
+}
+
+class Center{
+
+-Name
+-Address
+-Phone number
+-E-mail address
+-Fax number
+-Website address
+-Opening and closing hours
+-Slot duration
+-Max number of vaccines given per slot
+}
+
+class VaccineAdministration{
+- Vaccine
+- Lot number
+}
+
+class CenterStatistics{
+}
+
+class VaccinationQueue #BFDDF3 ##0000FF{
+
+}
+
+class Notification{
+-Message
+}
+
+class EmailNotification{
+}
+
+class SMSNotification{
+}
+
+class RecoveryPeriod{
+}
+class VaccineCertificate
+
+
+Receptionist"1..*" -down- "1        "VaccinationQueue : > registers
+Center "1"-left- "*"VaccinationQueue : > has
+Center"1" -down- "1..*"CenterStatistics : has
+CommunityMassVaccinationCenter"1..*" -up- "1"Center : > is a
+HealthCareCenter"1..*" -up- "1"Center : > is a
+Company"1" -left- "1..*"Employee : > has
+Company"1" -down- "1..*"Center : has
+Company"1" -right- "1..*""SNS User" : has
+"SNS User" "1" -down- "*"VaccineSchedule : < created for
+"SNS User""1" -down- "1"VaccineAdministration : < administered on
+VaccineAdministration"1" -down- "1..*"Vaccine : of
+Vaccine"1" -left- "1..*"VaccineType : > of
+VaccineType"1..*" -left- "1..*"Center : > administered in
+VaccinationQueue"1   "-up- "1"VaccineSchedule : > depends from
+VaccineSchedule"*" -down- "1"VaccineType : for taking
+Nurse"1" -right- "1..*"VaccineAdministration : < administrated by
+Notification"1" -- "1"SMSNotification : < is a
+Notification"1" -- "1"EmailNotification : < is a
+VaccineSchedule"1" -right- "0..1"Notification : > gives
+RecoveryPeriod"1" -right- "1"Notification : gives
+RecoveryPeriod"1" -left[#0000FF]- "1"VaccineAdministration : > requires
+"SNS User" "*" -right- "0..1"VaccineCertificate : requests
+Nurse "1..*" -down- "1"VaccineCertificate : issues
+Receptionist"1" -[#0000FF]- "1..*" "SNS User" : registers
+Administrator"1" -[#0000FF]- "1..*"Center : registers
+Administrator"1" -[#0000FF]- "1..*"Vaccine : creates
+Administrator"1" -[#0000FF]- "1..*"VaccineType : creates
+"SNS User""1" -[#0000FF]- "0..1"Notification : receives
+Administrator"1" -[#0000FF]-"1..*"Employee : > creates
+Nurse"1..*" -up[#0000FF]- "1"Employee : < play as
+Receptionist"1..*" -up[#0000FF]- "1"Employee : < play as
+Coordinator"1..*" -up[#0000FF]- "1"Employee : < play as
+Company"1"-[#0000FF]-"1..*"Administrator : owns
+@enduml

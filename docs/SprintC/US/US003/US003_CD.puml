@@ -1,0 +1,51 @@
+@startuml
+
+class RegisterNewSNSUserUI {
+
+}
+class RegisterNewSNSUserController{
++ createSNSUser(name, address, sex, phone number, e-mail, birth date, SNS User number, citizen card number)
++ saveSNSUser()
+}
+class Company{
+- designation
++ getSNSUserStore()
+}
+
+class SNSUserStore{
++ createSNSUser(name, address, sex, phone number, e-mail, birth date, SNS User number, citizen card number)
++ validateSNSUser(user)
++ saveSNSUser()
++ addSNSUser(user)
+}
+
+class SNSUser{
+- name
+- address
+- sex
+- phoneNumber
+- email
+- birthDate
+- SNSUserNumber
+- citizenCardNumber
++ create(name, address, sex, phone number, e-mail, birth date, SNS User number, citizen card number)
++ getName()
++ getEmail()
+}
+class AuthFacade {
++ addUserWithRole(name, email, pwd, "SNS_USER")
+}
+class PwdGenerator{
++ generatePwd()
+}
+
+
+RegisterNewSNSUserUI ..> RegisterNewSNSUserController
+RegisterNewSNSUserController  ..> Company
+RegisterNewSNSUserController ..> SNSUserStore
+Company --> SNSUserStore
+SNSUserStore -right-> SNSUser
+SNSUserStore ..> AuthFacade
+SNSUserStore ..> PwdGenerator
+
+@enduml

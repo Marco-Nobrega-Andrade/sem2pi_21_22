@@ -1,0 +1,49 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+
+actor "Administrator" as ADM
+
+participant ":ImportUsersUI" as UI
+participant ":ImportUsersController" as CTRL
+participant ":Company" as COMP
+participant ":UserStore" as UST
+participant "u: User" as U
+
+activate ADM
+
+"ADM" -> UI: Asks to import users.
+
+activate UI
+"ADM" <-- UI : Requests the path to CSV.
+UI --> CTRL : importUsers(List users).
+activate CTRL
+CTRL --> COMP : getUserStore().
+activate COMP
+deactivate COMP
+alt if (List users) contains header
+CTRL --> CTRL : importUsersCsvWithHeader(List users).
+CTRL --> UST : createNewUser(User).
+activate UST
+UST --> U : new User(user).
+activate U
+deactivate U
+CTRL --> UST : addUser(user)
+deactivate UST
+alt else (List users) doesn't contain header
+CTRL --> CTRL : importUsersCsvWithNoHeader(List users).
+CTRL --> UST : createNewUser(User).
+activate UST
+UST --> U : new User(user).
+activate U
+deactivate U
+CTRL --> UST : addUser(user)
+deactivate UST
+end
+end
+"ADM" <-- UI : listUsersCredentials().
+
+
+@enduml

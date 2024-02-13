@@ -1,0 +1,94 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Receptionist" as rec
+participant ":RegisterTheArrivalUI" as ui
+participant ":RegisterTheArrivalController" as ctrl
+participant ":App" as app
+participant ":Company" as comp
+participant ":VaccinationCenter" as vc
+participant ":VaccineScheduleStore" as vsStore
+participant ":WaitingUserStore" as wStore
+participant ":VaccineSchedule" as vs
+participant "dto: VaccineScheduleDto" as dtoVS
+participant ":UserStore" as us
+participant ":WaitingUser" as wu
+
+activate rec
+
+
+rec -> ui : Register arrival at the vaccination center
+activate ui
+ui -> ctrl **: :RegisterTheArrivalController()
+activate ctrl
+ctrl -> app : app = getInstance()
+activate app
+deactivate app
+ctrl -> comp: actorCenter= getActorCenter()
+activate comp
+deactivate comp
+deactivate ctrl
+ui --> rec : Requests data (snsNumber)
+deactivate ui
+
+
+rec -> ui : Types requested data
+activate ui
+ui->ctrl : dtoSchedule = checkAppointmentList(snsNumber)
+activate ctrl
+deactivate comp
+ctrl -> vc: vaccineScheduleStore = getVaccineScheduleStore()
+activate vc
+deactivate vc
+ctrl -> vsStore: dtoSchedule = checkIfThereIsAnAppointment(snsNumber)
+activate vsStore
+vsStore -> vs : time = getTime()
+activate vs
+deactivate vs
+vsStore -> vs : date = getDate()
+activate vs
+deactivate vs
+vsStore -> vs : vaccineType = getVaccineType()
+activate vs
+deactivate vs
+vsStore -> vs : snsNumber = getSnsNumber()
+activate vs
+deactivate vs
+vsStore -> "dto: VaccineScheduleDto" **: VaccineScheduleDTO(snsNumber, vaccineType, date, time)
+deactivate vsStore
+deactivate ctrl
+ui --> rec : Shows if the user have an appointment and the details of the appointment
+deactivate ui
+
+
+rec-> ui: Confirms the appointment
+activate ui
+ui-> ctrl: addWaitingUser(snsNumber)
+activate ctrl
+ctrl -> comp: userStore = getUserStore()
+activate comp
+deactivate comp
+ctrl -> vc: storeWaitingUser = getWaitingUserStore()
+activate vc
+deactivate vc
+ctrl -> wStore: createWaitingUser(snsNumber, userStore)
+activate wStore
+wStore -> us: user = getUserBySnsNumber(snsNumber)
+activate us
+deactivate us
+wStore ->wu**: waitingUser=WaitingUser(user, arrivalTime)
+wStore->wStore: validateWaitingUser(waitingUser)
+activate wStore
+deactivate wStore
+wStore->wStore: addtoWaitingUserList(waitingUser)
+activate wStore
+deactivate wStore
+deactivate wStore
+deactivate ctrl
+ui --> rec: Informs operation success
+deactivate ui
+
+deactivate rec
+@enduml

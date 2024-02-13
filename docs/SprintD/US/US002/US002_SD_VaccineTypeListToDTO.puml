@@ -1,0 +1,36 @@
+@startuml
+title SD_VaccineTypeListToDTO
+hide footbox
+autonumber
+participant VaccineTypeMapper as VTM
+participant "vaccineTypeListDTO: ArrayList<VaccineTypeDTO>" as DTOList
+participant "vaccineTypeList : ArrayList<VaccineType>" as list
+participant "vaccineType : VaccineType" as VT
+participant "vtDTO : VaccineTypeDTO" as DTOObj
+
+
+[o-> VTM : toDTO(vaccineTypeList)
+activate VTM
+VTM --> DTOList ** : create()
+loop for each vaccine type in vaccineTypeList
+VTM -> list : vaccineType = get(i)
+activate list
+deactivate list
+VTM -> VTM : vtDto = toDTO(vt)
+activate VTM
+VTM -> VT : code = getCode()
+activate VT
+deactivate VT
+VTM -> VT : description = getDescription()
+activate VT
+deactivate VT
+VTM -> VT : tech = getTech()
+activate VT
+deactivate VT
+VTM --> DTOObj ** : create(code,description,tech)
+deactivate VTM
+VTM -> DTOList : add(vaccineTypeDTO)
+activate DTOList
+deactivate DTOList
+end
+@enduml

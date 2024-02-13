@@ -1,0 +1,34 @@
+@startuml
+hide methods
+
+class "SNS User"{
+- Name
+- Address
+- Email
+- Sex
+- Phone number
+- Birth date
+- SNS User number
+- Citizen card number
+}
+
+class Vaccine{
+- vaccineType
+- brand
+- numberOfDoses
+- numDifAgeGroup
+- ageGroup
+- dosageList
+- intervalBetweenDosesList
+}
+
+class VaccineAdministration{
+- Vaccine
+- Lot number
+}
+
+
+
+"SNS User""1" -up- "1"VaccineAdministration : < administered on
+VaccineAdministration"1" -down- "1..*"Vaccine : of
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+Admin -> System: 1 Specify a new vaccine type
+Admin <-- System:  1.1 Request data about the new vaccine
+Admin -> System: 2 Add information requested
+Admin <-- System: 2.1 Shows input information and request a confirmation
+Admin -> System: 3 Confirms the data
+Admin <-- System: 3.1 Informs that the operation was succeeded.
+
+@enduml

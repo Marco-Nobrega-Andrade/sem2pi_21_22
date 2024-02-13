@@ -1,0 +1,147 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+
+
+'-----------------------------------------------------'
+package app.ui.gui{
+class AnalyzePerformanceUI{
++ run()
+}
+}
+
+package app.controller{
+class AnalyzePerformanceController{
++ AnalyzePerformanceController()
++ analyzePerformance(date : Date, timeIntervals : int, algorithmUsed : String)
++ checkIfUsersListIsEmpty(usersList : ArrayList<User>)
+}
+
+class App{
++ getInstance()
++ getCompany()
+}
+
+}
+package app.domain.model{
+class Company{
+- designation : String
+- actorCenter : ActorCenter
+- userStore : UserStore
++ getActorCenter()
++ getUserStore()
+}
+package AnalyzePerformance{
+class Performance{
+    + analyzePerformance(date : Date, timeIntervals int, algorithmUsed : String, usersList : ArrayList<User>, vaccinationCenterName : String)
+    + createInOutList(usersList : ArrayList<User>, name : String)
+    + findMaxSumListIndexes(inOutList : int[], maxSumList : int[])
+    + calculateMaxSumOfList(maxSumList : int[])
+    + convertIndexesToTime(index : int)
+    + getPerformanceInfo()
+    + setTimeIntervals(timeIntervals : int)
+    + setDate(date : Date)
+    + checkIfThereIsAnyUserInOutList()
+}
+interface AnalyzePerformanceAlgorithms{
++ getMaxSumList(inOutList : int[])
+}
+class BruteForceAlgorithm{
++ getMaxSumList(inOutList : int[])
+}
+
+class BenchmarkAlgorithm{
++ getMaxSumList(inOutList : int[])
+}
+}
+
+
+package VaccinationCenter{
+class VaccinationCenter{
+- name : String
+- address : String
+- phoneNumber : String
+- email : Email
+- faxNumber : String
+- websiteAddress : String
+- openingHours : Time
+- closingHours : Time
+- slotDuration : String
+- maximumNumVaccinesSlot : String
+- isHealthCareCenter : boolean
+- vaccineScheduleStore : VaccineScheduleStore
+- waitingUserStore : WaitingUserStore
+- analyzePerformance : Performance
++ analyzePerformance(date : Date, timeIntervals : int, algorithmUsed : String, userList : ArrayList <User>)
++ getPerformanceInfo()
+}
+}
+
+package User{
+class UserStore{
+- usersList : ArrayList<User>
+- userCredentials : ArrayList<String>
++ getUsersList()
+}
+
+class User{
+-int id
+-String name
+-String sex
+-Date birthDate
+-String address
+-int phoneNumber
+-Email eMail
+-int snsNumber
+-int ccNumber
++ checkIfUserArrivedAtCenter(date : Date, time : Time, timeIntervals : int, vaccinationCenterName : String)
++ checkIfUserLeftTheCenter(date : Date, time : Time, timeIntervals : int, vaccinationCenterName : String)
+}
+}
+
+package VaccineAdministration{
+class VaccineAdministrationStore{
+ArrayList<VaccineAdministration> vaccineAdministration
++ checkIfUserArrivedAtCenter(date : Date, time : Time, timeIntervals : int, vaccinationCenterName : String)
++ checkIfUserLeftTheCenter(date : Date, time : Time, timeIntervals : int, vaccinationCenterName : String)
+}
+
+class VaccineAdministration{
+- scheduleDate : Date
+- scheduleTime : Time
+- arrivalDate : Date
+- arrivalTime : Time
+- administrationDate : Date
+- administrationTime : Time
+- vaccinationCenter : VaccinationCenter
+- userName : String
+- snsNumber : int
+- vaccineName : String
+- doseNumber : int
+- leavingDate : Date
+- leavingTime : Time
++ getArrivalDate()
++ getArrivalTime()
++ getVaccinationCenter()
++ getLeavingDate()
++ getLeavingTime()
+}
+}
+}
+
+App -> Company
+App ..> AnalyzePerformanceController
+Company -down-> UserStore
+Company -> VaccinationCenter
+AnalyzePerformanceUI ..> AnalyzePerformanceController
+AnalyzePerformanceController ..-down-> UserStore
+AnalyzePerformanceController ..down> VaccinationCenter
+UserStore -down-> User
+User -down-> VaccineAdministrationStore
+VaccineAdministrationStore -down-> VaccineAdministration
+VaccinationCenter -down-> Performance
+Performance ..> AnalyzePerformanceAlgorithms
+BruteForceAlgorithm ..|> AnalyzePerformanceAlgorithms
+BenchmarkAlgorithm ..|> AnalyzePerformanceAlgorithms
+Performance ..> User
+@end

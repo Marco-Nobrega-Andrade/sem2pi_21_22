@@ -1,0 +1,44 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":EmployeeUI" as UI
+participant ":EmployeeController" as CTRL
+participant ":Company" as COMP
+participant ":EmployeeStore" as STORE
+
+activate ADM
+"ADM" -> UI: Get list of employees
+
+activate UI
+
+"ADM" <-- UI: Requests selection of one role
+deactivate UI
+
+ADM -> UI :Selects role
+activate UI
+"ADM" <-- UI: Shows the role and request a confirmation
+deactivate UI
+
+ADM -> UI :Confirms role selected
+activate UI
+UI -> CTRL : findEmployeesByRole(Role)
+CTRL -> COMP : store : getEmployeeStore()
+activate COMP
+deactivate COMP
+CTRL -> STORE : findEmployeesByRole(Role)
+activate STORE
+STORE -> STORE : findEmployeesByRole(Role)
+activate STORE
+deactivate STORE
+deactivate STORE
+UI -> ADM : Shows list of employees
+deactivate UI
+
+deactivate ADM
+
+
+
+
+@enduml

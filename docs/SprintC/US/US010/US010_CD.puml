@@ -1,0 +1,50 @@
+@startuml
+
+class CreateEmployeeUI {
+
+}
+class CreateEmployeeController{
++createNewEmployee (name, address, phone number, e-mail and citizen card number, role)
++saveEmployee()
+}
+class Company{
+- designation
++ getEmployeeStore()
+}
+
+class EmployeeStore{
++ create(name, address, phone number, e-mail and citizen card number, role)
++ validateNewEmployee(ne)
++ addEmployee(ne)
+}
+
+class Employee{
+-id
+-name
+-address
+-phone number
+-e-mail
+-citizen card number
+-role
++ Employee(name, address, phone number, e-mail and citizen card number, role)
++ getName()
++ getEmail()
++ getRole()
+}
+class AuthFacade {
++ addUserWithRole(name, email, pwd, role)
+}
+class PwdGenerator{
++ generatePwd()
+}
+
+
+CreateEmployeeUI ..> CreateEmployeeController
+CreateEmployeeController  ..> Company
+CreateEmployeeController ..> EmployeeStore
+Company"1" --> "1"EmployeeStore : uses
+EmployeeStore"1" -right-> "*"Employee : knows
+EmployeeStore ..> AuthFacade
+EmployeeStore ..> PwdGenerator
+
+@enduml

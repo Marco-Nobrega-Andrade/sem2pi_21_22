@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ui.gui.ExportVaccinationStatistics.PrintVaccinationStatisticsAndExportUI">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="textAreaId" layoutX="5.0" layoutY="61.0" prefHeight="264.0" prefWidth="591.0" />
+            <Label fx:id="textprint" layoutX="145.0" layoutY="14.0" prefHeight="54.0" prefWidth="311.0" text="Vaccination Statistics Export" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="325.0" prefHeight="27.0" prefWidth="287.0" text="If you want to export this statistics, insert the file path:" />
+            <TextField fx:id="filePath" layoutX="23.0" layoutY="354.0" prefHeight="23.0" prefWidth="462.0" />
+            <Button fx:id="exportButtonId" layoutX="509.0" layoutY="354.0" mnemonicParsing="false" onAction="#onExportButtonPress" text="Export" />
+            <ImageView fitHeight="52.0" fitWidth="128.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/ReturnImage.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="backButton" layoutX="14.0" layoutY="19.0" mnemonicParsing="false" onAction="#onBackButton" opacity="0.0" text="Back" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

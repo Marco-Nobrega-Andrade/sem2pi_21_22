@@ -1,0 +1,224 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":NewVaccineUI" as UI
+participant ":NewVaccineController" as CTRL
+participant ":Company" as COMP
+participant ":VaccineTypeStore" as VTS
+participant "storeV : VaccineStore" as VS
+participant "nv: NewVaccine" as NV
+
+
+activate ADM
+
+"ADM" -> UI: Create a new vaccine
+
+activate UI
+
+activate CTRL
+
+UI -> CTRL: verifyConditionVaccineTypeExist()
+CTRL -> COMP: storeVT = getVaccineTypeStore()
+
+activate COMP
+deactivate COMP
+
+CTRL -> COMP : storeV = getVaccineStore
+
+activate COMP
+deactivate COMP
+
+CTRL -> VTS: verifyConditionVaccineTypeExist()
+
+activate VTS
+deactivate VTS
+
+UI -> CTRL: getVaccineTypeList()
+
+CTRL -> VTS: getVaccineTypeList()
+activate VTS
+deactivate VTS
+
+deactivate CTRL
+
+"ADM" <-- UI : Request for selection of one Vaccine Type
+
+deactivate UI
+
+"ADM" -> UI : Select Vaccine Type
+
+activate UI
+
+"ADM" <-- UI: Request brand name
+
+deactivate UI
+
+ADM -> UI :Type requested brand name
+
+activate UI
+
+"ADM" <-- UI: Request number of doses
+
+deactivate UI
+
+ADM -> UI :Type requested number of doses
+
+activate UI
+
+UI -> CTRL : validateInputNumberOfDoses(numberOfDoses)
+
+activate CTRL
+
+CTRL -> VS : validateInputNumberOfDoses(numberOfDoses)
+
+activate VS
+deactivate VS
+
+deactivate CTRL
+
+"ADM" <-- UI: Request number of different age groups
+
+deactivate UI
+
+ADM -> UI :Type requested number of different age groups
+
+activate UI
+
+UI -> CTRL : validateInputNumDifAgeGroup(numDifAgeGroup)
+
+activate CTRL
+
+CTRL -> VS : validateInputNumDifAgeGroup(numDifAgeGroup)
+
+activate VS
+deactivate VS
+
+deactivate CTRL
+
+loop number of different age groups
+
+"ADM" <-- UI: Request age group interval
+
+deactivate UI
+
+ADM -> UI :Type requested age group interval
+activate UI
+
+UI -> CTRL : validateInputAgeGroup(ageGroup)
+
+activate CTRL
+
+CTRL -> VS : validateInputAgeGroup(ageGroup)
+
+activate VS
+deactivate VS
+
+deactivate CTRL
+
+end
+
+loop number of different age groups times number of doses
+
+"ADM" <-- UI: Request dosage for each dose and ageGroup
+
+deactivate UI
+
+ADM -> UI :Type requested dosage for each dose and ageGroup
+
+activate UI
+
+UI -> CTRL : validateInputDosage(dosage)
+
+activate CTRL
+
+CTRL -> VS : validateInputDosage(dosage)
+
+activate VS
+deactivate VS
+
+deactivate CTRL
+
+end
+
+
+
+alt if number of dose is greater than 1
+
+loop number of doses minus one
+
+"ADM" <-- UI: Request interval between doses
+
+deactivate UI
+
+ADM -> UI :Type requested interval between doses
+
+activate UI
+
+UI -> CTRL : validateInputIntervalBetweenDose(intervalBetweenDose)
+
+activate CTRL
+
+CTRL -> VS : validateInputIntervalBetweenDose(intervalBetweenDose)
+
+activate VS
+deactivate VS
+
+deactivate CTRL
+
+end
+end
+
+
+
+UI -> CTRL : createNewVaccine(vaccineType, brand, numDifAgeGroup,ageGroup, dosageList, numberOfDoses,intervalBetweenDosesList)
+
+activate CTRL
+
+CTRL -> VS : nv = createNewVaccine(vaccineType, brand, numDifAgeGroup,ageGroup, dosageList, numberOfDoses,intervalBetweenDosesList)
+
+activate VS
+
+VS -> NV**: create(vaccineType, brand, numDifAgeGroup,ageGroup, dosageList, numberOfDoses,intervalBetweenDosesList)
+
+deactivate VS
+
+deactivate CTRL
+
+"ADM" <-- UI: Shows the data and request a confirmation
+
+deactivate UI
+
+"ADM" -> UI: Confirms the data
+
+activate UI
+
+UI -> CTRL : saveNewVaccine(nv)
+
+activate CTRL
+
+CTRL -> VS : saveNewVaccine(nv)
+
+activate VS
+
+VS->VS : validateNewVaccineGlobal(nv)
+
+activate VS
+deactivate VS
+
+VS -> VS : addNewVaccine(nv)
+
+activate VS
+deactivate VS
+deactivate VS
+deactivate CTRL
+
+"ADM" <-- UI: Informs operation success
+
+deactivate UI
+
+
+
+
+@enduml

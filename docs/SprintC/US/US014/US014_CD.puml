@@ -1,0 +1,37 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class User{
+
+}
+
+class Company{
++ getUserStore();
++ getAuthFacade();
+}
+
+class UserStore{
+- createUser(String name, String sex, Date birthDate, String address,\nint phoneNumber, String eMail, int snsNumber,
+                                        int ccNumber);
++ validateNewUser(User ne);
++ addUser(User ne, AuthFacade auth);
++ findBySnsNumber(int snsNumber);
+}
+
+class ImportUsersController{
++ importUsers(List users);
+- importUsersCsvNoHeader(List users);
+- importUsersCsvWithHeader(List users);
+}
+
+class ImportUsersUI{
++ run();
+}
+
+ImportUsersUI .> ImportUsersController
+ImportUsersController ..> Company
+ImportUsersController ..> User
+Company"1" -->  "1"UserStore : uses
+UserStore"1" --> "*"User : knows
+
+@enduml

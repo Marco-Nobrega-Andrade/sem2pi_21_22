@@ -1,0 +1,212 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Company{
+- designation : String
+- vaccineTypeStore : VaccineTypeStore
+- vaccinationCenterStore : VaccinationCenterStore
+- userStore : UserStore
++ getVaccineTypeStore() : VaccineTypeStore
++ getVaccinationCenterStore() : VaccinationCenterStore
+}
+
+class App{
++ getInstance()
++ getCompany()
+}
+
+class AuthFacade{
++ getUserSession()
+}
+class UserSession{
++ getUserId()
+}
+'-----------------------------------------------------'
+
+class SNSUserVaccineScheduleUI{
++ run()
+}
+
+class SNSUserVaccineScheduleController{
+- app : App
+- int :snsNumber
+- vaccineType : VaccineType
+- vaccineTypeStore : VaccineTypeStore
+- vaccinationCenter : VaccinationCenter
+- vaccinationCenterStore : VaccinationCenterStore
+- vaccineSchedule : VaccineSchedule
+- vaccineScheduleStore : VaccineScheduleStore
++ SNSUserVaccineScheduleController()
++ getUserSNSNumber() : void
++ getVaccineTypeList() : ArrayList<VaccineTypeDTO>
++ obtainVaccineType(index : int) : void
++ getVaccinationCenterList() : ArrayList<VaccinationCenterDTO>
++ obtainVaccinationCenter(index : int) : void
++ createVaccineSchedule(date : Date, time : String) : void
++ validateVaccineSchedule() : void
++ saveVaccineSchedule() : void
++ getScheduleInfo() : String
+}
+class VaccineSchedule{
+- snsNumber : int
+- vaccineType : VaccineType
+- date : Date
+- time : Time
++ VaccineSchedule()
++ getSnsNumber() : int
++ getVaccineType() : VaccineType
++ getDate() : Date
++ getTime() : Time
++ checkSnsNumber(SnsNumber : int) : int
++ toString() : String
+}
+
+class VaccineScheduleStore{
+- vaccineSchedule : ArrayList<VaccineSchedule>
+- openingHours : Time
+- closingHours : Time
+- slotDuration : int
+- maximumNumVaccinesSlot : int
++ setOpeningHours(openingHours : Time) : void
++ setClosingHours(closingHours : Time) : void
++ setSlotDuration(slotDuration : int) : void
++ setMaximumNumVaccinesSlot(maximumNumVaccinesSlot : int) : void
++ createVaccineSchedule(scheduleDTO : VaccineScheduleDTO) : VaccineSchedule
++ getVaccineSchedulesList() : ArrayList<VaccineSchedule>
++ checkForMaxSchedulesQuantity (newVaccineSchedule : VaccineSchedule) : void
++ checkForSchedulesAtSameTime (newVaccineSchedule : VaccineSchedule) : void
++ checkForSchedulesBeforeNow (newVaccineSchedule : VaccineSchedule) : void
++ checkForSchedulesOutOfCenterWorkingHours (newVaccineSchedule : VaccineSchedule) : void
++ addVaccineSchedule(vaccineSchedule : VaccineSchedule) : void
+}
+
+class VaccineScheduleMapper{
++ toModel(ScheduleDTO : VaccineScheduleDTO) : VaccineSchedule
+}
+
+class VaccineScheduleDTO{
+- snsNumber : int
+- vaccineType : VaccineType
+- date : Date
+- time : Time
++ VaccineScheduleDTO(snsNumber : int, vaccineType : VaccineType, date : Date, time : Time)
++ VaccineScheduleDTO(snsNumber : int, vaccineType : VaccineType, date : Date, time : String)
++ getSnsNumber() : int
++ getVaccineType() : VaccineType
++ getDate() : Date
++ getTime() : Time
++ toString() : String
+}
+
+
+
+
+'------------------------------------------------------------------------'
+
+class VaccinationCenter{
+- name : String
+- address : String
+- phoneNumber : String
+- email : Email
+- faxNumber : String
+- websiteAddress : String
+- openingHours : Time
+- closingHours : Time
+- slotDuration : String
+- maximumNumVaccinesSlot : String
+- isHealthCareCenter : boolean
+- vaccineScheduleStore : VaccineScheduleStore
+- waitingUserStore : WaitingUserStore
++ getVaccineScheduleStore()
++ getName() : String
++ getAddress() : String
++ getOpeningHours() : Time
++ getClosingHours() : Time
++ isHealthcareCenter() : boolean
+}
+
+class VaccinationCenterStore{
++ getHealthcareCentersList() : ArrayList<VaccinationCenter>
++ getAllVaccinationCenters() : ArrayList<VaccinationCenter>
++ checkForDuplicateSchedules(newVaccineSchedule : VaccineSchedule) : void
++ getVaccinationCenterFromStore(index : int, flag : boolean) : VaccinationCenter
+}
+
+class VaccinationCenterMapper{
++ toDTO(vaccinationCenterList : ArrayList<VaccinationCenter>) : ArrayList<VaccinationCenterDTO>
+- toDTO(vaccinationCenterList) : ArrayList<VaccinationCenterDTO>
+}
+
+class VaccinationCenterDTO{
+- name : String
+- address : String
+- phoneNumber : String
+- email : Email
+- faxNumber : String
+- websiteAddress : String
+- openingHours : Time
+- closingHours : Time
+- slotDuration : String
+- maximumNumVaccinesSlot : String
+- isHealthCareCenter : boolean
++ toString() : String
+}
+
+'---------------------------------------------------------------'
+
+class VaccineType{
+- code : int
+- description : String
+- tech : String
+}
+
+class VaccineTypeStore{
+- vaccineTypeList : ArrayList<VaccineType>
+- vaccineTypeOngoingOutbreak : VaccineType
++ getVaccineTypeList() : ArrayList<VaccineType>
++ getVaccineTypeFromStore(index : int) : VaccineType
++ checkIfOngoingOutbreakIsTheChosenVaccineType(vaccineType : VaccineType) : boolean
+}
+
+class VaccineTypeMapper{
++ toDTO(vaccineTypeList : ArrayList<VaccineType>) : ArrayList<VaccineTypeDTO>
+- toDTO(vaccineType : VaccineType) : VaccineTypeDTO
+}
+
+class VaccineTypeDTO{
+- code : int
+- description : String
+- tech : String
++ toString() : String
+}
+
+
+App -> Company
+App ..> SNSUserVaccineScheduleController
+SNSUserVaccineScheduleUI ..> SNSUserVaccineScheduleController
+SNSUserVaccineScheduleController ..down> VaccineTypeMapper
+SNSUserVaccineScheduleController ..down> Company
+VaccineTypeMapper ..> VaccineTypeDTO
+VaccineTypeMapper ..> VaccineType
+SNSUserVaccineScheduleController ..> VaccinationCenterMapper
+VaccinationCenterMapper ..> VaccinationCenterDTO
+VaccinationCenterMapper ..> VaccinationCenter
+
+Company -> VaccineTypeStore
+Company -> VaccinationCenterStore
+VaccineTypeStore -> VaccineType
+VaccineTypeStore ..> VaccineTypeMapper
+VaccinationCenterStore -> VaccinationCenter
+VaccinationCenterStore ..> VaccinationCenterMapper
+VaccinationCenter -> VaccineScheduleStore
+VaccineScheduleStore -> VaccineSchedule
+VaccineScheduleStore ..> VaccineScheduleMapper
+VaccineScheduleMapper ..> VaccineScheduleDTO
+VaccineScheduleMapper ..> VaccineSchedule
+SNSUserVaccineScheduleController ..> VaccineScheduleDTO
+
+SNSUserVaccineScheduleController .left.> AuthFacade
+SNSUserVaccineScheduleController ..> UserSession
+AuthFacade -> UserSession
+Company -> AuthFacade
+@end

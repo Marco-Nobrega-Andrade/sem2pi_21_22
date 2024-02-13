@@ -1,0 +1,113 @@
+@startuml
+
+class RegisterTheArrivalUI {
++run()
+}
+
+class RegisterTheArrivalController{
+-App : app
+-VaccinationCenter: actorCenter
++checkAppointmentList(int: snsNumber)
++addWaitingUser(int: snsNumber)
+}
+
+class Company{
+- designation
+- VaccinationCenter: actorCenter
+- UserStore: userStore
++ getActorCenter()
++ getUserStore()
+}
+
+class App {
++ getInstance()
++ getCompany()
+}
+
+class VaccinationCenter{
+-String: name
+-String: address
+-String: phoneNumber
+-Email: email
+-String: faxNumber
+-String: websiteAddress
+-Time: openingHours
+-Time: closingHours
+-String: slotDuration
+-String: maximumNumVaccinesSlot
+-boolean: isHealthcareCenter
+-VaccineScheduleStore: vaccineScheduleStore
+-WaitingUser: waitingListStore
++ getVaccineScheduleStore()
++ getWaitingUserStore()
+}
+
+class VaccineScheduleStore{
+-ArrayList<VaccineSchedule> vaccineSchedulesList
++ checkIfThereIsAnAppointment(snsNumber)
+}
+
+class WaitingUserStore{
+- ArrayList<WaitingUser>: WaitingUserList
++ createWaitingUser(int: snsNumber, UserStore userStore)
++ validateWaitingUser(Waiting User: waitingUser)
++ addtoWaitingUserList(Waiting User: waitingUser)
+}
+
+class WaitingUser{
+-User: user
+-Time: arrivalTime
++WaitingUser(user, arrivalTime)
+}
+
+class VaccineSchedule{
+-int snsNumber
+-VaccineType vaccineType
+-Date date
+-Time time
++getTime()
++getDate()
++getVaccineType()
++getSnsNumber()
+}
+
+class VaccineScheduleDto{
+-int: snsNumber
+-VaccineType: vaccineType
+-Date: date
+-Time: time
+
+VaccineScheduleDTO(snsNumber, vaccineType, date, time)}
+}
+class UserStore{
++getUserBySnsNumber(int: snsNumber)
+}
+class User{
+-int id
+-String name
+-String sex
+-Date birthDate
+-String address
+-int phoneNumber
+-Email eMail
+-int snsNumber
+-int ccNumber
+}
+
+RegisterTheArrivalUI ..> RegisterTheArrivalController
+RegisterTheArrivalController ..> Company
+RegisterTheArrivalController ..> WaitingUserStore
+RegisterTheArrivalController ..> VaccinationCenter
+RegisterTheArrivalController ..> VaccineScheduleStore
+RegisterTheArrivalController ..> App
+App -> Company
+VaccineScheduleStore ..>VaccineScheduleDto
+Company -> VaccinationCenter
+VaccinationCenter -> VaccineScheduleStore
+VaccinationCenter -> WaitingUserStore
+VaccineScheduleStore -> VaccineSchedule
+WaitingUserStore -> WaitingUser
+Company -down-> UserStore
+UserStore ->User
+WaitingUserStore ..> UserStore
+@enduml

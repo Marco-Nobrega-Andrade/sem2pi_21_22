@@ -1,0 +1,46 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+
+left to right direction
+actor "SNS User" as user
+actor "Nurse" as nurse
+actor "Receptionist" as re
+actor "Administrator" as adm
+actor "Center Coordinator" as cc
+actor " «automatic» \n Timer/Clock" as tim
+
+usecase "US 001/002 - Schedules the vaccination" as UC1
+usecase "US ??? - Request the EU Covid Digital Certificate" as UC3
+usecase "US ??? - Deliver vaccination certificate" as UC4
+usecase "US 005 - Consult the users in the waiting room of a vacination center" as UC5
+usecase "US ??? - Register vaccine administration" as UC6
+usecase "US 004 - I want to register the arrival of a SNS user to take the vaccine" as UC7
+usecase "US ??? - Analyse and evaluate center statistics" as UC9
+usecase "US 003 - Register SNS User" as UC10
+usecase "US 012 - Specify new Vaccine Type" as UC11
+usecase "US 013 - Specify new Vaccine and its administration process " as UC12
+usecase "US 010 - Register employees" as UC13
+usecase "US 009 - Register vaccination center" as UC14
+usecase "US ??? - Send recovery time notification" as UC15
+usecase "US 014 - Load set of users from CSV file" as UC16
+
+user --> UC1
+user --> UC3
+nurse --> UC4
+nurse --> UC5
+nurse --> UC6
+re --> UC7
+cc --> UC9
+re --> UC10
+adm --> UC11
+adm --> UC12
+adm --> UC13
+adm --> UC14
+tim --> UC15
+adm -[#0000FF]-> UC16
+re -[#0000FF]-> UC1
+
+
+
+@enduml

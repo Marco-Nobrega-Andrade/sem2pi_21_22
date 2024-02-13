@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+Class WaitingUser{
+-User
+-Time
+}
+
+class Center{
+
+-Name
+-Address
+-Phone number
+-E-mail address
+-Fax number
+-Website address
+-Opening and closing hours
+-Slot duration
+-Max number of vaccines given per slot
+}
+
+Center "1"-left- "*"WaitingUser : > has
+
+@enduml

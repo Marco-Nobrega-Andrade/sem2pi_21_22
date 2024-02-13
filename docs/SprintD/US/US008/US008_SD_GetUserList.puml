@@ -1,0 +1,90 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+[o-> ":VaccineAdministrationController": getWaitingUser(snsNumber);
+
+participant ":WaitingUserStore" as STORE
+participant ":UserMapper" as MAP
+participant ":userListDTO: List<UserListDTO>" as ULDTO
+participant ":userList: List<UserList>" as UL
+participant ":user: User" as U
+participant ":userDTO: UserDTO" as UDTO
+
+activate ":VaccineAdministrationController"
+
+":VaccineAdministrationController" -> STORE: getUserList()
+
+activate STORE
+
+
+
+STORE -> MAP: toDTO(userList)
+
+activate MAP
+
+MAP -> ULDTO**: userListDTO = create()
+
+loop for each user in the user list
+
+MAP -> UL: user = get(i)
+activate UL
+deactivate UL
+
+MAP -> MAP: userDTO = toDTO(user)
+activate MAP
+
+MAP -> U : id = getId()
+
+activate U
+deactivate U
+
+MAP -> U : name = getName()
+
+activate U
+deactivate U
+
+MAP -> U : sex = getSex()
+
+activate U
+deactivate U
+
+MAP -> U : birthDate = getBirthDate()
+
+activate U
+deactivate U
+
+MAP -> U : address = getAdress()
+
+activate U
+deactivate U
+
+MAP -> U : phoneNumber = getPhoneNumber()
+
+activate U
+deactivate U
+
+MAP -> U : eMail = getEmail()
+
+activate U
+deactivate U
+
+MAP -> U : snsNumber = getSnsNumber()
+
+activate U
+deactivate U
+
+MAP -> U : ccNumber = getCcNumber()
+
+activate U
+deactivate U
+
+MAP -> UDTO**: userDTO = create(name, address, sex, phoneNumber, eMail, birthDate, snsNumber, ccNumber)
+
+deactivate MAP
+MAP -> ULDTO: add(userDTO)
+end
+deactivate MAP
+deactivate STORE
+@enduml

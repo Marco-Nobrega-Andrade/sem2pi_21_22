@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="288px" preserveAspectRatio="none" style="width:465px;height:288px;background:#FFFFFF;" version="1.1" viewBox="0 0 465 288" width="465px" zoomAndPan="magnify"><defs><filter height="300%" id="f125wg3k505k0d" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="53" x2="53" y1="41.6094" y2="243.7188"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="423" x2="423" y1="41.6094" y2="243.7188"/><rect fill="#FEFECE" filter="url(#f125wg3k505k0d)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="92" x="5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="12" y="26.5332">Receptionist</text><rect fill="#FEFECE" filter="url(#f125wg3k505k0d)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="92" x="5" y="242.7188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="12" y="264.252">Receptionist</text><rect fill="#FEFECE" filter="url(#f125wg3k505k0d)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="60" x="391" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="46" x="398" y="26.5332">System</text><rect fill="#FEFECE" filter="url(#f125wg3k505k0d)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="60" x="391" y="242.7188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="46" x="398" y="264.252">System</text><polygon fill="#A80036" points="411,69.9609,421,73.9609,411,77.9609,415,73.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="53" x2="417" y1="73.9609" y2="73.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="266" x="60" y="69.1045">1 Request the confirmation of the appointment</text><polygon fill="#A80036" points="64,100.3125,54,104.3125,64,108.3125,60,104.3125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="58" x2="422" y1="104.3125" y2="104.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="185" x="70" y="99.4561">1.1 Request data (SNS number)</text><polygon fill="#A80036" points="411,130.6641,421,134.6641,411,138.6641,415,134.6641" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="53" x2="417" y1="134.6641" y2="134.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="68" x="60" y="129.8076">1 Type data</text><polygon fill="#A80036" points="64,161.0156,54,165.0156,64,169.0156,60,165.0156" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="58" x2="422" y1="165.0156" y2="165.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="151" x="70" y="160.1592">1.1 Confirmation response</text><polygon fill="#A80036" points="411,191.3672,421,195.3672,411,199.3672,415,195.3672" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="53" x2="417" y1="195.3672" y2="195.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="346" x="60" y="190.5107">2 Confirm attendance of a sns user in the center vaccination</text><polygon fill="#A80036" points="64,221.7188,54,225.7188,64,229.7188,60,225.7188" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="58" x2="422" y1="225.7188" y2="225.7188"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="142" x="70" y="220.8623">2.1 Register attendance.</text><!--MD5=[ec5fc748c11ea7147cd3cbe8ad26d747]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+
+Receptionist -> System: 1 Request the confirmation of the appointment
+Receptionist <- - System: 1.1 Request data (SNS number)
+Receptionist -> System: 1 Type data
+Receptionist <- - System: 1.1 Confirmation response
+Receptionist -> System: 2 Confirm attendance of a sns user in the center vaccination
+Receptionist <- - System: 2.1 Register attendance.
+
+@enduml
+
+@startuml
+
+
+
+Receptionist -> System: 1 Request the confirmation of the appointment
+Receptionist <- - System: 1.1 Request data (SNS number)
+Receptionist -> System: 1 Type data
+Receptionist <- - System: 1.1 Confirmation response
+Receptionist -> System: 2 Confirm attendance of a sns user in the center vaccination
+Receptionist <- - System: 2.1 Register attendance.
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

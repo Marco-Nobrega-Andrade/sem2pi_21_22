@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="566px" preserveAspectRatio="none" style="width:185px;height:566px;background:#FFFFFF;" version="1.1" viewBox="0 0 185 566" width="185px" zoomAndPan="magnify"><defs><filter height="300%" id="f4pgj7yl7ill9" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[107cfa23aa516ff83d0cf17a6f9fe7ba]
+class VaccineAdministration--><rect codeLine="5" fill="#FEFECE" filter="url(#f4pgj7yl7ill9)" height="212.9609" id="VaccineAdministration" style="stroke:#A80036;stroke-width:1.5;" width="128" x="7" y="118"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="122" x="10" y="135.457">VaccineAdministration</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="134" y1="143.0938" y2="143.0938"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="151.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="27" y="158.5127">vaccinationCenter</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="164.9297"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="65" x="27" y="172.3486">vaccineName</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="178.7656"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="55" x="27" y="186.1846">snsNumber</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="192.6016"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="61" x="27" y="200.0205">doseNumber</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="206.4375"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="48" x="27" y="213.8564">lotNumber</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="220.2734"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="66" x="27" y="227.6924">scheduleData</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="234.1094"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="66" x="27" y="241.5283">scheduleTime</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="247.9453"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="52" x="27" y="255.3643">arrivalDate</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="261.7813"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="52" x="27" y="269.2002">arrivalTime</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="275.6172"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="27" y="283.0361">administrationDate</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="289.4531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="27" y="296.8721">administrationTime</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="303.2891"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="56" x="27" y="310.708">leavingDate</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="317.125"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="56" x="27" y="324.5439">leavingDate</text><!--MD5=[4926c5a35c9f15a37b9ee1244909f72d]
+class Reports--><rect codeLine="21" fill="#FEFECE" filter="url(#f4pgj7yl7ill9)" height="33.0938" id="Reports" style="stroke:#A80036;stroke-width:1.5;" width="50" x="46" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="44" x="49" y="24.457">Reports</text><line style="stroke:#A80036;stroke-width:1.5;" x1="47" x2="95" y1="32.0938" y2="32.0938"/><!--MD5=[bc9474904c93394f6b59770801b96c22]
+class SNS User--><rect codeLine="24" fill="#FEFECE" filter="url(#f4pgj7yl7ill9)" height="143.7813" id="SNS User" style="stroke:#A80036;stroke-width:1.5;" width="122" x="10" y="409"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="55" x="43.5" y="426.457">SNS User</text><line style="stroke:#A80036;stroke-width:1.5;" x1="11" x2="131" y1="434.0938" y2="434.0938"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="18" y="442.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="27" x="30" y="449.5127">Name</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="18" y="455.9297"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="42" x="30" y="463.3486">Address</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="18" y="469.7656"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="24" x="30" y="477.1846">Email</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="18" y="483.6016"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="19" x="30" y="491.0205">Sex</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="18" y="497.4375"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="30" y="504.8564">Phone number</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="18" y="511.2734"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="46" x="30" y="518.6924">Birth date</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="18" y="525.1094"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="86" x="30" y="532.5283">SNS User number</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="18" y="538.9453"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="96" x="30" y="546.3643">Citizen card number</text><!--MD5=[a563a6d650995c0e82d19f4bfc5a6d26]
+link Reports to VaccineAdministration--><path codeLine="36" d="M71,40.12 C71,57.52 71,87.27 71,117.79 " fill="none" id="Reports-VaccineAdministration" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="76,84.1758,78.9389,75.1307,73.0611,75.1307,76,84.1758" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="51" x="85" y="84.4951">Requires</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="62.8844" y="61.5038">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="50.2969" y="107.2333">1..*</text><!--MD5=[808a101a881f8e53230a9271a2dc5ec3]
+link VaccineAdministration to SNS User--><path codeLine="37" d="M71,331.22 C71,357.3 71,384.63 71,408.65 " fill="none" id="VaccineAdministration-SNS User" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="76,375.1758,78.9389,366.1307,73.0611,366.1307,76,375.1758" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="85" y="375.4951">administered on</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="63.7648" y="352.436">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="63.6555" y="398.2637">1</text><!--MD5=[5906a24dff292411be32ea40a00f4b31]
+@startuml
+hide methods
+hide circles
+
+
+class VaccineAdministration{
+- vaccinationCenter
+- vaccineName
+- snsNumber
+- doseNumber
+- lotNumber
+- scheduleData
+- scheduleTime
+- arrivalDate
+- arrivalTime
+- administrationDate
+- administrationTime
+- leavingDate
+- leavingDate
+}
+
+class Reports{
+}
+
+class "SNS User"{
+- Name
+- Address
+- Email
+- Sex
+- Phone number
+- Birth date
+- SNS User number
+- Citizen card number
+}
+
+
+Reports"1"- -"1..*"VaccineAdministration: > Requires
+"SNS User""1" -UP- "1"VaccineAdministration : < administered on
+
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

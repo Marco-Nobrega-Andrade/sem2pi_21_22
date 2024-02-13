@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+
+class "SNS User"{
+- Name
+- Address
+- Email
+- Sex
+- Phone number
+- Birth date
+- SNS User number
+- Citizen card number
+}
+
+class Administrator{
+}
+
+class Company{
+- Designation
+}
+
+
+Company"1" -right- "1..*""SNS User" : has
+Company"1"--"1..*"Administrator : owns
+
+
+@enduml

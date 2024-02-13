@@ -1,0 +1,183 @@
+@startuml
+package app.ui.gui{
+class ImportLegacySystemDataUI
+}
+package app.controller {
+class ImportLegacySystemDataController
+class App
+}
+
+package app.domain.model {
+
+class Company
+package Vaccine {
+class VaccineStore
+}
+
+package User {
+class UserStore
+class User
+}
+package VaccineAdministration {
+class VaccineAdministrationStore
+class VaccineAdministrationMapper
+class VaccineAdministrationDTO
+class VaccineAdministration
+}
+package SortingAlgorithms {
+interface SortingAlgorithm
+class MergeSort
+class BubbleSort
+}
+}
+
+class ImportLegacySystemDataUI{
++ run()
+}
+
+class ImportLegacySystemDataController{
+- app : App
+- vaccineAdministrationsListToSort : ArrayList<VaccineAdministration>
++ importVaccineAdministrations(vaccineAdministrationsStringList : List<String>)
+- getIntFromDoseString(doseString : String) : int
+- getDateFromDateTimeString(str : String) : Date
+- getTimeFromDateTimeString(str : String) : Time
++ sortVaccineAdministration(criteria : String ,order : String) : ArrayList<VaccineAdministrationDTO>
++ clearList() : void
+}
+
+class App{
++ getInstance()
++ geCompany()
+}
+
+class Company {
++getUserStore() : UserStore
++getVaccineStore() : VaccineStore
++getActorCenter() : VaccinationCenter
+}
+
+class VaccineStore{
++getVaccineByName(vaccineName : String) : Vaccine
+}
+
+class UserStore {
++ getUserBySnsNumber(snsNumber : int) : User
+}
+
+class User {
++ createNewVaccineAdministration(vaccineAdministrationDTO : VaccineAdministrationDTO) : VaccineAdministration
++ checkForDuplicateAdministration(vaccineAdministration : VaccineAdministration) : void
++ saveNewVaccineAdministration(vaccineAdministration : VaccineAdministration) : void
+}
+
+class VaccineAdministrationStore {
++ createNewVaccineAdministration(vaccineAdministrationDTO : VaccineAdministrationDTO) : VaccineAdministration
++ checkForDuplicateAdministration(vaccineAdministration : VaccineAdministration) : void
++ saveNewVaccineAdministration(vaccineAdministration : VaccineAdministration) : void
+}
+
+class VaccineAdministrationMapper {
++ toModel(vaccineAdministrationDTO : VaccineAdministrationDTO) : VaccineAdministration
++ toDTO (vaccineAdministrationsList : ArrayList<VaccineAdministration>) : ArrayList <VaccineAdministrationDTO>
+- toDTO (vaccineAdministration : VaccineAdministration) : vaccineAdministrationDTO
+}
+
+class VaccineAdministrationDTO {
+- vaccinationCenter : VaccinationCenter
+- vaccineName : VaccineName
+- snsNumber : int
+- doseNumber : int
+- lotNumber : String
+- scheduleData : Data
+- scheduleTime : Time
+- arrivalDate : Date
+- arrivalTime : Time
+- administrationDate : Date
+- administrationTime : Time
+- leavingDate : Date
+- leavingDate : Time
++ getVaccinationCenter() : VaccinationCenter
++ getVaccineName() : VaccineName
++ getSnsNumber() : int
++ getDoseNumber() : int
++ getLotNumber() : String
++ getScheduleData() : Data
++ getScheduleTime() : Time
++ getArrivalDate() : Date
++ getArrivalTime() : Time
++ getAdministrationDate() : Date
++ getAdministrationTime() : Time
++ getLeavingDate() : Date
++ getLeavingDate() : Time
+}
+
+class VaccineAdministration {
++ getVaccinationCenter() : VaccinationCenter
++ getVaccineName() : VaccineName
++ getSnsNumber() : int
++ getDoseNumber() : int
++ getLotNumber() : String
++ getScheduleData() : Data
++ getScheduleTime() : Time
++ getArrivalDate() : Date
++ getArrivalTime() : Time
++ getAdministrationDate() : Date
++ getAdministrationTime() : Time
++ getLeavingDate() : Date
++ getLeavingDate() : Time
+- vaccinationCenter : VaccinationCenter
+- vaccineName : VaccineName
+- snsNumber : int
+- doseNumber : int
+- lotNumber : String
+- scheduleData : Data
+- scheduleTime : Time
+- arrivalDate : Date
+- arrivalTime : Time
+- administrationDate : Date
+- administrationTime : Time
+- leavingDate : Date
+- leavingDate : Time
+
+}
+
+interface SortingAlgorithm {
++ sortList(criteria : String, order : String,  list : VaccineAdministration[]) : ArrayList<VaccineAdministration>
+}
+
+class MergeSort {
++ sortList(criteria : String, order : String,  list : VaccineAdministration[]) : ArrayList<VaccineAdministration>
+- sortListByCriteria(order : String, list : VaccineAdministration[], comparator : Comparator<VaccineAdministration>) : ArrayList<VaccineAdministration>
+- mergeSort(list : VaccineAdministration[], comparator : Comparator<VaccineAdministration>) : VaccineAdministration[]
+- merge(list : VaccineAdministration[],  leftHalf : VaccineAdministration[],  rightHalf : VaccineAdministration[],  comparator : Comparator<VaccineAdministration>) : VaccineAdministration[]
+}
+
+class BubbleSort {
++ sortList(criteria : String, order : String,  list : VaccineAdministration[]) : ArrayList<VaccineAdministration>
+- sortListByCriteria(order : String, list : VaccineAdministration[], comparator : Comparator<VaccineAdministration>) : ArrayList<VaccineAdministration>
+- bubbleSort(list : VaccineAdministration[], comparator : Comparator<VaccineAdministration>) : VaccineAdministration[]
+}
+
+BubbleSort ..|> SortingAlgorithm
+MergeSort ..|> SortingAlgorithm
+ImportLegacySystemDataUI ..> ImportLegacySystemDataController
+ImportLegacySystemDataController .left.> App
+ImportLegacySystemDataController ..> Company
+ImportLegacySystemDataController ..> VaccineStore
+ImportLegacySystemDataController ..> UserStore
+ImportLegacySystemDataController ..> VaccineAdministrationStore
+ImportLegacySystemDataController ..> User
+ImportLegacySystemDataController .right.> SortingAlgorithm
+ImportLegacySystemDataController .right.VaccineAdministrationMapper
+UserStore --> User
+User --> VaccineAdministrationStore
+VaccineAdministrationStore --> VaccineAdministration
+Company --> UserStore
+Company --> VaccineStore
+App --> Company
+VaccineAdministrationMapper ..> VaccineAdministrationStore
+VaccineAdministrationMapper ..> VaccineAdministrationDTO
+VaccineAdministrationMapper ..> VaccineAdministration
+
+@enduml

@@ -1,0 +1,131 @@
+@startuml
+
+
+
+
+package app.ui.console{
+class DailyReportUI{
++ run()
+}
+}
+package app.controller{
+class DailyReportController{
++DailyReportController()
++createReport()
+}
+
+class App{
++getInstance()
++getCompany()
+}
+}
+package app.domain.model{
+
+package app.domain.model.Report{
+interface Reports{
++checkTotalNumberOfPeopleVaccinatedToday(centerList,userList)
++createStringWithInformation(center,total)
+}
+class DailyReportOfPeopleVaccinatedPerCenter{
++checkTotalNumberOfPeopleVaccinatedToday(centerList,userList)
++createStringWithInformation(center,total)
+}
+}
+class Company {
+-VaccinationCenterStore getVaccinationCenterStore
+-UserStore userStore
++getUserStore()
++getVaccinationCenterStore()
+}
+
+package app.domain.model.VaccinationCenter{
+class VaccinationCenterStore {
+-ArrayList vaccinationCenterList
++getAllVaccinationCenters()
+}
+
+class VaccinationCenter{
+-String: name
+-String: address
+-String: phoneNumber
+-Email: email
+-String: faxNumber
+-String: websiteAddress
+-Time: openingHours
+-Time: closingHours
+-String: slotDuration
+-String: maximumNumVaccinesSlot
+-boolean: isHealthcareCenter
+-VaccineScheduleStore: vaccineScheduleStore
+-WaitingUser: waitingListStore
++equalsVaccinationCenter(vaccinationCenter)
+}
+}
+
+package app.domain.model.User{
+class UserStore{
+-ArrayList: usersList
++getUserList()
+}
+
+class User{
+-int: id
+-String: name
+-String: sex
+-Date: birthDate
+-String: address
+-int: phoneNumber
+-Email: eMail
+-int: snsNumber
+-int: ccNumber
+-VaccineAdministrationStore vaccineAdministrationStore
++getvaccineAdministrationStore()
+}
+}
+
+package app.domain.model.VaccineAdministration{
+class VaccineAdministrationStore{
+-ArrayList: vaccineAdministrationList
++checkIfUserWasVaccinatedToday(center)
+}
+
+
+class VaccineAdministration{
+- vaccinationCenter : VaccinationCenter
+- vaccineName : VaccineName
+- snsNumber : int
+- doseNumber : int
+- lotNumber : String
+- scheduleData : Data
+- scheduleTime : Time
+- arrivalDate : Date
+- arrivalTime : Time
+- administrationDate : Date
+- administrationTime : Time
+- leavingDate : Date
+- leavingDate : Time
++getVaccinationCenter()
++getAdministrationDate()
+}
+}
+
+
+DailyReportUI--> DailyReportController
+DailyReportController...> App
+App->Company
+DailyReportController..> Company
+Company-->UserStore
+DailyReportController..> UserStore
+Company --> VaccinationCenterStore
+DailyReportController..> VaccinationCenterStore
+DailyReportController ..> Reports
+UserStore -> User
+
+Reports <|.. DailyReportOfPeopleVaccinatedPerCenter
+DailyReportOfPeopleVaccinatedPerCenter..> User
+User--> VaccineAdministrationStore
+VaccineAdministrationStore-->VaccineAdministration
+DailyReportOfPeopleVaccinatedPerCenter..>VaccineAdministrationStore
+VaccineAdministration..>VaccinationCenter
+
+@enduml

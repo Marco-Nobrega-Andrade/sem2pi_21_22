@@ -1,0 +1,117 @@
+@startuml
+hide methods
+hide circle
+
+class Administrator{
+}
+
+class Nurse{
+}
+
+class "SNS User"{
+- SNS Number
+}
+
+class Coordinator{
+}
+
+class Receptionist{
+}
+
+class Vaccine{
+- designation
+- ageGroups
+- dosage
+- numberOfDoses
+- intervalBetweenDoses
+}
+
+class VaccineType{
+}
+
+class VaccineSchedule{
+- Center
+- Time
+- Date
+- SNS Number
+}
+
+class Company{
+- Designation
+}
+
+class CommunityMassVaccinationCenter{
+}
+
+class HealthCareCenter{
+}
+
+class Employee{
+}
+
+class Center{
+
+-Name
+-Address
+-Phone number
+-E-mail address
+-Fax number
+-Website address
+-Opening and closing hours
+-Slot duration
+-Max number of vaccines given per slot
+}
+
+class VaccineAdministration{
+- Vaccine
+- Lot number
+}
+
+class CenterStatistics{
+}
+
+class Arrival{
+}
+
+class Notification{
+-Message
+}
+
+class EmailNotification{
+}
+
+class SMSNotification{
+}
+
+class RecoveryPeriod{
+}
+class VaccineCertificate
+
+Nurse"1..*" -up- "1"Employee : > is an
+Receptionist"1..*" -up- "1"Employee : > is an
+Administrator"1..*" -up- "1"Employee : > is an
+Coordinator"1..*" -up- "1"Employee : > is an
+Receptionist"1..*" -down- "1        "Arrival : > registers
+Center "1"-left- "*"Arrival : > has
+Center"1" -down- "1..*"CenterStatistics : has
+CommunityMassVaccinationCenter"1..*" -up- "1"Center : > is a
+HealthCareCenter"1..*" -up- "1"Center : > is a
+Company"1" -left- "1..*"Employee : > has
+Company"1" -down- "1..*"Center : has
+Company"1" -right- "1..*""SNS User" : has
+"SNS User" "1" -down- "*"VaccineSchedule : < created for
+"SNS User""1" -down- "1"VaccineAdministration : < administered on
+VaccineAdministration"1" -down- "1..*"Vaccine : of
+Vaccine"1" -left- "1..*"VaccineType : > of
+VaccineType"1..*" -left- "1..*"Center : > administered in
+Arrival"1   "-up- "1"VaccineSchedule : > depends from
+VaccineSchedule"*" -down- "1"VaccineType : for taking
+Nurse"1" -right- "1..*"VaccineAdministration : < administrated by
+Notification"1" -- "1"SMSNotification : < is a
+Notification"1" -- "1"EmailNotification : < is a
+VaccineSchedule"1" -right- "0..1"Notification : > gives
+RecoveryPeriod"1" -right- "1"Notification : gives
+RecoveryPeriod"1" -left- "1"VaccineAdministration : > given by
+"SNS User" "*" -right- "0..1"VaccineCertificate : requests
+Nurse "1..*" -down- "1"VaccineCertificate : issues
+@enduml

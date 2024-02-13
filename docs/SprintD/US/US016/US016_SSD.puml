@@ -1,0 +1,17 @@
+@startuml
+autonumber
+
+actor "Coordinator" as Cor
+participant ":System" as System
+
+activate Cor
+Cor -> System : asks to analyze the performance of the center
+activate System
+System --> Cor : requests data (date, timeIntervals, algorithmUsed)
+deactivate System
+Cor -> System : selects the requested data
+activate System
+System --> Cor : shows the data
+deactivate System
+
+@enduml

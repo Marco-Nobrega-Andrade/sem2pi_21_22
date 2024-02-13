@@ -1,0 +1,63 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Receptionist" as rec
+participant ":RegisterNewSNSUserUI" as ui
+participant ":RegisterNewSNSUserController" as ctrl
+participant ":Company" as comp
+participant "store:SNSUserStore" as store
+participant "user: SNSUser" as user
+participant ":AuthFacade" as auth
+participant ":PwdGenerator" as pwd
+
+
+
+activate rec
+rec -> ui : stats registering a new SNS User
+activate ui
+ui --> rec : requests data (name, address, sex (optional), phone number, e-mail, birth date, SNS User number and citizen card number)
+deactivate ui
+
+
+
+rec -> ui : types the requested data
+activate ui
+ui -> ctrl : createSNSUser(name, address, sex, phone number, e-mail, birth date, SNS User number, citizen card number)
+activate ctrl
+ctrl -> comp : store = getSNSUserStore()
+ctrl -> store : user = createSNSUser(name, address, sex, phone number, e-mail, birth date, SNS User number, citizen card number)
+activate store
+store --> user : create(name, address, sex, phone number, e-mail, birth date, SNS User number, citizen card number)
+activate user
+deactivate user
+deactivate store
+deactivate ctrl
+ui --> rec : shows all data and requests confirmation
+deactivate ui
+
+
+rec -> ui : confirms data
+activate ui
+ui -> ctrl : saveSNSUser()
+activate ctrl
+ctrl -> store : saveSNSUser(user)
+activate store
+store -> store : validateSNSUser(user)
+activate store
+deactivate store
+store -> user : nome = getNome()
+store -> user : email = getEmail()
+store -> pwd : pwd = generatePwd()
+store -> auth : boolean = addUserWithRole(name, email, pwd, "SNS_USER")
+store -> store : addSNSUser(user)
+activate store
+deactivate store
+deactivate store
+deactivate ctrl
+
+ui --> rec : informs operation success
+deactivate ui
+deactivate rec
+@enduml

@@ -1,0 +1,34 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class EmployeeUI{
++findEmployeeRole(Role)
+}
+
+class EmployeeController{
++findEmployeeRole(Role)
+}
+
+class Company{
+-designation
+-employees
++findEmployeeRole(Role)
+}
+
+class EmployeeStore{
++findEmployeeRole(Role)
+}
+
+class Employee{
+-name
+-citizenCardNumber
+-role
+}
+
+EmployeeUI "1\n\nuses"...> "1"EmployeeController
+EmployeeController ..> Company
+Company "1\n\n has"---> "1..*"Employee
+Company "\n1 has" -up-> "1" EmployeeStore
+EmployeeController ..> EmployeeStore
+
+@enduml

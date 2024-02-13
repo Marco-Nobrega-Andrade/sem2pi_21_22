@@ -1,0 +1,23 @@
+@startuml
+participant Coordinator as coord
+participant ":System" as sy
+autonumber
+
+
+activate  coord
+
+coord -> sy : Asks to import data from a legacy system
+activate sy
+sy --> coord : Requests data (file path)
+deactivate sy
+
+coord -> sy : Types requested data
+activate sy
+sy --> coord : Shows sorting criteria options
+deactivate sy
+
+coord -> sy : Chooses sorting criteria
+activate sy
+sy --> coord : Shows all data sorted
+deactivate sy
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+Nurse -> System: 1.Chooses to get a vaccination certificate and types the user's data and requests it
+
+alt is already vaccinated
+System --> Nurse: 1.1 Creates a file with the certificate
+else isn't vaccinated
+System --> Nurse: 1.1 Shows a text that the user isn't vaccinated
+
+end
+
+@enduml
+
+
+
+

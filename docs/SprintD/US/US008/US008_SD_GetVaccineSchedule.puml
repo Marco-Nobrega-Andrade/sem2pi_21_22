@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant "VaccineAdministrationController" as CTRL
+participant "VaccinationCenter" as VC
+participant ":VaccineScheduleStore" as STORE
+participant ":VaccineSchedule" as VS
+participant ":VaccineScheduleDTO" as DTO
+
+[o-> CTRL : getVaccineSchedule(snsNumber);
+
+activate CTRL
+
+CTRL -> VC: vaccineScheduleStore = getVaccineScheduleStore()
+
+activate VC
+deactivate VC
+
+CTRL -> STORE: checkIfThereIsAnAppointment(snsNumber)
+activate STORE
+STORE -> VS : time = getTime()
+activate VS
+deactivate VS
+STORE -> VS : date = getDate()
+activate VS
+deactivate VS
+STORE -> VS : vaccineType = getVaccineType()
+activate VS
+deactivate VS
+STORE -> VS : snsNumber = getSnsNumber()
+activate VS
+deactivate VS
+STORE -> "dto: VaccineScheduleDto" **: VaccineScheduleDTO(snsNumber, vaccineType, date, time)
+deactivate STORE
+deactivate CTRL
+@enduml

@@ -1,0 +1,378 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+package ui <<Folder>> {
+    package console <<Folder>> {
+        class VaccineAdministrationUI{
+            +run()
+        }
+    }
+}
+
+package Controller <<Folder>> {
+     class VaccineAdministrationController{
+         -App app;
+         -VaccinationCenter actorCenter;
+     }
+     class App{
+         -Company company
+         +getInstance()
+         +getCompany()
+     }
+}
+
+class Company{
+    -VaccinationCenter actorCenter;
+    -VaccineStore
+    +getActorCenter()
+    +getVaccineStore()
+}
+
+package VaccinatiionCenter <<Folder>>{
+    class VaccinationCenter{
+        -String name;
+        -String address;
+        -String phoneNumber;
+        -Email email;
+        -String faxNumber;
+        -String websiteAddress;
+        -Time openingHours;
+        -Time closingHours;
+        -String slotDuration;
+        -String maximumNumVaccinesSlot;
+        -boolean isHealthcareCenter;
+        -WaitingUserStore waitingUserStore
+        +getWaitingUserStore()
+        +getVaccineScheduleStore()
+    }
+}
+
+package WaitingUser <<Folder>> {
+    class WaitingUserStore {
+        -ArrayList<WaitingUser> waitingUsersList;
+        +getWaitingUser(snsNumber);
+        +getUserList()
+    }
+
+    class WaitingUserMapper{
+        +toDTO(ArrayList<WaitingUser> waitingUsersList)
+        +toDTO(WaitingUser waitingUser)
+    }
+
+    class WaitingUserDTO{
+        -User user;
+        -Time arrivalTime;
+        +getArrivalTime()
+        +getUser()
+        +setUser(User user)
+        +setArrivalTime(Time arrivalTime)
+        +toString()
+    }
+
+    class WaitingUser{
+        -User user;
+        -Time arrivalTime;
+        +getArrivalTime()
+        +getUser()
+        +setUser(User user)
+        +setArrivalTime(Time arrivalTime)
+    }
+}
+
+package VaccineSchedule <<Folder>> {
+
+    class VaccineScheduleStore{
+        -ArrayList<VaccineSchedule> vaccineSchedulesList
+        +checkIfThereIsAnAppointment(snsNumber)
+    }
+
+    class VaccineSchedule{
+        -int snsNumber
+        -VaccineType vaccineType
+        -Date date
+        -Time time
+        +getTime()
+        +getDate()
+        +getVaccineType()
+        +getSnsNumber()
+        +setTime(time)
+        +setDate(date)
+        +set(vaccineType)
+        +set(snsNumber)
+    }
+
+    class VaccineScheduleDTO{
+        -int snsNumber
+        -VaccineType vaccineType
+        -Date date
+        -Time time
+        +getTime()
+        +getDate()
+        +getVaccineType()
+        +getSnsNumber()
+        +setTime(time)
+        +setDate(date)
+        +set(vaccineType)
+        +set(snsNumber)
+        +toString()
+    }
+
+}
+
+package Vaccine <<Folder>> {
+
+    class VaccineStore{
+        -ArrayList<Vaccine> vaccineList
+        +getVaccineByType()vaccineType
+        +selectVaccine(i)
+        +verifyDose(doseNumber, vaccineDTO)
+        +verifyLotNumber(lotNumber)
+    }
+
+    class Vaccine{
+        -VaccineTypeDTO vaccineType
+        -String brand
+        -int numDifAgeGroup
+        -ArrayList<Integer> ageGroup
+        -ArrayList<Double> dosageList
+        -int numberOfDoses
+        -ArrayList<Integer> intervalBetweenDosesList
+        +getVaccineType()
+        +getBrand()
+        +getNumDifAgeGroup()
+        +getAgeGroup()
+        +getDosageList()
+        +getNumberOfDoses()
+        +getIntervalBetweenDosesList(intervalBetweenDosesList)
+        +setVaccineType(vaccineType)
+        +setBrand(brand)
+        +setNumDifAgeGroup(numDifAgeGroup)
+        +setAgeGroup(ageGroup)
+        +setDosageList(dosageList)
+        +setNumberOfDoses(numberOfDoses)
+        +setIntervalBetweenDosesList(intervalBetweenDosesList)
+    }
+
+    class VaccineMapper{
+        toDTO(ArrayList<Vaccine> vaccineList)
+        toDTO(Vaccine vaccine)
+    }
+
+    class VaccineDTO{
+        -VaccineTypeDTO vaccineType
+        -String brand
+        -int numDifAgeGroup
+        -ArrayList<Integer> ageGroup
+        -ArrayList<Double> dosageList
+        -int numberOfDoses
+        -ArrayList<Integer> intervalBetweenDosesList
+        +getVaccineType()
+        +getBrand()
+        +getNumDifAgeGroup()
+        +getAgeGroup()
+        +getDosageList()
+        +getNumberOfDoses()
+        +getIntervalBetweenDosesList(intervalBetweenDosesList)
+        +setVaccineType(vaccineType)
+        +setBrand(brand)
+        +setNumDifAgeGroup(numDifAgeGroup)
+        +setAgeGroup(ageGroup)
+        +setDosageList(dosageList)
+        +setNumberOfDoses(numberOfDoses)
+        +setIntervalBetweenDosesList(intervalBetweenDosesList)
+        +toString()
+    }
+}
+
+package VaccineAdministration <<Folder>> {
+
+    class HealthRecordsStore{
+        -ArrayList<VaccineAdministration> vaccineAdministration
+        +createVaccineAdministration(VaccineAdministrationDTO vaccineAdministrationDTO)
+        +saveVaccineAdminstration(VaccineAdministration vaccineAdministration)
+        +localValidate(VaccineAdministrationDTO vaccineAdministrationDTO)
+    }
+
+    class VaccineAdministration{
+        -Date scheduleDate
+        -Time scheduleTime
+        -Date arrivalDate
+        -Time arrivalTime
+        -Date administrationDate
+        -Time administrationTime
+        -VaccinationCenter vaccinationCenter
+        -String userName
+        -int snsNumber
+        -String vaccineName
+        -int doseNumber
+        -Date leavingDate
+        -Time leavingTime
+        +getScheduleDate()
+        +getScheduleTime()
+        +getArrivalDate()
+        +getArrivalTime()
+        +getAdministrationDate()
+        +getAdministrationTime()
+        +getVaccinationCenter()
+        +getUserName()
+        +getSnsNumber()
+        +getVaccineName()
+        +getDoseNumber()
+        +getLeavingDate()
+        +getLeavingTime()
+        +setScheduleDate(scheduleDate)
+        +setScheduleTime(scheduleTime)
+        +setArrivalDate(arrivalDate)
+        +setArrivalTime(arrivalTime)
+        +setAdministrationDate(AdministrationDate)
+        +setAdministrationTime(AdministrationTime)
+        +setVaccinationCenter(VaccinationCenter)
+        +setUserName(UserName)
+        +setSnsNumber(SnsNumber)
+        +setVaccineName(VaccineName)
+        +setDoseNumber(DoseNumber)
+        +setLeavingDate(LeavingDate)
+        +setLeavingTime(LeavingTime)
+    }
+
+    class VaccineAdministrationDTO{
+        -Date scheduleDate
+        -Time scheduleTime
+        -Date arrivalDate
+        -Time arrivalTime
+        -Date administrationDate
+        -Time administrationTime
+        -VaccinationCenter vaccinationCenter
+        -String userName
+        -int snsNumber
+        -String vaccineName
+        -int doseNumber
+        -Date leavingDate
+        -Time leavingTime
+        +getScheduleDate()
+        +getScheduleTime()
+        +getArrivalDate()
+        +getArrivalTime()
+        +getAdministrationDate()
+        +getAdministrationTime()
+        +getVaccinationCenter()
+        +getUserName()
+        +getSnsNumber()
+        +getVaccineName()
+        +getDoseNumber()
+        +getLeavingDate()
+        +getLeavingTime()
+        +setScheduleDate(scheduleDate)
+        +setScheduleTime(scheduleTime)
+        +setArrivalDate(arrivalDate)
+        +setArrivalTime(arrivalTime)
+        +setAdministrationDate(AdministrationDate)
+        +setAdministrationTime(AdministrationTime)
+        +setVaccinationCenter(VaccinationCenter)
+        +setUserName(UserName)
+        +setSnsNumber(SnsNumber)
+        +setVaccineName(VaccineName)
+        +setDoseNumber(DoseNumber)
+        +setLeavingDate(LeavingDate)
+        +setLeavingTime(LeavingTime)
+        +toString()
+    }
+}
+
+package User <<Folder>> {
+
+    class UserMapper{
+        +toDTO(userList)
+        +toDTO(user)
+    }
+
+    class UserDTO{
+        -int id
+        -String name
+        -String sex
+        -Date birthDate
+        -String address
+        -int phoneNumber
+        -Email eMail
+        -int snsNumber
+        -int ccNumber
+        +getId()
+        +getName()
+        +getSex()
+        +getBirthDate()
+        +getAddress()
+        +getPhoneNumber()
+        +getEmail()
+        +getSnsNumber()
+        +getCcNumber()
+        +setId(id)
+        +setName(name)
+        +setSex(sex)
+        +setBirthDate(birthDate)
+        +setAddress(address)
+        +setPhoneNumber(phoneNumber)
+        +setEmail(eMail)
+        +setSnsNumber(snsNumber)
+        +setCcNumber(ccNumber)
+        +toString()
+    }
+
+    class User{
+        -int id
+        -String name
+        -String sex
+        -Date birthDate
+        -String address
+        -int phoneNumber
+        -Email eMail
+        -int snsNumber
+        -int ccNumber
+        +getId()
+        +getName()
+        +getSex()
+        +getBirthDate()
+        +getAddress()
+        +getPhoneNumber()
+        +getEmail()
+        +getSnsNumber()
+        +getCcNumber()
+        +setId(id)
+        +setName(name)
+        +setSex(sex)
+        +setBirthDate(birthDate)
+        +setAddress(address)
+        +setPhoneNumber(phoneNumber)
+        +setEmail(eMail)
+        +setSnsNumber(snsNumber)
+        +setCcNumber(ccNumber)
+    }
+}
+
+
+VaccineAdministrationUI .> VaccineAdministrationController
+VaccineAdministrationUI ..> VaccineAdministrationDTO
+VaccineAdministrationController ..> App
+VaccineAdministrationController ..>Company
+VaccineAdministrationController ..> VaccineScheduleStore
+VaccineAdministrationController ..> WaitingUserStore
+VaccineAdministrationController ..> VaccineStore
+Company --> VaccinationCenter
+Company -> VaccineStore
+VaccinationCenter -->WaitingUserStore
+VaccinationCenter --> VaccineScheduleStore
+WaitingUserStore --> WaitingUserMapper
+WaitingUserMapper --> WaitingUser
+WaitingUserMapper --> WaitingUserDTO
+VaccineScheduleStore --> VaccineSchedule
+VaccineScheduleStore --> VaccineScheduleDTO
+VaccineStore --> VaccineMapper
+VaccineMapper --> Vaccine
+VaccineMapper --> VaccineDTO
+WaitingUserStore --> UserMapper
+UserMapper --> User
+UserMapper --> UserDTO
+User --> HealthRecordsStore
+HealthRecordsStore --> VaccineAdministration
+
+
+@enduml

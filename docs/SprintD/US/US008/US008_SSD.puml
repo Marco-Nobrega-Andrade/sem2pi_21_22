@@ -1,0 +1,68 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Nurse" as nurse
+
+activate nurse
+
+nurse -> ":System": Ask to to record the administration of a vaccine to an SNS user
+
+activate ":System"
+
+":System" --> nurse: Request selection of one SNS user
+
+deactivate ":System"
+
+nurse -> ":System": Select SNS user
+
+activate ":System"
+
+":System" --> nurse: Request selection vaccine
+
+deactivate ":System"
+
+nurse -> ":System": Select vaccine
+
+activate ":System"
+
+":System" --> nurse: Request dose number
+
+deactivate ":System"
+
+nurse -> ":System": Type dose number
+
+activate ":System"
+
+":System" --> nurse: Request lot number
+
+deactivate ":System"
+
+nurse -> ":System": Type lot number
+
+activate ":System"
+
+":System" --> nurse: Show input data and request a confirmation
+
+deactivate ":System"
+
+nurse -> ":System": Confirms
+
+activate ":System"
+
+":System" --> nurse: informs operation success and asks if user \nwants to receive a SMS notification
+
+deactivate ":System"
+
+nurse -> ":System": chooses option
+
+activate ":System"
+
+":System" -> nurse: informs operation success
+
+deactivate ":System"
+
+deactivate nurse
+
+@enduml

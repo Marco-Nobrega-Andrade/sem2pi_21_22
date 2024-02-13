@@ -1,0 +1,87 @@
+@startuml
+autonumber
+actor "Coordinator" as Cor
+participant ":AnalyzePerformanceUI" as UI
+participant ":AnalyzePerformanceController" as CTRL
+participant ":App" as APP
+participant ": Company" as COMP
+participant ": UserStore" as US
+participant ": VaccinationCenter" as VC
+participant ": Performance" as P
+participant ": Calendar" as CAL
+participant ": Time" as T
+
+
+
+activate Cor
+Cor -> UI : asks to analyze the performance of the center
+activate UI
+UI -> CTRL ** : AnalyzePerformanceController()
+
+UI --> Cor : requests data (date, timeIntervals)
+deactivate UI
+Cor ->  UI : selects the requested data
+activate UI
+UI -> CTRL : analyzePerformance(date, timeIntervals, algorithmUsed)
+activate CTRL
+CTRL -> APP : app = getInstance()
+activate APP
+deactivate APP
+CTRL -> COMP : vaccinationCenter = getActorCenter()
+activate COMP
+deactivate COMP
+CTRL -> COMP: userStore = getUserStore()
+activate COMP
+deactivate COMP
+CTRL -> US : usersList = getUsersList()
+activate US
+deactivate US
+CTRL -> CTRL : checkIfUsersListIsEmpty()
+activate CTRL
+deactivate CTRL
+
+CTRL -> VC : analyzePerformance(date, timeIntervals, algorithmUsed, usersList)
+ref over VC
+US016_SD_AnalyzePerformance
+end
+activate VC
+deactivate VC
+deactivate CTRL
+
+UI -> CTRL: getPerformanceInfo()
+activate CTRL
+CTRL -> APP : app = getInstance()
+activate APP
+deactivate APP
+CTRL -> COMP : vaccinationCenter = getActorCenter()
+activate COMP
+deactivate COMP
+CTRL -> VC : getPerformanceInfo()
+activate VC
+VC -> P : getPerformanceInfo()
+activate P
+P -> CAL : calendar = getInstance()
+activate CAL
+deactivate CAL
+P -> CAL : setTime()
+activate CAL
+deactivate CAL
+P -> P : convertIndexesToTime(maxSumListIndexes[0])
+activate P
+P -> T : addMinutes(index * timeIntervals)
+activate T
+deactivate T
+deactivate P
+P -> P : convertIndexesToTime(maxSumListIndexes[1])
+activate P
+P -> T : addMinutes(index * timeIntervals)
+activate T
+deactivate T
+deactivate P
+deactivate P
+deactivate VC
+deactivate CTRL
+UI --> Cor : shows the data
+deactivate UI
+
+@enduml

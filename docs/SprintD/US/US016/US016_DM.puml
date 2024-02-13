@@ -1,0 +1,33 @@
+@startuml
+hide circle
+hide methods
+Object Performance{
+}
+
+Object Center{
+-Name
+-Address
+-Phone number
+-E-mail address
+-Fax number
+-Website address
+-Opening and closing hours
+-Slot duration
+-Max number of vaccines given per slot
+-Type of center
+}
+
+
+Object VaccineAdministration{
+- Arrival Time
+- Arrival Date
+- Leaving Time
+- Leaving Date
+}
+
+
+Center"1"-down-"*" Performance : has >
+User "1" -down-"*" VaccineAdministration : has
+Performance "1" -up- "*"VaccineAdministration : analyses >
+VaccineAdministration "*" -down- Center : at
+@enduml

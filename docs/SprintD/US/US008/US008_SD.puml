@@ -1,0 +1,283 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Nurse" as Nurse
+participant ":VaccineAdministrationUI" as UI
+participant ":VaccineAdministrationController" as CTRL
+participant ":App" as APP
+participant ":Company" as COM
+participant ":VaccineStore" as VSTORE
+participant ":WaitingUserStore" as WUSTORE
+participant ":VaccineAdministrationDTO" as VADDTO
+participant "user: UserDTO" as USERDTO
+participant "user: User" as USER
+participant ":HealthRecordsStore" as HRSTORE
+participant ":VaccineAdministration" as VAD
+
+
+activate Nurse
+
+Nurse -> UI: Ask to record the administration of a vaccine to an SNS user
+
+activate UI
+
+UI -> CTRL**: vaccineAdministrationController();
+
+activate CTRL
+
+CTRL -> APP: app = getInstance();
+
+activate APP
+deactivate APP
+
+CTRL -> COM: actorCenter = getActorCenter();
+
+activate COM
+deactivate COM
+
+deactivate CTRL
+
+UI -> CTRL: userList = getUserFromWaitingUserList()
+
+activate CTRL
+
+CTRL -> COM: waitingUserStore = getWaitingUserStore()
+
+activate COM
+deactivate COM
+
+CTRL -> WUSTORE: getUserFromWaitingUserList()
+
+ref over WUSTORE
+This method is represented in "US008_SD_GetUserList"
+end ref
+
+activate WUSTORE
+deactivate WUSTORE
+
+deactivate CTRL
+
+UI -> Nurse: Request selection of one SNS user
+
+deactivate UI
+
+Nurse -> UI: Select SNS user
+
+activate UI
+
+UI -> CTRL: user = getUserByNumber(userList,select);
+
+activate CTRL
+deactivate CTRL
+
+UI -> USERDTO: snsNumber = getSnsNumber()
+
+activate USERDTO
+deactivate USERDTO
+
+UI -> CTRL: age = getAge(user)
+
+activate CTRL
+
+CTRL -> USER: getAge()
+
+activate USER
+deactivate USER
+
+deactivate CTRL
+
+UI -> CTRL: schedule = getVaccineSchedule(snsNumber);
+
+ref over CTRL
+This method is represented in "US008_SD_GetVaccineSchedule"
+end ref
+
+activate CTRL
+deactivate CTRL
+
+UI -> CTRL: arrivalTime = getArrivalTime(snsNumber);
+
+activate CTRL
+
+CTRL -> WUSTORE: checkArrivalTimeBySnsNumber(snsNumber)
+
+activate WUSTORE
+
+deactivate WUSTORE
+
+deactivate CTRL
+
+UI -> CTRL: verifyIfExistVaccinationRecord(vaccineSchedule.getVaccineType(), user)
+
+activate CTRL
+
+CTRL -> USER: verifyIfExistVaccinationRecord(vaccineTypeMapper.toDTO(vaccineType))
+
+activate USER
+
+USER -> HRSTORE: verifyIfExistVaccinationRecord(vaccineTypeMapper.toDTO(vaccineType))
+deactivate CTRL
+
+alt if exist Vaccine Administration Object
+
+UI -> CTRL: vaccine = getVaccine()
+
+activate CTRL
+
+CTRL -> USER: getVaccine()
+
+activate USER
+
+USER -> HRSTORE: getVaccine()
+
+activate HRSTORE
+deactivate HRSTORE
+
+deactivate USER
+
+deactivate CTRL
+
+UI -> CTRL: dose = getNextDose()
+
+activate CTRL
+
+CTRL -> USER: getNextDose()
+
+activate USER
+
+USER -> HRSTORE: getNextDose()
+
+activate HRSTORE
+deactivate HRSTORE
+
+deactivate USER
+
+deactivate CTRL
+
+UI -> CTRL: dosage = getNextDosage()
+
+activate CTRL
+
+CTRL -> USER: getNextDosage()
+
+activate USER
+
+USER -> HRSTORE: getNextDosage()
+
+activate HRSTORE
+deactivate HRSTORE
+
+deactivate USER
+
+deactivate CTRL
+
+end
+
+
+UI -> CTRL: vaccineList = getVaccineByVaccineType(vaccineType)
+
+ref over CTRL
+This method is represented in "US008_SD_GetVaccineList"
+end ref
+
+activate CTRL
+deactivate CTRL
+
+alt if doesn't exist Vaccine Administration Object
+
+UI -> Nurse: Request selection vaccine
+
+deactivate UI
+
+Nurse -> UI: Select vaccine
+
+activate UI
+
+end
+
+UI -> Nurse: Request lot number
+
+deactivate UI
+
+Nurse -> UI: Type lot number
+
+activate UI
+
+UI -> CTRL: verifyLotNumber(user, lotNumber)
+
+activate CTRL
+
+CTRL -> USER: verifyLotNumber(lotNumber)
+
+activate USER
+
+USER -> HRSTORE: verifyLotNumber(lotNumber)
+
+deactivate CTRL
+
+deactivate UI
+
+Nurse -> UI: Confirms
+
+activate UI
+
+UI -> CTRL: administrationTime = getCurrentTime()
+
+activate CTRL
+
+CTRL -> TIME: getCurrentTime()
+
+activate TIME
+
+deactivate TIME
+deactivate CTRL
+
+UI -> VADDTO: vaccineAdministrationDTO = (vaccinationCenter, schedule, arrivalTime, user, vaccine, doseNumber, administrationDate, administrationTime, leavingDate, leavingTime)
+
+activate VADDTO
+deactivate VADDTO
+
+UI -> CTRL: saveVaccineAdministration(vaccineAdministrationDTO)
+
+activate CTRL
+
+CTRL -> USER: createVaccineAdministration(vaccineAdministrationDTO)
+
+activate USER
+
+USER -> HRSTORE: createVaccineAdministration(vaccineAdministrationDTO)
+
+activate HRSTORE
+
+HRSTORE -> HRSTORE: localValidate(vaccineAdministrationDTO)
+
+activate HRSTORE
+deactivate HRSTORE
+
+HRSTORE -> VAD**: vaccineAdministration = createVaccineAdministration(vaccineAdministrationDTO)
+
+HRSTORE -> HRSTORE: saveVaccineAdministration(vaccineAdministration)
+
+activate HRSTORE
+deactivate HRSTORE
+deactivate HRSTORE
+
+deactivate USER
+
+deactivate CTRL
+
+UI --> Nurse : informs operation success and asks if user \nwants to receive a SMS notification
+
+deactivate UI
+
+Nurse -> UI : chooses option
+
+activate UI
+
+UI --> Nurse : informs operation success
+
+deactivate Nurse
+
+@enduml

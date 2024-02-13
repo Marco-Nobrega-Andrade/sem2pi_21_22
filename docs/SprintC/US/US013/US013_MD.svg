@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="248px" preserveAspectRatio="none" style="width:295px;height:248px;background:#FFFFFF;" version="1.1" viewBox="0 0 295 248" width="295px" zoomAndPan="magnify"><defs><filter height="300%" id="fkdw9p62cd8n8" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[02e4b9b7573f1156f41e60aa5b4e25a4]
+class Company--><rect codeLine="4" fill="#FEFECE" filter="url(#fkdw9p62cd8n8)" height="46.9297" id="Company" style="stroke:#A80036;stroke-width:1.5;" width="82" x="7" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="53" x="21.5" y="24.457">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="88" y1="32.0938" y2="32.0938"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="40.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="56" x="27" y="47.5127">Designation</text><!--MD5=[da547346deef918ea16944ba046651ef]
+class Administrator--><rect codeLine="7" fill="#FEFECE" filter="url(#fkdw9p62cd8n8)" height="33.0938" id="Administrator" style="stroke:#A80036;stroke-width:1.5;" width="79" x="155.5" y="14"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="73" x="158.5" y="31.457">Administrator</text><line style="stroke:#A80036;stroke-width:1.5;" x1="156.5" x2="233.5" y1="39.0938" y2="39.0938"/><!--MD5=[19e445fc4d3b48519cbe33da05496394]
+class Vaccine--><rect codeLine="9" fill="#FEFECE" filter="url(#fkdw9p62cd8n8)" height="102.2734" id="Vaccine" style="stroke:#A80036;stroke-width:1.5;" width="136" x="145" y="132"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="43" x="191.5" y="149.457">Vaccine</text><line style="stroke:#A80036;stroke-width:1.5;" x1="146" x2="280" y1="157.0938" y2="157.0938"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="153" y="165.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="55" x="165" y="172.5127">designation</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="153" y="178.9297"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="54" x="165" y="186.3486">ageGroups</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="153" y="192.7656"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="36" x="165" y="200.1846">dosage</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="153" y="206.6016"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="79" x="165" y="214.0205">numberOfDoses</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="153" y="220.4375"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="110" x="165" y="227.8564">intervalBetweenDoses</text><!--MD5=[0e501da62322464167c8ec4d233a6b7e]
+class VaccineType--><rect codeLine="16" fill="#FEFECE" filter="url(#fkdw9p62cd8n8)" height="33.0938" id="VaccineType" style="stroke:#A80036;stroke-width:1.5;" width="75" x="10.5" y="166.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="69" x="13.5" y="183.957">VaccineType</text><line style="stroke:#A80036;stroke-width:1.5;" x1="11.5" x2="84.5" y1="191.5938" y2="191.5938"/><!--MD5=[0e439f75a3d966f965fe5f237a1bacbe]
+link Administrator to Vaccine--><path codeLine="19" d="M196.86,47.04 C199.24,66.94 203.48,102.4 207.02,131.97 " fill="none" id="Administrator-Vaccine" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="207.5939,98.1404,209.4376,88.8102,203.6014,89.5084,207.5939,98.1404" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="43" x="216" y="98.4951">creates</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="189.3168" y="68.7067">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="184.7728" y="121.1695">1..*</text><!--MD5=[d0b477519989ed3601cd00d052224350]
+link Administrator to VaccineType--><path codeLine="20" d="M176.08,47 C163.98,57.16 148.16,70.93 135,84 C107.23,111.57 77.5,146.33 60.98,166.18 " fill="none" id="Administrator-VaccineType" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="136.5266,96.7723,144.9241,92.3077,140.6961,88.2245,136.5266,96.7723" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="43" x="149" y="98.4951">creates</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="161.6534" y="68.6534">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="68.5921" y="155.4962">1..*</text><!--MD5=[7991057a0b57fcb72665747661b5eb1a]
+link VaccineType to Vaccine--><path codeLine="21" d="M85.85,183 C103.36,183 124.71,183 144.87,183 " fill="none" id="VaccineType-Vaccine" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="102.75,171.1758,111.7951,174.1147,111.7951,168.2369,102.75,171.1758" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="10" x="116.75" y="176.4951">of</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="93.4761" y="197.7907">1..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="130.0355" y="179.6244">1</text><!--MD5=[eaea43e34e45c5b9d20b595fc78f1f20]
+link Company to Administrator--><path codeLine="22" d="M89.34,30.5 C110.06,30.5 135.03,30.5 155.49,30.5 " fill="none" id="Company-Administrator" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="30" x="107.25" y="23.9951">owns</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="97.0469" y="26.6564">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="127.5993" y="45.2907">1..*</text><!--MD5=[05986564e1c13a00611587b35563d868]
+link Company to VaccineType--><path codeLine="23" d="M47.47,54.24 C47.28,63.47 47.09,74.25 47,84 C46.72,113.09 47.26,147.05 47.65,166.38 " fill="none" id="Company-VaccineType" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21" x="48" y="98.4951">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="39.4877" y="75.5232">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="24.2216" y="155.7624">1..*</text><!--MD5=[86bfb2705235fd72edbf005dc28456b2]
+@startuml
+hide methods
+hide circle
+
+class Company{
+- Designation
+}
+class Administrator{
+}
+class Vaccine{
+- designation
+- ageGroups
+- dosage
+- numberOfDoses
+- intervalBetweenDoses
+}
+class VaccineType{
+}
+
+Administrator"1" -down- "1..*"Vaccine : > creates
+Administrator"1" -down- "1..*"VaccineType : > creates
+Vaccine"1" -left- "1..*"VaccineType : > of
+Administrator"1..*" -left- "1"Company :  owns
+Company "1" -down- "1..*"VaccineType : has
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

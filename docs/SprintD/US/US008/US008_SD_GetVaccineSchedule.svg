@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="515px" preserveAspectRatio="none" style="width:1403px;height:515px;background:#FFFFFF;" version="1.1" viewBox="0 0 1403 515" width="1403px" zoomAndPan="magnify"><defs><filter height="300%" id="f152izmlm723xa" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f152izmlm723xa)" height="362.4609" style="stroke:#A80036;stroke-width:1.0;" width="10" x="235" y="73.9609"/><rect fill="#FFFFFF" filter="url(#f152izmlm723xa)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="577" y="104.3125"/><rect fill="#FFFFFF" filter="url(#f152izmlm723xa)" height="271.7578" style="stroke:#A80036;stroke-width:1.0;" width="10" x="736.5" y="164.6641"/><rect fill="#FFFFFF" filter="url(#f152izmlm723xa)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="964.5" y="195.0156"/><rect fill="#FFFFFF" filter="url(#f152izmlm723xa)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="964.5" y="255.3672"/><rect fill="#FFFFFF" filter="url(#f152izmlm723xa)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="964.5" y="315.7188"/><rect fill="#FFFFFF" filter="url(#f152izmlm723xa)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="964.5" y="376.0703"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="239.5" x2="239.5" y1="41.6094" y2="470.6797"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="582" x2="582" y1="41.6094" y2="470.6797"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="741" x2="741" y1="41.6094" y2="470.6797"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="969" x2="969" y1="41.6094" y2="470.6797"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1125" x2="1125" y1="41.6094" y2="470.6797"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1304" x2="1304" y1="447.375" y2="470.6797"/><rect fill="#FEFECE" filter="url(#f152izmlm723xa)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="215" x="130.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="201" x="137.5" y="26.5332">VaccineAdministrationController</text><rect fill="#FEFECE" filter="url(#f152izmlm723xa)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="215" x="130.5" y="469.6797"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="201" x="137.5" y="491.2129">VaccineAdministrationController</text><rect fill="#FEFECE" filter="url(#f152izmlm723xa)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="130" x="515" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116" x="522" y="26.5332">VaccinationCenter</text><rect fill="#FEFECE" filter="url(#f152izmlm723xa)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="130" x="515" y="469.6797"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116" x="522" y="491.2129">VaccinationCenter</text><rect fill="#FEFECE" filter="url(#f152izmlm723xa)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="161" x="659" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147" x="666" y="26.5332">:VaccineScheduleStore</text><rect fill="#FEFECE" filter="url(#f152izmlm723xa)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="161" x="659" y="469.6797"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147" x="666" y="491.2129">:VaccineScheduleStore</text><rect fill="#FEFECE" filter="url(#f152izmlm723xa)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="127" x="904" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="911" y="26.5332">:VaccineSchedule</text><rect fill="#FEFECE" filter="url(#f152izmlm723xa)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="127" x="904" y="469.6797"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="911" y="491.2129">:VaccineSchedule</text><rect fill="#FEFECE" filter="url(#f152izmlm723xa)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="157" x="1045" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="1052" y="26.5332">:VaccineScheduleDTO</text><rect fill="#FEFECE" filter="url(#f152izmlm723xa)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="157" x="1045" y="469.6797"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="1052" y="491.2129">:VaccineScheduleDTO</text><rect fill="#FEFECE" filter="url(#f152izmlm723xa)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="173" x="1216" y="469.6797"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159" x="1223" y="491.2129">dto: VaccineScheduleDto</text><rect fill="#FFFFFF" filter="url(#f152izmlm723xa)" height="362.4609" style="stroke:#A80036;stroke-width:1.0;" width="10" x="235" y="73.9609"/><rect fill="#FFFFFF" filter="url(#f152izmlm723xa)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="577" y="104.3125"/><rect fill="#FFFFFF" filter="url(#f152izmlm723xa)" height="271.7578" style="stroke:#A80036;stroke-width:1.0;" width="10" x="736.5" y="164.6641"/><rect fill="#FFFFFF" filter="url(#f152izmlm723xa)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="964.5" y="195.0156"/><rect fill="#FFFFFF" filter="url(#f152izmlm723xa)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="964.5" y="255.3672"/><rect fill="#FFFFFF" filter="url(#f152izmlm723xa)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="964.5" y="315.7188"/><rect fill="#FFFFFF" filter="url(#f152izmlm723xa)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="964.5" y="376.0703"/><ellipse cx="7.5" cy="73.2109" fill="none" rx="4" ry="4" style="stroke:#A80036;stroke-width:1.5;"/><polygon fill="#A80036" points="223,69.9609,233,73.9609,223,77.9609,227,73.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="12" x2="229" y1="73.9609" y2="73.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="15" y="69.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="197" x="26" y="69.1045">getVaccineSchedule(snsNumber);</text><polygon fill="#A80036" points="565,100.3125,575,104.3125,565,108.3125,569,104.3125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="245" x2="571" y1="104.3125" y2="104.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="252" y="99.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="302" x="263" y="99.4561">vaccineScheduleStore = getVaccineScheduleStore()</text><polygon fill="#A80036" points="724.5,160.6641,734.5,164.6641,724.5,168.6641,728.5,164.6641" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="245" x2="730.5" y1="164.6641" y2="164.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="252" y="159.8076">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="246" x="263" y="159.8076">checkIfThereIsAnAppointment(snsNumber)</text><polygon fill="#A80036" points="952.5,191.0156,962.5,195.0156,952.5,199.0156,956.5,195.0156" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="746.5" x2="958.5" y1="195.0156" y2="195.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="753.5" y="190.1592">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="95" x="764.5" y="190.1592">time = getTime()</text><polygon fill="#A80036" points="952.5,251.3672,962.5,255.3672,952.5,259.3672,956.5,255.3672" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="746.5" x2="958.5" y1="255.3672" y2="255.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="753.5" y="250.5107">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="94" x="764.5" y="250.5107">date = getDate()</text><polygon fill="#A80036" points="952.5,311.7188,962.5,315.7188,952.5,319.7188,956.5,315.7188" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="746.5" x2="958.5" y1="315.7188" y2="315.7188"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="753.5" y="310.8623">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="188" x="764.5" y="310.8623">vaccineType = getVaccineType()</text><polygon fill="#A80036" points="952.5,372.0703,962.5,376.0703,952.5,380.0703,956.5,376.0703" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="746.5" x2="958.5" y1="376.0703" y2="376.0703"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="753.5" y="371.2139">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="176" x="764.5" y="371.2139">snsNumber = getSnsNumber()</text><polygon fill="#A80036" points="1204,432.4219,1214,436.4219,1204,440.4219,1208,436.4219" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="741.5" x2="1210" y1="436.4219" y2="436.4219"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="748.5" y="431.5654">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="346" x="759.5" y="431.5654">VaccineScheduleDTO(snsNumber, vaccineType, date, time)</text><rect fill="#FEFECE" filter="url(#f152izmlm723xa)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="173" x="1216" y="414.0703"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159" x="1223" y="435.6035">dto: VaccineScheduleDto</text><!--MD5=[86cb99a05bd3ebc08f205bb36e84cf66]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant "VaccineAdministrationController" as CTRL
+participant "VaccinationCenter" as VC
+participant ":VaccineScheduleStore" as STORE
+participant ":VaccineSchedule" as VS
+participant ":VaccineScheduleDTO" as DTO
+
+[o-> CTRL : getVaccineSchedule(snsNumber);
+
+activate CTRL
+
+CTRL -> VC: vaccineScheduleStore = getVaccineScheduleStore()
+
+activate VC
+deactivate VC
+
+CTRL -> STORE: checkIfThereIsAnAppointment(snsNumber)
+activate STORE
+STORE -> VS : time = getTime()
+activate VS
+deactivate VS
+STORE -> VS : date = getDate()
+activate VS
+deactivate VS
+STORE -> VS : vaccineType = getVaccineType()
+activate VS
+deactivate VS
+STORE -> VS : snsNumber = getSnsNumber()
+activate VS
+deactivate VS
+STORE -> "dto: VaccineScheduleDto" **: VaccineScheduleDTO(snsNumber, vaccineType, date, time)
+deactivate STORE
+deactivate CTRL
+@enduml
+
+@startuml
+
+autonumber
+
+participant "VaccineAdministrationController" as CTRL
+participant "VaccinationCenter" as VC
+participant ":VaccineScheduleStore" as STORE
+participant ":VaccineSchedule" as VS
+participant ":VaccineScheduleDTO" as DTO
+
+[o-> CTRL : getVaccineSchedule(snsNumber);
+
+activate CTRL
+
+CTRL -> VC: vaccineScheduleStore = getVaccineScheduleStore()
+
+activate VC
+deactivate VC
+
+CTRL -> STORE: checkIfThereIsAnAppointment(snsNumber)
+activate STORE
+STORE -> VS : time = getTime()
+activate VS
+deactivate VS
+STORE -> VS : date = getDate()
+activate VS
+deactivate VS
+STORE -> VS : vaccineType = getVaccineType()
+activate VS
+deactivate VS
+STORE -> VS : snsNumber = getSnsNumber()
+activate VS
+deactivate VS
+STORE -> "dto: VaccineScheduleDto" **: VaccineScheduleDTO(snsNumber, vaccineType, date, time)
+deactivate STORE
+deactivate CTRL
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

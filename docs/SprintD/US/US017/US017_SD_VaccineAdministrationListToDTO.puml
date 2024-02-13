@@ -1,0 +1,66 @@
+@startuml
+title US017_SD_VaccineAdministrationListToDTO
+hide footbox
+autonumber
+participant VaccineAdministrationMapper as VAM
+participant "vaccineAdministrationDTOList: ArrayList<VaccineAdministrationDTO>" as DTOList
+participant "vaccineAdministrationList : ArrayList<VaccineAdministration>" as list
+participant "vaccineAdministration : VaccineAdministration" as VA
+participant "vaccineAdministrationDTO : VaccineAdministrationDTO" as DTOObj
+
+
+[o-> VAM : toDTO(vaccineAdministrationList)
+activate VAM
+VAM --> DTOList ** : create()
+loop for each vaccine administration in vaccineAdministrationList
+VAM -> list : vaccineAdministration = get(i)
+activate list
+deactivate list
+VAM -> VAM : vaccineAdministrationDTO = toDTO(vaccineAdministration)
+activate VAM
+VAM -> VA : vaccinationCenter = getVaccinationCenter()
+activate VA
+deactivate VA
+VAM -> VA : snsNumber = getSnsNumber()
+activate VA
+deactivate VA
+VAM -> VA : vaccineName = getVaccineName()
+activate VA
+deactivate VA
+VAM -> VA : doseNumber = getDoseNumber()
+activate VA
+deactivate VA
+VAM -> VA : lotNumber = getLotNumber()
+activate VA
+deactivate VA
+VAM -> VA : scheduleData = getScheduleData()
+activate VA
+deactivate VA
+VAM -> VA : scheduleTime = getScheduleTime()
+activate VA
+deactivate VA
+VAM -> VA : arrivalDate = getArrivalDate()
+activate VA
+deactivate VA
+VAM -> VA : arrivalTime = getArrivalTime()
+activate VA
+deactivate VA
+VAM -> VA : administrationDate = getAdministrationDate()
+activate VA
+deactivate VA
+VAM -> VA : administrationTime = getAdministrationTime()
+activate VA
+deactivate VA
+VAM -> VA : leavingDate = getLeavingDate()
+activate VA
+deactivate VA
+VAM -> VA : leavingTime = getLeavingDate()
+activate VA
+deactivate VA
+VAM --> DTOObj ** : VaccineAdministrationDTO(vaccinationCenter, snsNumber, vaccineName, doseNumber, lotNumber, scheduleData, scheduleTime, arrivalDate, arrivalTime, administrationDate, administrationTime, leavingDate, leavingTime)
+deactivate VAM
+VAM -> DTOList : add(vaccineAdministrationDTO)
+activate DTOList
+deactivate DTOList
+end
+@enduml

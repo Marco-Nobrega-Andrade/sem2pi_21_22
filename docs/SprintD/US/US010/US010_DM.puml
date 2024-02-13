@@ -1,0 +1,27 @@
+@startuml
+hide methods
+hide circles
+
+class Administrator{
+}
+
+class Company{
+- Designation
+}
+
+class Employee{
+-id
+-name
+-address
+-phone number
+-e-mail
+-citizen card number
+-role
+}
+
+Company"1" -- "1..*"Employee : > has
+Company"1" -- "1..*"Administrator: > owns
+Administrator"1" --"1..*"Employee : > creates
+
+
+@enduml

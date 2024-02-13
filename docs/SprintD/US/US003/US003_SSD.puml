@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor "Receptionist" as rec
+
+activate rec
+rec -> ":System" : starts registering a new SNS User
+activate ":System"
+":System" --> rec : requests data (name, address, sex (optional), phone number, e-mail, birth date, SNS User number and citizen card number)
+deactivate ":System"
+
+rec -> ":System" : types the requested data
+activate ":System"
+":System" --> rec : shows all data and requests confirmation
+deactivate ":System"
+
+rec -> ":System" : confirms data
+activate ":System"
+":System" --> rec : informs operation success
+deactivate ":System"
+
+deactivate rec
+@enduml

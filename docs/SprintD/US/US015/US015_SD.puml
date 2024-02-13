@@ -1,0 +1,61 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+
+actor "CenterCoordinator" as COORD
+
+participant ":ExportVaccinationStatisticsGUI" as UI
+participant ":WriteFile" as WF
+participant ":ExportVaccinationStatisticsController" as CTRL
+participant ":Company" as COMP
+participant ":UserStore" as US
+participant ":VaccineAdministrationStore" as HRS
+
+activate COORD
+
+"COORD" -> UI: Asks to export vaccination statistics.
+
+activate UI
+"COORD" <-- UI : Requests the start date of the interval.
+"COORD" -> UI: Inserts the start date interval.
+"COORD" <-- UI : Requests the end date of the interval.
+"COORD" -> UI: Inserts the end date interval.
+"COORD" <-- UI : Requests the path to CSV file.
+"COORD" -> UI: Inserts path to the file.
+
+UI --> CTRL : getUsersFullyVaccinatedOnIntervalAndCenter(Date start, Date end).
+activate CTRL
+activate COMP
+CTRL --> COMP : getUserStore().
+deactivate COMP
+CTRL --> COMP : getHealthRecordStore().
+activate COMP
+deactivate COMP
+CTRL --> COMP : getActorCenter
+activate COMP
+deactivate COMP
+loop
+CTRL --> US : findUserFullyVaccinatedOnIntervalAndCenter(Date start, Date end, VaccinationCenter center)
+activate US
+US --> HRS : VerifyFullyVaccinatedOnIntervalAndCenter(Date start, Date end, VaccinationCenter center)
+activate HRS
+HRS -> US : dateLastAdministration : Date
+US -> CTRL : returnList : List<Date>
+deactivate HRS
+deactivate US
+end
+CTRL -> UI : dateAndNumberFullyVaccinated : List<String>
+loop
+UI --> WF : writeFile.WriteToFile(string : DateAndNumberFullyVaccinated)
+activate WF
+end
+WF --> UI : informs export success
+deactivate WF
+"COORD" <-- UI : Informs operation success.
+deactivate UI
+deactivate COORD
+
+
+@enduml

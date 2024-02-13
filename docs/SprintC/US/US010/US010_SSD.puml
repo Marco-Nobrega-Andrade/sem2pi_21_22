@@ -1,0 +1,27 @@
+@startuml
+autonumber
+actor "Administrator" as adm
+
+activate adm
+adm -> ":System" : Register an employee
+activate ":System"
+":System"--> adm: ask to select role
+deactivate ":System"
+
+adm->":System" : Selects role
+activate ":System"
+":System" --> adm : requests data (name, address, phone number, e-mail and citizen card number)
+deactivate ":System"
+adm -> ":System" : types requested data
+activate ":System"
+":System" --> adm : shows all data and requests confirmation
+deactivate ":System"
+
+adm -> ":System" : confirms data
+activate ":System"
+":System" --> adm : informs operation success
+deactivate ":System"
+
+deactivate adm
+
+@enduml

@@ -1,0 +1,93 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant "VaccineAdministrationController" as CTRL
+participant "Company" as COM
+participant ":VaccineStore" as STORE
+participant ":VaccineMapper" as MAP
+participant ":vaccineListDTO: List<VaccineListDTO>" as DTOLIST
+participant ":vaccineList: List<VaccineList>" as LIST
+participant ":vaccine: Vaccine" as VAC
+participant ":VaccineDTO" as DTO
+
+
+[o-> CTRL : getVaccineByVaccineType(vaccineType)
+
+activate CTRL
+
+CTRL -> COM : storeV = getVaccineStore()
+
+activate COM
+deactivate COM
+
+CTRL -> STORE: getVaccineByVaccineType(vaccineType)
+
+activate STORE
+
+STORE -> STORE: getVaccineByVaccineType(vaccineType)
+
+activate STORE
+deactivate STORE
+
+STORE -> MAP: toDTO(vaccineList)
+
+activate MAP
+
+MAP -> DTOLIST**: vaccineListDTO = create()
+
+loop for each vaccine in the vaccine list of a specific vaccine type
+
+MAP -> LIST: vaccine = get(i)
+activate LIST
+deactivate LIST
+
+MAP -> MAP: toDTO(vaccine)
+activate MAP
+
+MAP -> VAC : vaccineType = getVaccineType()
+
+activate VAC
+deactivate VAC
+
+MAP -> VAC : brand = getBrand()
+
+activate VAC
+deactivate VAC
+
+MAP -> VAC : numDifAgeGroup = getNumDifAgeGroup()
+
+activate VAC
+deactivate VAC
+
+MAP -> VAC : ageGroup = getAgeGroup()
+
+activate VAC
+deactivate VAC
+
+MAP -> VAC : dosageList = getDosageList()
+
+activate VAC
+deactivate VAC
+
+MAP -> VAC : numberOfDoses = getNumberOfDoses()
+
+activate VAC
+deactivate VAC
+
+MAP -> VAC : intervalBetweenDosesList = getIntervalBetweenDosesList()
+
+activate VAC
+deactivate VAC
+
+MAP -> DTO**: vaccineDTO= create(vaccineType, brand, numDifAgeGroup,ageGroup, dosageList, numberOfDoses,intervalBetweenDosesList)
+
+deactivate MAP
+MAP -> DTOLIST: add(vaccineDTO)
+end
+deactivate MAP
+deactivate STORE
+deactivate CTRL
+
+@enduml

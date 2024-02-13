@@ -1,0 +1,64 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+participant ":RegisterVaccinationCenterUI" as UI
+participant ":RegisterVaccinationCenterController" as CTRL
+participant ": Company" as COMP
+participant "store: Vaccination Center Store" as SVC
+participant "vc: Vaccination Center" as VC
+
+
+activate ADM
+ADM -> UI : asks to register a new vaccination center
+activate UI
+UI --> ADM : requests data (name, address, phoneNumber, email, faxNumber, websiteAddress, openingHours, closingHours, slotDuration, maximumNumVaccinesSlot)
+deactivate UI
+
+ADM -> UI : types requested data
+activate UI
+
+UI -> CTRL : vc = registerVaccinationCenter(name, address, phoneNumber, email, faxNumber, websiteAddress, openingHours, closingHours, slotDuration, maximumNumVaccinesSlot)
+activate CTRL
+
+CTRL -> COMP : store = getVaccinationCenterStore
+activate COMP
+deactivate COMP
+
+CTRL -> SVC : vc = registerVaccinationCenter(name, address, phoneNumber, email, faxNumber, websiteAddress, openingHours, closingHours, slotDuration, maximumNumVaccinesSlot)
+activate SVC
+SVC -> VC ** : register(name, address, phoneNumber, email, faxNumber, websiteAddress, openingHours, closingHours, slotDuration, maximumNumVaccinesSlot)
+deactivate
+
+
+|||
+deactivate CTRL
+
+UI --> ADM : shows all data and requests confirmation
+deactivate UI
+
+ADM -> UI : confirms the data
+activate UI
+
+UI -> CTRL : saveVaccinationCenter()
+
+activate CTRL
+
+CTRL -> SVC : saveVaccinationCenter(vc)
+activate SVC
+SVC -> SVC : validateVaccinationCenter(vc)
+activate SVC
+deactivate SVC
+SVC -> SVC : addVaccinationCenter(vc)
+activate SVC
+deactivate SVC
+deactivate SVC
+
+
+deactivate CTRL
+UI --> ADM : informs operation success
+deactivate UI
+
+deactivate ADM
+
+@enduml

@@ -1,0 +1,36 @@
+@startuml
+title SD_GetUserSNSNumber
+autonumber
+participant ":VaccineScheduleController" as CTRL
+participant ":App" as APP
+participant "Company" as COMP
+participant "store: UserStore" as US
+participant "AuthFacade" as AF
+participant "UserSession" as USession
+participant "user :User" as U
+
+
+[o-> CTRL : getUserSNSNumber()
+activate CTRL
+CTRL -> AF : userSession = getCurrentUserSession()
+activate AF
+deactivate AF
+CTRL -> USession : userEmail = getUserId()
+activate USession
+deactivate USession
+
+CTRL -> COMP : userStore = getUserStore()
+activate COMP
+deactivate COMP
+CTRL -> US : snsNumber = getUserSNSNumberWithEmail(userEmail)
+activate US
+loop for each user in userList
+alt if userEmail = user.getEmail()
+US -> U : getSnsUserSnsNumber()
+activate U
+deactivate U
+end alt
+end loop
+deactivate US
+
+@enduml

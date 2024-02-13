@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="402.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ui.gui.Coordinator.CoordinatorGUI">
+   <center>
+      <AnchorPane prefHeight="306.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" layoutX="93.0" layoutY="147.0" prefHeight="173.0" prefWidth="226.0" spacing="25.0">
+               <children>
+                  <Button fx:id="importLegacySystemBtn" mnemonicParsing="false" onAction="#importLegacySystemClick" prefHeight="34.0" prefWidth="181.0" text="Import Legacy System Data">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="analyzePerformanceBtn" mnemonicParsing="false" onAction="#analyzePerformanceClick" prefHeight="34.0" prefWidth="181.0" text="Analyze Center Performance">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="exportVaccinationStatsBtn" mnemonicParsing="false" onAction="#exportVaccinationStatsClick" prefHeight="34.0" prefWidth="181.0" text="Export vaccination statistics">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+            <ComboBox fx:id="actorCenterComboBox" layoutX="116.0" layoutY="74.0" prefHeight="34.0" prefWidth="181.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <Label alignment="CENTER" layoutX="103.0" layoutY="43.0" prefHeight="24.0" prefWidth="194.0" text="Which Center are you working on?" />
+            <Label alignment="CENTER" layoutX="105.0" layoutY="126.0" prefHeight="24.0" prefWidth="194.0" text="Choose one option to proceed." />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="66.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="41.0" fitWidth="42.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/ReturnImage.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="119.0" layoutY="35.0" text="Coordinator UI">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Button fx:id="returnBtn" layoutX="5.0" layoutY="9.0" mnemonicParsing="false" onAction="#returnBtnClick" opacity="0.0" prefHeight="40.0" prefWidth="55.0" text="Button">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

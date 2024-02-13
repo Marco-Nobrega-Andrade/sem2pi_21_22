@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/class-diagram
+autonumber
+actor "Nurse" as Nurse
+
+activate Nurse
+Nurse -> ":System" : Consult the SNS users in the waiting room of a vaccination center.
+activate ":System"
+":System" --> Nurse:  Shows SNS Users’ list
+deactivate ":System"
+deactivate Nurse
+@enduml

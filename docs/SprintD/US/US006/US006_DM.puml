@@ -1,0 +1,41 @@
+@startuml
+hide methods
+hide circles
+
+
+class VaccineAdministration{
+- vaccinationCenter
+- vaccineName
+- snsNumber
+- doseNumber
+- lotNumber
+- scheduleData
+- scheduleTime
+- arrivalDate
+- arrivalTime
+- administrationDate
+- administrationTime
+- leavingDate
+- leavingDate
+}
+
+class Reports{
+}
+
+class "SNS User"{
+- Name
+- Address
+- Email
+- Sex
+- Phone number
+- Birth date
+- SNS User number
+- Citizen card number
+}
+
+
+Reports"1"--"1..*"VaccineAdministration: > Requires
+"SNS User""1" -UP- "1"VaccineAdministration : < administered on
+
+
+@enduml

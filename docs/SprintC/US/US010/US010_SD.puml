@@ -1,0 +1,62 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":CreateEmployeeUI" as UI
+participant ":CreateEmployeeController" as CTRL
+participant ":Company" as COMP
+participant "store :EmployeeStore" as STORE
+participant ":Employee" as EMP
+participant "PwdGenerator" as PWD
+participant "AuthFacade" as AUTH
+
+
+
+activate ADM
+ADM -> UI : Register an employee
+activate UI
+UI-->ADM:  ask to select role
+deactivate UI
+
+ADM -> UI: selects role
+activate UI
+UI --> ADM : requests data (name, address, phone number, e-mail and citizen card number)
+deactivate UI
+
+ADM -> UI : types requested data
+activate UI
+UI -> CTRL : createNewEmployee (name, address, phone number, e-mail and citizen card number, role)
+activate CTRL
+CTRL -> COMP: store=getEmployeeStore()
+activate COMP
+deactivate COMP
+CTRL --> STORE: ne=create(name, address, phone number, e-mail and citizen card number, role, id)
+activate STORE
+STORE --> EMP**: create(name, address, phone number, e-mail and citizen card number, role)
+deactivate STORE
+deactivate STORE
+deactivate CTRL
+
+UI-->ADM: shows data and request confirmation
+deactivate UI
+ADM->UI: confirms data
+activate UI
+UI->CTRL: saveEmployee()
+activate CTRL
+CTRL->STORE: saveEmployee(ne)
+activate STORE
+STORE->STORE: validateNewEmployee(ne)
+activate STORE
+deactivate STORE
+STORE->EMP: name = getName();
+STORE->EMP: email = getEmail();
+STORE->EMP: role = getRole();
+STORE->PWD: pwd =generatePwd()
+STORE -> AUTH : boolean = addUserWithRole(name, email, pwd, role)
+STORE->STORE: addEmployee(ne)
+activate STORE
+deactivate STORE
+UI->ADM: informs operation success
+
+@enduml

@@ -1,0 +1,72 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class ShowWaitingListUI{
++run()
+}
+class ShowWaitingListController{
+-private App app;
+-private VaccinationCenter center;
++checkWaitingUserList()
+}
+class App{
++getInstance()
++getCompany()
+}
+class Company{
+-private VaccinationCenter actorCenter;
++getActorCenter()
+}
+class WaitingUserStore {
+-private ArrayList<WaitingUser> waitingUsersList;
++checkWaitingUserList()
+}
+class WaitingUser{
+-private User user;
+-private Time arrivalTime;
++getArrivalTime()
++getUser()
++setUser(User user)
++setArrivalTime(Time arrivalTime)
+}
+class VaccinationCenter{
+-private String name;
+-private String address;
+-private String phoneNumber;
+-private Email email;
+-private String faxNumber;
+-private String websiteAddress;
+-private Time openingHours;
+-private Time closingHours;
+-private String slotDuration;
+-private String maximumNumVaccinesSlot;
+-private boolean isHealthcareCenter;
+-private WaitingUserStore waitingUserStore
++getWaitingUserStore()
+}
+class WaitingListMapper{
++toDTO(ArrayList<WaitingUser> waitingUsersList)
++toDTO(WaitingUser wl)
+
+}
+class WaitingUserDTO{
++toString()
+-time
+-user
+}
+
+ShowWaitingListUI .> ShowWaitingListController
+ShowWaitingListController ..> App
+App -> Company
+ShowWaitingListController ..> Company
+ShowWaitingListController .> WaitingUserStore
+ShowWaitingListController .> VaccinationCenter
+Company --> VaccinationCenter
+VaccinationCenter -> WaitingUserStore
+WaitingListMapper --> WaitingUser
+WaitingUserStore -> WaitingListMapper
+WaitingListMapper -> WaitingUserDTO
+
+
+
+@enduml

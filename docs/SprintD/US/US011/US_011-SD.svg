@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="561px" preserveAspectRatio="none" style="width:1031px;height:561px;background:#FFFFFF;" version="1.1" viewBox="0 0 1031 561" width="1031px" zoomAndPan="magnify"><defs/><g><rect fill="#FFFFFF" height="368.5156" style="stroke:#181818;stroke-width:1.0;" width="10" x="44.5" y="92.6094"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="332.5" y="114.9609"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="332.5" y="175.6641"/><rect fill="#FFFFFF" height="224.7578" style="stroke:#181818;stroke-width:1.0;" width="10" x="332.5" y="236.3672"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="724.5" y="297.0703"/><rect fill="#FFFFFF" height="66.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="830.5" y="357.4219"/><rect fill="#FFFFFF" height="28" style="stroke:#181818;stroke-width:1.0;" width="10" x="835.5" y="395.7734"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="49" x2="49" y1="82.6094" y2="479.125"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="337.5" x2="337.5" y1="82.6094" y2="479.125"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="538.5" x2="538.5" y1="82.6094" y2="479.125"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="729.5" x2="729.5" y1="82.6094" y2="479.125"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="835.5" x2="835.5" y1="82.6094" y2="479.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="5" y="79.5332">Administrator</text><ellipse cx="49.5" cy="13.5" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M49.5,21.5 L49.5,48.5 M36.5,29.5 L62.5,29.5 M49.5,48.5 L36.5,63.5 M49.5,48.5 L62.5,63.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="5" y="492.6582">Administrator</text><ellipse cx="49.5" cy="504.2344" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M49.5,512.2344 L49.5,539.2344 M36.5,520.2344 L62.5,520.2344 M49.5,539.2344 L36.5,554.2344 M49.5,539.2344 L62.5,554.2344 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="92" x="291.5" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="298.5" y="71.5332">:EmployeeUI</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="92" x="291.5" y="478.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="298.5" y="499.6582">:EmployeeUI</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="142" x="467.5" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128" x="474.5" y="71.5332">:EmployeeController</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="142" x="467.5" y="478.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128" x="474.5" y="499.6582">:EmployeeController</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="78" x="690.5" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="697.5" y="71.5332">:Company</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="78" x="690.5" y="478.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="697.5" y="499.6582">:Company</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="114" x="778.5" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="785.5" y="71.5332">:EmployeeStore</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="114" x="778.5" y="478.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="785.5" y="499.6582">:EmployeeStore</text><rect fill="#FFFFFF" height="368.5156" style="stroke:#181818;stroke-width:1.0;" width="10" x="44.5" y="92.6094"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="332.5" y="114.9609"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="332.5" y="175.6641"/><rect fill="#FFFFFF" height="224.7578" style="stroke:#181818;stroke-width:1.0;" width="10" x="332.5" y="236.3672"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="724.5" y="297.0703"/><rect fill="#FFFFFF" height="66.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="830.5" y="357.4219"/><rect fill="#FFFFFF" height="28" style="stroke:#181818;stroke-width:1.0;" width="10" x="835.5" y="395.7734"/><polygon fill="#181818" points="320.5,110.9609,330.5,114.9609,320.5,118.9609,324.5,114.9609" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="54.5" x2="326.5" y1="114.9609" y2="114.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="61.5" y="110.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="123" x="72.5" y="110.1045">Get list of employees</text><polygon fill="#181818" points="65.5,141.3125,55.5,145.3125,65.5,149.3125,61.5,145.3125" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="59.5" x2="336.5" y1="145.3125" y2="145.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="71.5" y="140.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="175" x="82.5" y="140.4561">Requests selection of one role</text><polygon fill="#181818" points="320.5,171.6641,330.5,175.6641,320.5,179.6641,324.5,175.6641" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="54.5" x2="326.5" y1="175.6641" y2="175.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="61.5" y="170.8076">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="69" x="72.5" y="170.8076">Selects role</text><polygon fill="#181818" points="65.5,202.0156,55.5,206.0156,65.5,210.0156,61.5,206.0156" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="59.5" x2="336.5" y1="206.0156" y2="206.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="71.5" y="201.1592">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="243" x="82.5" y="201.1592">Shows the role and request a confirmation</text><polygon fill="#181818" points="320.5,232.3672,330.5,236.3672,320.5,240.3672,324.5,236.3672" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="54.5" x2="326.5" y1="236.3672" y2="236.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="61.5" y="231.5107">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="129" x="72.5" y="231.5107">Confirms role selected</text><polygon fill="#181818" points="526.5,262.7188,536.5,266.7188,526.5,270.7188,530.5,266.7188" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="342.5" x2="532.5" y1="266.7188" y2="266.7188"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="349.5" y="261.8623">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="161" x="360.5" y="261.8623">findEmployeesByRole(Role)</text><polygon fill="#181818" points="712.5,293.0703,722.5,297.0703,712.5,301.0703,716.5,297.0703" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="538.5" x2="718.5" y1="297.0703" y2="297.0703"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="545.5" y="292.2139">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="156" x="556.5" y="292.2139">store : getEmployeeStore()</text><polygon fill="#181818" points="818.5,353.4219,828.5,357.4219,818.5,361.4219,822.5,357.4219" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="538.5" x2="824.5" y1="357.4219" y2="357.4219"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="545.5" y="352.5654">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="161" x="556.5" y="352.5654">findEmployeesByRole(Role)</text><line style="stroke:#181818;stroke-width:1.0;" x1="845.5" x2="887.5" y1="387.7734" y2="387.7734"/><line style="stroke:#181818;stroke-width:1.0;" x1="887.5" x2="887.5" y1="387.7734" y2="400.7734"/><line style="stroke:#181818;stroke-width:1.0;" x1="846.5" x2="887.5" y1="400.7734" y2="400.7734"/><polygon fill="#181818" points="856.5,396.7734,846.5,400.7734,856.5,404.7734,852.5,400.7734" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="852.5" y="382.917">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="161" x="863.5" y="382.917">findEmployeesByRole(Role)</text><polygon fill="#181818" points="60.5,457.125,50.5,461.125,60.5,465.125,56.5,461.125" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="54.5" x2="336.5" y1="461.125" y2="461.125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="66.5" y="456.2686">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="141" x="84.5" y="456.2686">Shows list of employees</text><!--MD5=[d581fe40232d5b4da1f228a21f489524]
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":EmployeeUI" as UI
+participant ":EmployeeController" as CTRL
+participant ":Company" as COMP
+participant ":EmployeeStore" as STORE
+
+activate ADM
+"ADM" -> UI: Get list of employees
+
+activate UI
+
+"ADM" <- - UI: Requests selection of one role
+deactivate UI
+
+ADM -> UI :Selects role
+activate UI
+"ADM" <- - UI: Shows the role and request a confirmation
+deactivate UI
+
+ADM -> UI :Confirms role selected
+activate UI
+UI -> CTRL : findEmployeesByRole(Role)
+CTRL -> COMP : store : getEmployeeStore()
+activate COMP
+deactivate COMP
+CTRL -> STORE : findEmployeesByRole(Role)
+activate STORE
+STORE -> STORE : findEmployeesByRole(Role)
+activate STORE
+deactivate STORE
+deactivate STORE
+UI -> ADM : Shows list of employees
+deactivate UI
+
+deactivate ADM
+
+
+
+
+@enduml
+
+@startuml
+autonumber
+actor "Administrator" as ADM
+
+participant ":EmployeeUI" as UI
+participant ":EmployeeController" as CTRL
+participant ":Company" as COMP
+participant ":EmployeeStore" as STORE
+
+activate ADM
+"ADM" -> UI: Get list of employees
+
+activate UI
+
+"ADM" <- - UI: Requests selection of one role
+deactivate UI
+
+ADM -> UI :Selects role
+activate UI
+"ADM" <- - UI: Shows the role and request a confirmation
+deactivate UI
+
+ADM -> UI :Confirms role selected
+activate UI
+UI -> CTRL : findEmployeesByRole(Role)
+CTRL -> COMP : store : getEmployeeStore()
+activate COMP
+deactivate COMP
+CTRL -> STORE : findEmployeesByRole(Role)
+activate STORE
+STORE -> STORE : findEmployeesByRole(Role)
+activate STORE
+deactivate STORE
+deactivate STORE
+UI -> ADM : Shows list of employees
+deactivate UI
+
+deactivate ADM
+
+
+
+
+@enduml
+
+PlantUML version 1.2022.4(Sat Apr 09 14:29:17 BST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

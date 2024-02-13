@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "CenterCoordinator" as Coord
+
+activate Coord
+
+"Coord" -> SYSTEM: Selects to export vaccination statistics.
+activate "SYSTEM"
+"Coord" <-- SYSTEM: Requests start date interval.
+deactivate "SYSTEM"
+"Coord" -> SYSTEM: Writes the start date interval.
+activate "SYSTEM"
+"Coord" <-- SYSTEM: Requests end date interval.
+deactivate "SYSTEM"
+"Coord" -> SYSTEM: Writes the end date interval.
+activate "SYSTEM"
+"Coord" <-- SYSTEM: Requests the path to the CSV file.
+deactivate "SYSTEM"
+"Coord" -> SYSTEM: Writes the path to the file.
+
+activate "SYSTEM"
+"Coord" <-- SYSTEM: Informs operation success.
+deactivate "SYSTEM"
+@enduml
+@enduml

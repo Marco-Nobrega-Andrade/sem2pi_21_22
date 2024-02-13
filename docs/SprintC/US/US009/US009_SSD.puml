@@ -1,0 +1,23 @@
+@startuml
+autonumber
+actor "Administrator" as Admin
+
+activate Admin
+Admin -> ":System" : asks to register a new vaccination center
+activate ":System"
+":System" --> Admin : requests data (name, address, phoneNumber, email, faxNumber, websiteAddress, openingHours, closingHours, slotDuration, maximumNumVaccinesSlot)
+deactivate ":System"
+
+Admin -> ":System" : types the requested data
+activate ":System"
+":System" --> Admin : shows all data and requests confirmation
+deactivate ":System"
+
+Admin -> ":System" : confirms data
+activate ":System"
+":System" --> Admin : informs operation success
+deactivate ":System"
+
+deactivate Admin
+
+@enduml

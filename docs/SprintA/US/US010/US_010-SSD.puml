@@ -1,0 +1,8 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+
+"Coordinator Center" -> SYSTEM: 1 Request of charts and statistics of the vaccination process on his center or another
+"Coordinator Center" <-- SYSTEM: 1.1 Charts and statistics about his vaccination center or another
+@enduml

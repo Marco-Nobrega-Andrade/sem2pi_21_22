@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Administrator" as Admin
+
+activate Admin
+
+"Admin" -> SYSTEM: Selects to import Users
+activate "SYSTEM"
+"Admin" <-- SYSTEM: Requests the path to the CSV file.
+deactivate "SYSTEM"
+"Admin" -> SYSTEM: Writes the path to the file.
+activate "SYSTEM"
+"Admin" <-- SYSTEM: Informs operation success.
+deactivate "SYSTEM"
+@enduml

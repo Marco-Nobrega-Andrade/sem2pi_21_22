@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="726px" preserveAspectRatio="none" style="width:1131px;height:726px;background:#FFFFFF;" version="1.1" viewBox="0 0 1131 726" width="1131px" zoomAndPan="magnify"><defs><filter height="300%" id="f1a228ozr8infa" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[286fecb2eea6d2d1a9d942c6bf6f5e1f]
+class ShowWaitingListUI--><rect codeLine="3" fill="#FEFECE" filter="url(#f1a228ozr8infa)" height="61.8359" id="ShowWaitingListUI" style="stroke:#A80036;stroke-width:1.5;" width="136" x="58" y="21"/><ellipse cx="73" cy="37" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M75,33.5 Q75.2031,33 75.4375,32.75 Q75.6719,32.5 75.9375,32.5 Q76.4063,32.5 76.7031,32.7813 Q77,33.0625 77,33.7188 L77,35.2813 Q77,35.9375 76.7188,36.2188 Q76.4375,36.5 76,36.5 Q75.6094,36.5 75.3594,36.3281 Q75.1094,36.1563 75,35.7031 Q74.9531,35.3906 74.7813,35.2188 Q74.4688,34.8906 73.9063,34.7031 Q73.3438,34.5 72.7813,34.5 Q72.0781,34.5 71.4844,34.7813 Q70.9063,35.0625 70.4531,35.6875 Q70,36.3125 70,37.1719 L70,38.0938 Q70,39.125 70.8438,39.8125 Q71.6875,40.5 73.1875,40.5 Q74.0781,40.5 74.7031,40.2969 Q75.0625,40.1875 75.4688,39.8281 Q75.7344,39.625 75.875,39.5625 Q76.0156,39.5 76.1875,39.5 Q76.5156,39.5 76.75,39.7656 Q77,40.0156 77,40.375 Q77,40.7188 76.6563,41.125 Q76.1563,41.7188 75.3594,42.0469 Q74.3125,42.5 73.0313,42.5 Q71.5313,42.5 70.3281,41.9063 Q69.3594,41.4375 68.6719,40.4219 Q68,39.4063 68,38.2031 L68,37.1094 Q68,35.8594 68.5938,34.7656 Q69.2031,33.6719 70.25,33.0938 Q71.3125,32.5 72.5,32.5 Q73.2188,32.5 73.8438,32.75 Q74.4688,33 75,33.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="104" x="87" y="41.9102">ShowWaitingListUI</text><line style="stroke:#A80036;stroke-width:1.5;" x1="59" x2="193" y1="53" y2="53"/><line style="stroke:#A80036;stroke-width:1.5;" x1="59" x2="193" y1="61" y2="61"/><ellipse cx="69" cy="72" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="24" x="78" y="76.4189">run()</text><!--MD5=[f993781844f44fb0ea1917b95db3907a]
+class ShowWaitingListController--><rect codeLine="6" fill="#FEFECE" filter="url(#f1a228ozr8infa)" height="89.5078" id="ShowWaitingListController" style="stroke:#A80036;stroke-width:1.5;" width="188" x="229" y="7"/><ellipse cx="248.5" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M250.5,19.5 Q250.7031,19 250.9375,18.75 Q251.1719,18.5 251.4375,18.5 Q251.9063,18.5 252.2031,18.7813 Q252.5,19.0625 252.5,19.7188 L252.5,21.2813 Q252.5,21.9375 252.2188,22.2188 Q251.9375,22.5 251.5,22.5 Q251.1094,22.5 250.8594,22.3281 Q250.6094,22.1563 250.5,21.7031 Q250.4531,21.3906 250.2813,21.2188 Q249.9688,20.8906 249.4063,20.7031 Q248.8438,20.5 248.2813,20.5 Q247.5781,20.5 246.9844,20.7813 Q246.4063,21.0625 245.9531,21.6875 Q245.5,22.3125 245.5,23.1719 L245.5,24.0938 Q245.5,25.125 246.3438,25.8125 Q247.1875,26.5 248.6875,26.5 Q249.5781,26.5 250.2031,26.2969 Q250.5625,26.1875 250.9688,25.8281 Q251.2344,25.625 251.375,25.5625 Q251.5156,25.5 251.6875,25.5 Q252.0156,25.5 252.25,25.7656 Q252.5,26.0156 252.5,26.375 Q252.5,26.7188 252.1563,27.125 Q251.6563,27.7188 250.8594,28.0469 Q249.8125,28.5 248.5313,28.5 Q247.0313,28.5 245.8281,27.9063 Q244.8594,27.4375 244.1719,26.4219 Q243.5,25.4063 243.5,24.2031 L243.5,23.1094 Q243.5,21.8594 244.0938,20.7656 Q244.7031,19.6719 245.75,19.0938 Q246.8125,18.5 248,18.5 Q248.7188,18.5 249.3438,18.75 Q249.9688,19 250.5,19.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="146" x="263.5" y="27.9102">ShowWaitingListController</text><line style="stroke:#A80036;stroke-width:1.5;" x1="230" x2="416" y1="39" y2="39"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="237" y="47"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="80" x="249" y="54.4189">private App app;</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="237" y="60.8359"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="162" x="249" y="68.2549">private VaccinationCenter center;</text><line style="stroke:#A80036;stroke-width:1.5;" x1="230" x2="416" y1="74.6719" y2="74.6719"/><ellipse cx="240" cy="85.6719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="112" x="249" y="90.0908">checkWaitingUserList()</text><!--MD5=[335f4d9be48430461c68bf6d6fdba145]
+class App--><rect codeLine="11" fill="#FEFECE" filter="url(#f1a228ozr8infa)" height="75.6719" id="App" style="stroke:#A80036;stroke-width:1.5;" width="94" x="7" y="157"/><ellipse cx="40.45" cy="173" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M42.45,169.5 Q42.6531,169 42.8875,168.75 Q43.1219,168.5 43.3875,168.5 Q43.8563,168.5 44.1531,168.7813 Q44.45,169.0625 44.45,169.7188 L44.45,171.2813 Q44.45,171.9375 44.1688,172.2188 Q43.8875,172.5 43.45,172.5 Q43.0594,172.5 42.8094,172.3281 Q42.5594,172.1563 42.45,171.7031 Q42.4031,171.3906 42.2313,171.2188 Q41.9188,170.8906 41.3563,170.7031 Q40.7938,170.5 40.2313,170.5 Q39.5281,170.5 38.9344,170.7813 Q38.3563,171.0625 37.9031,171.6875 Q37.45,172.3125 37.45,173.1719 L37.45,174.0938 Q37.45,175.125 38.2938,175.8125 Q39.1375,176.5 40.6375,176.5 Q41.5281,176.5 42.1531,176.2969 Q42.5125,176.1875 42.9188,175.8281 Q43.1844,175.625 43.325,175.5625 Q43.4656,175.5 43.6375,175.5 Q43.9656,175.5 44.2,175.7656 Q44.45,176.0156 44.45,176.375 Q44.45,176.7188 44.1063,177.125 Q43.6063,177.7188 42.8094,178.0469 Q41.7625,178.5 40.4813,178.5 Q38.9813,178.5 37.7781,177.9063 Q36.8094,177.4375 36.1219,176.4219 Q35.45,175.4063 35.45,174.2031 L35.45,173.1094 Q35.45,171.8594 36.0438,170.7656 Q36.6531,169.6719 37.7,169.0938 Q38.7625,168.5 39.95,168.5 Q40.6688,168.5 41.2938,168.75 Q41.9188,169 42.45,169.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="21" x="58.55" y="177.9102">App</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="100" y1="189" y2="189"/><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="100" y1="197" y2="197"/><ellipse cx="18" cy="208" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="27" y="212.4189">getInstance()</text><ellipse cx="18" cy="221.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="68" x="27" y="226.2549">getCompany()</text><!--MD5=[02e4b9b7573f1156f41e60aa5b4e25a4]
+class Company--><rect codeLine="15" fill="#FEFECE" filter="url(#f1a228ozr8infa)" height="75.6719" id="Company" style="stroke:#A80036;stroke-width:1.5;" width="214" x="136" y="157"/><ellipse cx="212.25" cy="173" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M214.25,169.5 Q214.4531,169 214.6875,168.75 Q214.9219,168.5 215.1875,168.5 Q215.6563,168.5 215.9531,168.7813 Q216.25,169.0625 216.25,169.7188 L216.25,171.2813 Q216.25,171.9375 215.9688,172.2188 Q215.6875,172.5 215.25,172.5 Q214.8594,172.5 214.6094,172.3281 Q214.3594,172.1563 214.25,171.7031 Q214.2031,171.3906 214.0313,171.2188 Q213.7188,170.8906 213.1563,170.7031 Q212.5938,170.5 212.0313,170.5 Q211.3281,170.5 210.7344,170.7813 Q210.1563,171.0625 209.7031,171.6875 Q209.25,172.3125 209.25,173.1719 L209.25,174.0938 Q209.25,175.125 210.0938,175.8125 Q210.9375,176.5 212.4375,176.5 Q213.3281,176.5 213.9531,176.2969 Q214.3125,176.1875 214.7188,175.8281 Q214.9844,175.625 215.125,175.5625 Q215.2656,175.5 215.4375,175.5 Q215.7656,175.5 216,175.7656 Q216.25,176.0156 216.25,176.375 Q216.25,176.7188 215.9063,177.125 Q215.4063,177.7188 214.6094,178.0469 Q213.5625,178.5 212.2813,178.5 Q210.7813,178.5 209.5781,177.9063 Q208.6094,177.4375 207.9219,176.4219 Q207.25,175.4063 207.25,174.2031 L207.25,173.1094 Q207.25,171.8594 207.8438,170.7656 Q208.4531,169.6719 209.5,169.0938 Q210.5625,168.5 211.75,168.5 Q212.4688,168.5 213.0938,168.75 Q213.7188,169 214.25,169.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="53" x="232.75" y="177.9102">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="137" x2="349" y1="189" y2="189"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="144" y="197"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="188" x="156" y="204.4189">private VaccinationCenter actorCenter;</text><line style="stroke:#A80036;stroke-width:1.5;" x1="137" x2="349" y1="210.8359" y2="210.8359"/><ellipse cx="147" cy="221.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="82" x="156" y="226.2549">getActorCenter()</text><!--MD5=[b4592b5d401d490afd33493a1b0d6223]
+class WaitingUserStore--><rect codeLine="19" fill="#FEFECE" filter="url(#f1a228ozr8infa)" height="75.6719" id="WaitingUserStore" style="stroke:#A80036;stroke-width:1.5;" width="264" x="395" y="369"/><ellipse cx="474.25" cy="385" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M476.25,381.5 Q476.4531,381 476.6875,380.75 Q476.9219,380.5 477.1875,380.5 Q477.6563,380.5 477.9531,380.7813 Q478.25,381.0625 478.25,381.7188 L478.25,383.2813 Q478.25,383.9375 477.9688,384.2188 Q477.6875,384.5 477.25,384.5 Q476.8594,384.5 476.6094,384.3281 Q476.3594,384.1563 476.25,383.7031 Q476.2031,383.3906 476.0313,383.2188 Q475.7188,382.8906 475.1563,382.7031 Q474.5938,382.5 474.0313,382.5 Q473.3281,382.5 472.7344,382.7813 Q472.1563,383.0625 471.7031,383.6875 Q471.25,384.3125 471.25,385.1719 L471.25,386.0938 Q471.25,387.125 472.0938,387.8125 Q472.9375,388.5 474.4375,388.5 Q475.3281,388.5 475.9531,388.2969 Q476.3125,388.1875 476.7188,387.8281 Q476.9844,387.625 477.125,387.5625 Q477.2656,387.5 477.4375,387.5 Q477.7656,387.5 478,387.7656 Q478.25,388.0156 478.25,388.375 Q478.25,388.7188 477.9063,389.125 Q477.4063,389.7188 476.6094,390.0469 Q475.5625,390.5 474.2813,390.5 Q472.7813,390.5 471.5781,389.9063 Q470.6094,389.4375 469.9219,388.4219 Q469.25,387.4063 469.25,386.2031 L469.25,385.1094 Q469.25,383.8594 469.8438,382.7656 Q470.4531,381.6719 471.5,381.0938 Q472.5625,380.5 473.75,380.5 Q474.4688,380.5 475.0938,380.75 Q475.7188,381 476.25,381.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="97" x="494.75" y="389.9102">WaitingUserStore</text><line style="stroke:#A80036;stroke-width:1.5;" x1="396" x2="658" y1="401" y2="401"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="403" y="409"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="238" x="415" y="416.4189">private ArrayList&lt;WaitingUser&gt; waitingUsersList;</text><line style="stroke:#A80036;stroke-width:1.5;" x1="396" x2="658" y1="422.8359" y2="422.8359"/><ellipse cx="406" cy="433.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="112" x="415" y="438.2549">checkWaitingUserList()</text><!--MD5=[e8a0ea5a19ad3a152fb07fead0fc0529]
+class WaitingUser--><rect codeLine="23" fill="#FEFECE" filter="url(#f1a228ozr8infa)" height="131.0156" id="WaitingUser" style="stroke:#A80036;stroke-width:1.5;" width="180" x="736" y="581"/><ellipse cx="787.75" cy="597" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M789.75,593.5 Q789.9531,593 790.1875,592.75 Q790.4219,592.5 790.6875,592.5 Q791.1563,592.5 791.4531,592.7813 Q791.75,593.0625 791.75,593.7188 L791.75,595.2813 Q791.75,595.9375 791.4688,596.2188 Q791.1875,596.5 790.75,596.5 Q790.3594,596.5 790.1094,596.3281 Q789.8594,596.1563 789.75,595.7031 Q789.7031,595.3906 789.5313,595.2188 Q789.2188,594.8906 788.6563,594.7031 Q788.0938,594.5 787.5313,594.5 Q786.8281,594.5 786.2344,594.7813 Q785.6563,595.0625 785.2031,595.6875 Q784.75,596.3125 784.75,597.1719 L784.75,598.0938 Q784.75,599.125 785.5938,599.8125 Q786.4375,600.5 787.9375,600.5 Q788.8281,600.5 789.4531,600.2969 Q789.8125,600.1875 790.2188,599.8281 Q790.4844,599.625 790.625,599.5625 Q790.7656,599.5 790.9375,599.5 Q791.2656,599.5 791.5,599.7656 Q791.75,600.0156 791.75,600.375 Q791.75,600.7188 791.4063,601.125 Q790.9063,601.7188 790.1094,602.0469 Q789.0625,602.5 787.7813,602.5 Q786.2813,602.5 785.0781,601.9063 Q784.1094,601.4375 783.4219,600.4219 Q782.75,599.4063 782.75,598.2031 L782.75,597.1094 Q782.75,595.8594 783.3438,594.7656 Q783.9531,593.6719 785,593.0938 Q786.0625,592.5 787.25,592.5 Q787.9688,592.5 788.5938,592.75 Q789.2188,593 789.75,593.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="68" x="808.25" y="601.9102">WaitingUser</text><line style="stroke:#A80036;stroke-width:1.5;" x1="737" x2="915" y1="613" y2="613"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="744" y="621"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="87" x="756" y="628.4189">private User user;</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="744" y="634.8359"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="756" y="642.2549">private Time arrivalTime;</text><line style="stroke:#A80036;stroke-width:1.5;" x1="737" x2="915" y1="648.6719" y2="648.6719"/><ellipse cx="747" cy="659.6719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="77" x="756" y="664.0908">getArrivalTime()</text><ellipse cx="747" cy="673.5078" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="46" x="756" y="677.9268">getUser()</text><ellipse cx="747" cy="687.3438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="94" x="756" y="691.7627">setUser(User user)</text><ellipse cx="747" cy="701.1797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="154" x="756" y="705.5986">setArrivalTime(Time arrivalTime)</text><!--MD5=[de60e6d4f424ae4d0522096f76a59010]
+class VaccinationCenter--><rect codeLine="31" fill="#FEFECE" filter="url(#f1a228ozr8infa)" height="227.8672" id="VaccinationCenter" style="stroke:#A80036;stroke-width:1.5;" width="233" x="126.5" y="293"/><ellipse cx="188.75" cy="309" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M190.75,305.5 Q190.9531,305 191.1875,304.75 Q191.4219,304.5 191.6875,304.5 Q192.1563,304.5 192.4531,304.7813 Q192.75,305.0625 192.75,305.7188 L192.75,307.2813 Q192.75,307.9375 192.4688,308.2188 Q192.1875,308.5 191.75,308.5 Q191.3594,308.5 191.1094,308.3281 Q190.8594,308.1563 190.75,307.7031 Q190.7031,307.3906 190.5313,307.2188 Q190.2188,306.8906 189.6563,306.7031 Q189.0938,306.5 188.5313,306.5 Q187.8281,306.5 187.2344,306.7813 Q186.6563,307.0625 186.2031,307.6875 Q185.75,308.3125 185.75,309.1719 L185.75,310.0938 Q185.75,311.125 186.5938,311.8125 Q187.4375,312.5 188.9375,312.5 Q189.8281,312.5 190.4531,312.2969 Q190.8125,312.1875 191.2188,311.8281 Q191.4844,311.625 191.625,311.5625 Q191.7656,311.5 191.9375,311.5 Q192.2656,311.5 192.5,311.7656 Q192.75,312.0156 192.75,312.375 Q192.75,312.7188 192.4063,313.125 Q191.9063,313.7188 191.1094,314.0469 Q190.0625,314.5 188.7813,314.5 Q187.2813,314.5 186.0781,313.9063 Q185.1094,313.4375 184.4219,312.4219 Q183.75,311.4063 183.75,310.2031 L183.75,309.1094 Q183.75,307.8594 184.3438,306.7656 Q184.9531,305.6719 186,305.0938 Q187.0625,304.5 188.25,304.5 Q188.9688,304.5 189.5938,304.75 Q190.2188,305 190.75,305.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="100" x="209.25" y="313.9102">VaccinationCenter</text><line style="stroke:#A80036;stroke-width:1.5;" x1="127.5" x2="358.5" y1="325" y2="325"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="134.5" y="333"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="96" x="146.5" y="340.4189">private String name;</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="134.5" y="346.8359"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="110" x="146.5" y="354.2549">private String address;</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="134.5" y="360.6719"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="137" x="146.5" y="368.0908">private String phoneNumber;</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="134.5" y="374.5078"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="90" x="146.5" y="381.9268">private Email email;</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="134.5" y="388.3438"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="123" x="146.5" y="395.7627">private String faxNumber;</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="134.5" y="402.1797"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="151" x="146.5" y="409.5986">private String websiteAddress;</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="134.5" y="416.0156"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="131" x="146.5" y="423.4346">private Time openingHours;</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="134.5" y="429.8516"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="127" x="146.5" y="437.2705">private Time closingHours;</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="134.5" y="443.6875"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="127" x="146.5" y="451.1064">private String slotDuration;</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="134.5" y="457.5234"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="199" x="146.5" y="464.9424">private String maximumNumVaccinesSlot;</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="134.5" y="471.3594"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="172" x="146.5" y="478.7783">private boolean isHealthcareCenter;</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="134.5" y="485.1953"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="207" x="146.5" y="492.6143">private WaitingUserStore waitingUserStore</text><line style="stroke:#A80036;stroke-width:1.5;" x1="127.5" x2="358.5" y1="499.0313" y2="499.0313"/><ellipse cx="137.5" cy="510.0313" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="107" x="146.5" y="514.4502">getWaitingUserStore()</text><!--MD5=[89548b8aeac8bd03e06c4fd529d340c5]
+class WaitingListMapper--><rect codeLine="46" fill="#FEFECE" filter="url(#f1a228ozr8infa)" height="75.6719" id="WaitingListMapper" style="stroke:#A80036;stroke-width:1.5;" width="263" x="694.5" y="369"/><ellipse cx="770.75" cy="385" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M772.75,381.5 Q772.9531,381 773.1875,380.75 Q773.4219,380.5 773.6875,380.5 Q774.1563,380.5 774.4531,380.7813 Q774.75,381.0625 774.75,381.7188 L774.75,383.2813 Q774.75,383.9375 774.4688,384.2188 Q774.1875,384.5 773.75,384.5 Q773.3594,384.5 773.1094,384.3281 Q772.8594,384.1563 772.75,383.7031 Q772.7031,383.3906 772.5313,383.2188 Q772.2188,382.8906 771.6563,382.7031 Q771.0938,382.5 770.5313,382.5 Q769.8281,382.5 769.2344,382.7813 Q768.6563,383.0625 768.2031,383.6875 Q767.75,384.3125 767.75,385.1719 L767.75,386.0938 Q767.75,387.125 768.5938,387.8125 Q769.4375,388.5 770.9375,388.5 Q771.8281,388.5 772.4531,388.2969 Q772.8125,388.1875 773.2188,387.8281 Q773.4844,387.625 773.625,387.5625 Q773.7656,387.5 773.9375,387.5 Q774.2656,387.5 774.5,387.7656 Q774.75,388.0156 774.75,388.375 Q774.75,388.7188 774.4063,389.125 Q773.9063,389.7188 773.1094,390.0469 Q772.0625,390.5 770.7813,390.5 Q769.2813,390.5 768.0781,389.9063 Q767.1094,389.4375 766.4219,388.4219 Q765.75,387.4063 765.75,386.2031 L765.75,385.1094 Q765.75,383.8594 766.3438,382.7656 Q766.9531,381.6719 768,381.0938 Q769.0625,380.5 770.25,380.5 Q770.9688,380.5 771.5938,380.75 Q772.2188,381 772.75,381.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="102" x="791.25" y="389.9102">WaitingListMapper</text><line style="stroke:#A80036;stroke-width:1.5;" x1="695.5" x2="956.5" y1="401" y2="401"/><line style="stroke:#A80036;stroke-width:1.5;" x1="695.5" x2="956.5" y1="409" y2="409"/><ellipse cx="705.5" cy="420" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="237" x="714.5" y="424.4189">toDTO(ArrayList&lt;WaitingUser&gt; waitingUsersList)</text><ellipse cx="705.5" cy="433.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="111" x="714.5" y="438.2549">toDTO(WaitingUser wl)</text><!--MD5=[f44629891d1a05de0e1abcbdafddda73]
+class WaitingUserDTO--><rect codeLine="51" fill="#FEFECE" filter="url(#f1a228ozr8infa)" height="89.5078" id="WaitingUserDTO" style="stroke:#A80036;stroke-width:1.5;" width="125" x="992.5" y="362"/><ellipse cx="1007.5" cy="378" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1009.5,374.5 Q1009.7031,374 1009.9375,373.75 Q1010.1719,373.5 1010.4375,373.5 Q1010.9063,373.5 1011.2031,373.7813 Q1011.5,374.0625 1011.5,374.7188 L1011.5,376.2813 Q1011.5,376.9375 1011.2188,377.2188 Q1010.9375,377.5 1010.5,377.5 Q1010.1094,377.5 1009.8594,377.3281 Q1009.6094,377.1563 1009.5,376.7031 Q1009.4531,376.3906 1009.2813,376.2188 Q1008.9688,375.8906 1008.4063,375.7031 Q1007.8438,375.5 1007.2813,375.5 Q1006.5781,375.5 1005.9844,375.7813 Q1005.4063,376.0625 1004.9531,376.6875 Q1004.5,377.3125 1004.5,378.1719 L1004.5,379.0938 Q1004.5,380.125 1005.3438,380.8125 Q1006.1875,381.5 1007.6875,381.5 Q1008.5781,381.5 1009.2031,381.2969 Q1009.5625,381.1875 1009.9688,380.8281 Q1010.2344,380.625 1010.375,380.5625 Q1010.5156,380.5 1010.6875,380.5 Q1011.0156,380.5 1011.25,380.7656 Q1011.5,381.0156 1011.5,381.375 Q1011.5,381.7188 1011.1563,382.125 Q1010.6563,382.7188 1009.8594,383.0469 Q1008.8125,383.5 1007.5313,383.5 Q1006.0313,383.5 1004.8281,382.9063 Q1003.8594,382.4375 1003.1719,381.4219 Q1002.5,380.4063 1002.5,379.2031 L1002.5,378.1094 Q1002.5,376.8594 1003.0938,375.7656 Q1003.7031,374.6719 1004.75,374.0938 Q1005.8125,373.5 1007,373.5 Q1007.7188,373.5 1008.3438,373.75 Q1008.9688,374 1009.5,374.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="93" x="1021.5" y="382.9102">WaitingUserDTO</text><line style="stroke:#A80036;stroke-width:1.5;" x1="993.5" x2="1116.5" y1="394" y2="394"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1000.5" y="402"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="19" x="1012.5" y="409.4189">time</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1000.5" y="415.8359"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="22" x="1012.5" y="423.2549">user</text><line style="stroke:#A80036;stroke-width:1.5;" x1="993.5" x2="1116.5" y1="429.6719" y2="429.6719"/><ellipse cx="1003.5" cy="440.6719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="1012.5" y="445.0908">toString()</text><!--MD5=[48518818adbe57cd955c0a1b1c3b5027]
+link ShowWaitingListUI to ShowWaitingListController--><path codeLine="57" d="M194.1,52 C203.97,52 213.83,52 223.69,52 " fill="none" id="ShowWaitingListUI-to-ShowWaitingListController" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="228.85,52,219.85,48,223.85,52,219.85,56,228.85,52" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[fa2f08d691e8b28fb574bc415f779463]
+link ShowWaitingListController to App--><path codeLine="58" d="M233.4,97.12 C197.31,115.24 155.45,136.69 118,157 C113.94,159.2 109.76,161.51 105.57,163.87 " fill="none" id="ShowWaitingListController-to-App" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="101.02,166.43,110.8265,165.5177,105.3813,163.9848,106.9142,158.5396,101.02,166.43" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[5b0f1873c15ced29becf7ded48d12cb7]
+link App to Company--><path codeLine="59" d="M101.25,195 C111.07,195 120.9,195 130.72,195 " fill="none" id="App-to-Company" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="135.86,195,126.86,191,130.86,195,126.86,199,135.86,195" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[cff968674e072e4fe5dd698692e6a425]
+link ShowWaitingListController to Company--><path codeLine="60" d="M297.91,97.23 C288.02,114.65 276.72,134.57 266.95,151.79 " fill="none" id="ShowWaitingListController-to-Company" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="264.24,156.57,272.1596,150.7151,266.7069,152.2209,265.2011,146.7681,264.24,156.57" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[5e23be20ad3f1087cd9a498009f61521]
+link ShowWaitingListController to WaitingUserStore--><path codeLine="61" d="M355.9,97.21 C368.93,115.38 383.7,136.85 396,157 C439.15,227.68 482.6,313.94 507.03,364.16 " fill="none" id="ShowWaitingListController-to-WaitingUserStore" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="509.33,368.9,508.9836,359.0572,507.1399,364.4052,501.7919,362.5615,509.33,368.9" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[9af1cf07e918f6f90b72db42d4a2884c]
+link ShowWaitingListController to VaccinationCenter--><path codeLine="62" d="M347.32,97.13 C364.35,133.88 381.67,187.37 367,233 C360.9,251.97 351.87,270.63 341.41,288.26 " fill="none" id="ShowWaitingListController-to-VaccinationCenter" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="338.72,292.72,346.7888,287.0724,341.2988,288.4363,339.9349,282.9464,338.72,292.72" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[eebe9b198877275d05dd12630ed9e401]
+link Company to VaccinationCenter--><path codeLine="63" d="M243,233.06 C243,248.69 243,267.84 243,287.64 " fill="none" id="Company-to-VaccinationCenter" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="243,292.68,247,283.68,243,287.68,239,283.68,243,292.68" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[afd5f794700056691b350b1d4b8cfb6d]
+link VaccinationCenter to WaitingUserStore--><path codeLine="64" d="M359.76,407 C369.68,407 379.6,407 389.52,407 " fill="none" id="VaccinationCenter-to-WaitingUserStore" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="394.71,407,385.71,403,389.71,407,385.71,411,394.71,407" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ceeec99efccd1d7276a6f436b9e58bd5]
+link WaitingListMapper to WaitingUser--><path codeLine="65" d="M826,445.11 C826,479.96 826,533 826,575.75 " fill="none" id="WaitingListMapper-to-WaitingUser" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="826,580.92,830,571.92,826,575.92,822,571.92,826,580.92" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[64ce7afcfe6bf7c28fc8368d5cab7716]
+link WaitingUserStore to WaitingListMapper--><path codeLine="66" d="M659.27,407 C669.26,407 679.24,407 689.22,407 " fill="none" id="WaitingUserStore-to-WaitingListMapper" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="694.44,407,685.44,403,689.44,407,685.44,411,694.44,407" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[e963a83c4ac9ebe723ea1180048b9ad8]
+link WaitingListMapper to WaitingUserDTO--><path codeLine="67" d="M957.94,407 C967.74,407 977.53,407 987.32,407 " fill="none" id="WaitingListMapper-to-WaitingUserDTO" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="992.44,407,983.44,403,987.44,407,983.44,411,992.44,407" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ab76d43b63589380fcf97f3477b6c697]
+@startuml
+'https://plantuml.com/class-diagram
+
+class ShowWaitingListUI{
++run()
+}
+class ShowWaitingListController{
+-private App app;
+-private VaccinationCenter center;
++checkWaitingUserList()
+}
+class App{
++getInstance()
++getCompany()
+}
+class Company{
+-private VaccinationCenter actorCenter;
++getActorCenter()
+}
+class WaitingUserStore {
+-private ArrayList<WaitingUser> waitingUsersList;
++checkWaitingUserList()
+}
+class WaitingUser{
+-private User user;
+-private Time arrivalTime;
++getArrivalTime()
++getUser()
++setUser(User user)
++setArrivalTime(Time arrivalTime)
+}
+class VaccinationCenter{
+-private String name;
+-private String address;
+-private String phoneNumber;
+-private Email email;
+-private String faxNumber;
+-private String websiteAddress;
+-private Time openingHours;
+-private Time closingHours;
+-private String slotDuration;
+-private String maximumNumVaccinesSlot;
+-private boolean isHealthcareCenter;
+-private WaitingUserStore waitingUserStore
++getWaitingUserStore()
+}
+class WaitingListMapper{
++toDTO(ArrayList<WaitingUser> waitingUsersList)
++toDTO(WaitingUser wl)
+
+}
+class WaitingUserDTO{
++toString()
+-time
+-user
+}
+
+ShowWaitingListUI .> ShowWaitingListController
+ShowWaitingListController ..> App
+App -> Company
+ShowWaitingListController ..> Company
+ShowWaitingListController .> WaitingUserStore
+ShowWaitingListController .> VaccinationCenter
+Company - -> VaccinationCenter
+VaccinationCenter -> WaitingUserStore
+WaitingListMapper - -> WaitingUser
+WaitingUserStore -> WaitingListMapper
+WaitingListMapper -> WaitingUserDTO
+
+
+
+@enduml
+
+@startuml
+
+class ShowWaitingListUI{
++run()
+}
+class ShowWaitingListController{
+-private App app;
+-private VaccinationCenter center;
++checkWaitingUserList()
+}
+class App{
++getInstance()
++getCompany()
+}
+class Company{
+-private VaccinationCenter actorCenter;
++getActorCenter()
+}
+class WaitingUserStore {
+-private ArrayList<WaitingUser> waitingUsersList;
++checkWaitingUserList()
+}
+class WaitingUser{
+-private User user;
+-private Time arrivalTime;
++getArrivalTime()
++getUser()
++setUser(User user)
++setArrivalTime(Time arrivalTime)
+}
+class VaccinationCenter{
+-private String name;
+-private String address;
+-private String phoneNumber;
+-private Email email;
+-private String faxNumber;
+-private String websiteAddress;
+-private Time openingHours;
+-private Time closingHours;
+-private String slotDuration;
+-private String maximumNumVaccinesSlot;
+-private boolean isHealthcareCenter;
+-private WaitingUserStore waitingUserStore
++getWaitingUserStore()
+}
+class WaitingListMapper{
++toDTO(ArrayList<WaitingUser> waitingUsersList)
++toDTO(WaitingUser wl)
+
+}
+class WaitingUserDTO{
++toString()
+-time
+-user
+}
+
+ShowWaitingListUI .> ShowWaitingListController
+ShowWaitingListController ..> App
+App -> Company
+ShowWaitingListController ..> Company
+ShowWaitingListController .> WaitingUserStore
+ShowWaitingListController .> VaccinationCenter
+Company - -> VaccinationCenter
+VaccinationCenter -> WaitingUserStore
+WaitingListMapper - -> WaitingUser
+WaitingUserStore -> WaitingListMapper
+WaitingListMapper -> WaitingUserDTO
+
+
+
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

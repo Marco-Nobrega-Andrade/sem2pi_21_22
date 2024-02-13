@@ -1,0 +1,107 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+hide methods
+hide circle
+
+class WaitingUser{
+-User
+-Time
+}
+
+class Center{
+
+-Name
+-Address
+-Phone number
+-E-mail address
+-Fax number
+-Website address
+-Opening and closing hours
+-Slot duration
+-Max number of vaccines given per slot
+}
+
+class VaccineSchedule{
+- Time
+- Date
+- SNS Number
+}
+
+class Nurse{
+}
+
+class "SNS User"{
+- Name
+- Address
+- Email
+- Sex
+- Phone number
+- Birth date
+- SNS User number
+- Citizen card number
+}
+
+class Employee{
+-id
+-name
+-address
+-phone number
+-e-mail
+-citizen card number
+}
+
+class Center{
+- Designation
+}
+
+class VaccineType{
+}
+
+class Vaccine{
+-vaccine type
+-brand
+-age group
+-dosageList
+-number of doses
+-interval between doses list
+}
+
+class VaccineAdministration{
+- Vaccine
+- Lot number
+}
+
+class Notification{
+-Message
+}
+
+class EmailNotification{
+}
+
+class SMSNotification{
+}
+
+class RecoveryPeriod{
+}
+
+Nurse"1..*" -- "1"Employee : < plays as
+Center"1" -up- "1..*"Employee : > has
+Center "1"-left- "*"WaitingUser : > has
+WaitingUser"1   "-- "1"VaccineSchedule : > depends from
+Center"1"--"*"VaccineSchedule : has
+VaccineType"1..*" -left- "1..*"Center : > administered in
+Vaccine"1" -left- "1..*"VaccineType : > of
+VaccineSchedule"*" -- "1"VaccineType : > for taking
+Center"1" -right- "1..*""SNS User" : has
+"SNS User" "1" -down- "*"VaccineSchedule : < created for
+"SNS User""1" -down- "1"VaccineAdministration : < administered on
+VaccineAdministration"1" -down- "1..*"Vaccine : of
+Nurse"1" -right- "1..*"VaccineAdministration : < administrated by
+Notification"1" -- "1"SMSNotification : < is a
+Notification"1" -- "1"EmailNotification : < is a
+VaccineSchedule"1" -right- "0..1"Notification : > gives
+RecoveryPeriod"1" -right- "1"Notification : gives
+RecoveryPeriod"1" -left- "1"VaccineAdministration : > requires
+
+@enduml

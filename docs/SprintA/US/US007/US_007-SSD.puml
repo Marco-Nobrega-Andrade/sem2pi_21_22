@@ -1,0 +1,8 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+Nurse -> System: 1. Uses the option to check the list of SNS users present on a vaccination center
+System -> Nurse: 1.1 Asks what vaccination center the nurse is in
+Nurse -> System: 2 Types the center
+System -> Nurse: 2.1 Shows the list
+@enduml

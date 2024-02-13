@@ -1,0 +1,73 @@
+@startuml
+autonumber
+actor "Nurse" as Nurse
+
+participant "ShowWaitingListUI" as UI
+participant ":ShowWaitingListController" as Controller
+participant ":App" as App
+participant ":Company" as Company
+participant "VaccinationCenter" as VC
+participant "WaitingListStore" as Store
+participant "WaitingListMapper" as WLM
+participant "waitingListDTO: List<WaitingUserDTO>" as DTO
+participant "waitingList: List<WaitingUser>" as List
+participant "wl: WaitingUser" as WL
+participant "wlDTO: WaitingUserDTO" as wlDTO
+
+
+activate Nurse
+Nurse --> UI: Consult the SNS users in the waiting room of a vaccination center.
+activate UI
+
+UI -> Controller: ArrayList<WaitingUserDTO> waitingUserListDTO = checkWaitingList()
+activate Controller
+
+Controller -> App: App app = getInstance()
+activate App
+deactivate App
+
+Controller -> Company: VaccinationCenter actorCenter = getActorCenter()
+activate Company
+deactivate Company
+
+Controller -> VC: WaitingUserStore waitingUserStore = getWaitingUserStore()
+activate VC
+deactivate VC
+
+Controller -> Store: ArrayList<WaitingUserDTO> waitingUserListDTO= checkWaitingUserList()
+activate Store
+
+Store -> WLM:  ArrayList<WaitingUserDTO> waitingUserListDTO = toDTO(waitingUsersList)
+activate WLM
+
+WLM -> DTO**: ArrayList<WaitingUserDTO> waitingUserListDTO= create()
+
+loop for each user in the waiting list in the Center
+
+WLM -> List: Waiting User wl=get(int i)
+activate List
+deactivate List
+
+WLM -> WLM: WaitingUserDTO wlDTO = toDTO(wl)
+activate WLM
+
+WLM -> WL : Time time = getArrivalTime()
+activate WL
+deactivate WL
+WLM -> WL : User user = getUser()
+activate WL
+deactivate WL
+WLM -> wlDTO**: create(Time time, User user)
+deactivate WLM
+
+WLM -> DTO: add(WaitingUserDTO wlDTO)
+end
+deactivate WLM
+deactivate Store
+deactivate Controller
+
+UI -> Nurse: Shows the users that have an appointment and the details of the appointment
+deactivate UI
+
+deactivate Nurse
+@enduml

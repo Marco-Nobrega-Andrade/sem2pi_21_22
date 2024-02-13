@@ -1,0 +1,75 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Timer/Clock" as timer
+participant ":DailyReportUI" as ui
+participant ":DailyReportController" as ctrl
+participant ":App" as app
+participant ":Company" as comp
+participant ":VaccinationCenterStore" as vcStore
+participant "UserStore" as usStore
+participant ":DailyReportOfPeopleVaccinatedPerCenter" as rep
+participant "user: User" as user
+participant ":VaccineAdministrationStore" as hrStore
+participant ":VaccineAdministration" as vad
+participant ":VaccinationCenter" as vc
+
+activate timer
+
+
+timer -> ui: Send report of daily total number of people vaccinated in each center
+activate ui
+ui -> ctrl: listOfInformation = createReport(today)
+activate ctrl
+ctrl -> app: app = getInstance()
+activate app
+deactivate app
+ctrl -> app: comp = getCompany()
+activate app
+deactivate app
+ctrl -> comp: userStore = getUserStore()
+activate comp
+deactivate comp
+ctrl -> comp: vaccinationCenterStore = getVaccinationCenterStore()
+activate comp
+deactivate comp
+
+ctrl -> vcStore: centerList = getAllVacciantionCenters()
+activate vcStore
+deactivate vcStore
+ctrl->usStore: userList = getUsersList()
+activate usStore
+deactivate usStore
+ctrl -> rep: listOfInformation = checkNumberOfPeopleVaccinated(centerList,userList,today)
+loop for each Vaccination Center from centerList
+activate rep
+loop for all User in the userList
+rep -> user:  vaccineAdministrationStore = getvaccineAdministrationStore()
+activate user
+deactivate user
+rep -> hrStore: total = checkIfUserWasVaccinatedToday(center,today)
+activate hrStore
+loop For all VaccineAdministration
+hrStore -> vad: vaccineAdministrationDate =getAdministrationDate
+activate vad
+deactivate vad
+hrStore -> vad: vaccinationCenter = getvaccinationCenter
+activate vad
+deactivate vad
+hrStore->vc: equalsVaccinationCenter(vaccinationCenter)
+activate vc
+deactivate vc
+end
+deactivate hrStore
+end
+rep -> rep: createStringWithInformation(center,total)
+activate rep
+deactivate rep
+end
+deactivate ctrl
+deactivate ui
+
+deactivate timer
+@enduml

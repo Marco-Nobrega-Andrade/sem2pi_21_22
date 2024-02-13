@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+Nurse -> System: 1: Chooses to check a user's data and types the SNS number
+System --> Nurse: 1.1: Shows all health data about the user
+Nurse -> System: 2: Chooses the option to give a vaccine and types the vaccine type
+System --> Nurse: 2.1: Shows the recommended vaccine brand and dosage according to the user's data
+Nurse -> System: 3: After giving the vaccine the nurse chooses the option to register a vaccination and types the type, brand and the lot used
+
+alt The user is having adverse reactions
+Nurse -> System: 4: The nurse registers all of them.
+
+end
+
+@enduml

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="179.4px" preserveAspectRatio="none" style="width:270px;height:179px;background:#FFFFFF;" version="1.1" viewBox="0 0 270 179" width="270px" zoomAndPan="magnify"><defs/><g><rect fill="#FFFFFF" height="70.9453" style="stroke:#181818;stroke-width:0.6;" width="6" x="27" y="54.893"/><rect fill="#FFFFFF" height="17.5863" style="stroke:#181818;stroke-width:0.6;" width="6" x="243.6" y="67.6793"/><rect fill="#FFFFFF" height="17.5863" style="stroke:#181818;stroke-width:0.6;" width="6" x="243.6" y="102.852"/><line style="stroke:#181818;stroke-width:0.3;stroke-dasharray:5.0,5.0;" x1="30" x2="30" y1="48.893" y2="131.2383"/><line style="stroke:#181818;stroke-width:0.3;stroke-dasharray:5.0,5.0;" x1="246.6" x2="246.6" y1="48.893" y2="131.2383"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="50.4" x="3" y="47.1211">Coordinator</text><ellipse cx="30" cy="8.1" fill="#E2E2F0" rx="4.8" ry="4.8" style="stroke:#181818;stroke-width:0.3;"/><path d="M30,12.9 L30,29.1 M22.2,17.7 L37.8,17.7 M30,29.1 L22.2,38.1 M30,29.1 L37.8,38.1 " fill="none" style="stroke:#181818;stroke-width:0.3;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="50.4" x="3" y="138.7594">Coordinator</text><ellipse cx="30" cy="145.6313" fill="#E2E2F0" rx="4.8" ry="4.8" style="stroke:#181818;stroke-width:0.3;"/><path d="M30,150.4313 L30,166.6313 M22.2,155.2313 L37.8,155.2313 M30,166.6313 L22.2,175.6313 M30,166.6313 L37.8,175.6313 " fill="none" style="stroke:#181818;stroke-width:0.3;"/><rect fill="#E2E2F0" height="18.293" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="39.6" x="226.8" y="30"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="31.2" x="231" y="42.3211">:System</text><rect fill="#E2E2F0" height="18.293" rx="1.5" ry="1.5" style="stroke:#181818;stroke-width:0.3;" width="39.6" x="226.8" y="130.6383"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="31.2" x="231" y="142.9594">:System</text><rect fill="#FFFFFF" height="70.9453" style="stroke:#181818;stroke-width:0.6;" width="6" x="27" y="54.893"/><rect fill="#FFFFFF" height="17.5863" style="stroke:#181818;stroke-width:0.6;" width="6" x="243.6" y="67.6793"/><rect fill="#FFFFFF" height="17.5863" style="stroke:#181818;stroke-width:0.6;" width="6" x="243.6" y="102.852"/><polygon fill="#181818" points="236.4,65.2793,242.4,67.6793,236.4,70.0793,238.8,67.6793" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;" x1="33" x2="240" y1="67.6793" y2="67.6793"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="5.4" x="37.2" y="64.834">1</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="172.8" x="45" y="64.834">asks to analyze the performance of the center</text><polygon fill="#181818" points="39.6,82.8656,33.6,85.2656,39.6,87.6656,37.2,85.2656" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;stroke-dasharray:2.0,2.0;" x1="36" x2="246" y1="85.2656" y2="85.2656"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="5.4" x="43.2" y="82.4203">2</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="188.4" x="51" y="82.4203">requests data (date, timeIntervals, algorithmUsed)</text><polygon fill="#181818" points="236.4,100.452,242.4,102.852,236.4,105.252,238.8,102.852" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;" x1="33" x2="240" y1="102.852" y2="102.852"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="5.4" x="37.2" y="100.0066">3</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="99" x="45" y="100.0066">selects the requested data</text><polygon fill="#181818" points="39.6,118.0383,33.6,120.4383,39.6,122.8383,37.2,120.4383" style="stroke:#181818;stroke-width:0.6;"/><line style="stroke:#181818;stroke-width:0.6;stroke-dasharray:2.0,2.0;" x1="36" x2="246" y1="120.4383" y2="120.4383"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="5.4" x="43.2" y="117.593">4</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="57" x="51" y="117.593">shows the data</text><!--MD5=[fa01c23e1c3b46e9da0b1981ec45a2e1]
+@startuml
+autonumber
+
+actor "Coordinator" as Cor
+participant ":System" as System
+
+activate Cor
+Cor -> System : asks to analyze the performance of the center
+activate System
+System - -> Cor : requests data (date, timeIntervals, algorithmUsed)
+deactivate System
+Cor -> System : selects the requested data
+activate System
+System - -> Cor : shows the data
+deactivate System
+
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 11:55:52 WEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: PT
+--></g></svg>

@@ -1,0 +1,58 @@
+@startuml
+title SD_VaccinationCentersListToDTO
+hide footbox
+autonumber
+participant VaccinationCenterMapper as VCM
+participant " vaccinationCenterListDTO: ArrayList<VaccinationCenterDTO>" as DTOList
+participant "vaccinationCenterList : ArrayList<VaccinationCenter>" as list
+participant "vc:VaccinationCenter" as VC
+participant "vcDTO : VaccinationCenterDTO" as DTOObj
+
+
+[o-> VCM : toDTO(vaccinationCenterList)
+activate VCM
+VCM --> DTOList ** : create()
+loop for each vaccination center in vaccinationCenterList
+VCM -> list : vaccinationCenter = get(i)
+activate list
+deactivate list
+VCM -> VCM : vaccinationCenterDTO = toDTO(vc)
+activate VCM
+VCM -> VC : name = getName()
+activate VC
+deactivate VC
+VCM -> VC : address = getAddress()
+activate VC
+deactivate VC
+VCM -> VC : phoneNumber = getPhoneNumber()
+activate VC
+deactivate VC
+VCM -> VC : email = getEmail()
+activate VC
+deactivate VC
+VCM -> VC : faxNumber = getFaxNumber()
+activate VC
+deactivate VC
+VCM -> VC : websiteAddress = getWebsiteAddress()
+activate VC
+deactivate VC
+VCM -> VC : openingHours = getOpeningHours()
+activate VC
+deactivate VC
+VCM -> VC : closingHours = getClosingHours()
+activate VC
+deactivate VC
+VCM -> VC : slotDuration = getSlotDuration()
+activate VC
+deactivate VC
+VCM -> VC : maximumNumVaccinesSlot = getMaximumNumVaccinesSlot()
+activate VC
+deactivate VC
+VCM -> VC : isHealthCareCenter = isHealthCareCenter()
+activate VC
+deactivate VC
+VCM --> DTOObj ** : create(name, address, phoneNumber, email, faxNumber, websiteAddress, openingHours, closingHours, slotDuration, maximumNumVaccinesSlot, isHealthCareCenter)
+deactivate VCM
+VCM -> DTOList : add(vaccinationCenterDTO)
+end
+@enduml

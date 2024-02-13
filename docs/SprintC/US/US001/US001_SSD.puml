@@ -1,0 +1,40 @@
+@startuml
+autonumber
+
+actor "SNS User" as Recep
+
+activate Recep
+Recep -> ":System" : Asks to Schedule a vaccination
+
+activate ":System"
+":System" --> Recep : shows vaccine type list
+deactivate ":System"
+Recep -> ":System" : Selects vaccine type
+
+activate ":System"
+":System" --> Recep : shows vaccination center list
+deactivate ":System"
+Recep -> ":System" : Selects vaccination center
+
+activate ":System"
+":System" --> Recep : Requests data (date, time)
+deactivate ":System"
+
+Recep -> ":System" : Types the requested data
+activate ":System"
+":System" --> Recep : Shows all data and requests confirmation
+deactivate ":System"
+
+Recep -> ":System" : Confirms the data
+activate ":System"
+":System" --> Recep : Informs operation success and asks if user \nwants to receive a SMS notification
+deactivate ":System"
+Recep --> ":System" : Chooses option
+activate ":System"
+alt if the user answers affirmatively
+":System" --> Recep : Informs operation success
+deactivate ":System"
+end
+deactivate Recep
+
+@enduml

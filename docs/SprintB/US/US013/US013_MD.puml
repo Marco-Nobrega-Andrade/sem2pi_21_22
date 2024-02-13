@@ -1,0 +1,25 @@
+@startuml
+hide methods
+hide circle
+
+class Company{
+- Designation
+}
+class Administrator{
+}
+class Vaccine{
+- designation
+- ageGroups
+- dosage
+- numberOfDoses
+- intervalBetweenDoses
+}
+class VaccineType{
+}
+
+Administrator"1" -down- "1..*"Vaccine : > creates
+Administrator"1" -down- "1..*"VaccineType : > creates
+Vaccine"1" -left- "1..*"VaccineType : > of
+Administrator"1..*" -left- "1"Company :  owns
+Company "1" -down- "1..*"VaccineType : has
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+Receptionist -> System: 1: Chooses to schedule the vaccine
+System --> Receptionist: 1.1: requestData(SNS number, vaccination center, date, time , vaccine type)
+Receptionist -> System: 2: Type the data
+System --> Receptionist: 2.1: Show the data and request a confirmation
+Receptionist --> System: 3: Confirms data
+System --> Receptionist: 3.1: Show the date, time and vaccination center
+
+@enduml

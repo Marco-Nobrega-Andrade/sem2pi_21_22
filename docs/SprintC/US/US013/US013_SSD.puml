@@ -1,0 +1,79 @@
+@startuml
+
+autonumber
+
+actor "Administrator" as Admin
+
+activate Admin
+
+"Admin" -> SYSTEM: Create a new vaccine
+activate "SYSTEM"
+"Admin" <-- SYSTEM: Request for selection of one Vaccine Type
+deactivate "SYSTEM"
+
+"Admin" -> SYSTEM: Select Vaccine Type
+activate "SYSTEM"
+
+"Admin" <-- SYSTEM: Request brand name
+deactivate "SYSTEM"
+
+"Admin" -> SYSTEM: Type requested brand name
+activate "SYSTEM"
+
+"Admin" <-- SYSTEM: Request number of doses
+deactivate "SYSTEM"
+
+"Admin" -> SYSTEM: Type requested number of doses
+activate "SYSTEM"
+
+"Admin" <-- SYSTEM: Request number of different age groups
+deactivate "SYSTEM"
+
+"Admin" -> SYSTEM: Type requested number of different age groups
+activate "SYSTEM"
+
+loop number of different age groups
+
+"Admin" <-- SYSTEM: Request age group interval
+deactivate "SYSTEM"
+
+"Admin" -> SYSTEM: Type requested age group interval
+activate "SYSTEM"
+
+end
+
+loop number of different age groups times number of doses
+
+"Admin" <-- SYSTEM: Request dosage for each dose and ageGroup
+deactivate "SYSTEM"
+
+"Admin" -> SYSTEM: Type requested dosage for each dose and ageGroup
+activate "SYSTEM"
+
+end
+
+alt if number of dose is greater than 1
+
+loop number of doses minus one
+
+"Admin" <-- SYSTEM:  Request interval between doses
+deactivate "SYSTEM"
+
+"Admin" -> SYSTEM: Type requested interval between doses
+activate "SYSTEM"
+
+end
+end
+
+"Admin" <-- SYSTEM: Shows the data and request a confirmation
+deactivate "SYSTEM"
+
+"Admin" -> SYSTEM: Confirms the data
+activate "SYSTEM"
+
+"Admin" <-- SYSTEM: Informs operation success
+deactivate "SYSTEM"
+
+deactivate Admin
+
+@enduml

@@ -1,0 +1,37 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Company{
+- designation
++ getVaccinationCenterStore()
+
+}
+class RequestVaccinationCenterUI
+class RequestVaccinationCenterController{
++ registerVaccinationCenter(name, address, phoneNumber, email, faxNumber, websiteAddress, openingHours, closingHours, slotDuration, maximumNumVaccinesSlot)
++ saveVaccinationCenter()
+}
+class VaccinationCenter{
+- name
+- address
+- phoneNumber
+- email
+- faxNumber
+- websiteAddress
+- openingClosingHours
+- slotDuration
+- maximumNumVaccinesSlot
+}
+class VaccinationCenterStore{
++ registerVaccinationCenter(name, address, phoneNumber, email, faxNumber, websiteAddress, openingHours, closingHours, slotDuration, maximumNumVaccinesSlot)
++ validateVaccinationCenter(vc)
++ saveVaccinationCenter(vc)
+- addVaccinationCenter(vc)
+}
+
+Company "1" --> "1" VaccinationCenterStore : uses
+RequestVaccinationCenterController ..> VaccinationCenterStore
+RequestVaccinationCenterUI ..> RequestVaccinationCenterController
+RequestVaccinationCenterController ..> Company
+VaccinationCenterStore "1" --> "*" VaccinationCenter : Capable of Analyzing
+@enduml

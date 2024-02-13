@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Timer/Clock" as timer
+
+activate timer
+
+timer -> ":System": Send report of daily total number of people vaccinated in each center
+
+activate ":System"
+
+":System" --> timer: File with the data
+
+deactivate ":System"
+deactivate timer
+@enduml

@@ -1,0 +1,176 @@
+@startuml
+autonumber
+'hide footbox
+actor "SNS User" as Rec
+participant ":SNSUserVaccineScheduleUI" as UI
+participant ":SNSUserVaccineScheduleController" as CTRL
+participant ":App" as APP
+participant ":Company" as COMP
+participant "store: UserStore" as US
+participant "store: VaccinationTypeStore" as SVT
+participant ": VaccineTypeMapper" as MVT
+participant "VaccineType" as VT
+participant "store: VaccinationCenterStore" as SVC
+participant ": VaccinationCenterMapper" as MVC
+participant ":VaccinationCenter" as VC
+participant "store: VaccineScheduleStore" as SVS
+participant ": VaccineScheduleMapper" as MVS
+participant "scheduleDTO: VaccineScheduleDto" as DtoVS
+participant "vs: VaccineSchedule" as VS
+
+
+activate Rec
+Rec -> UI : asks to schedule a vaccination
+activate UI
+UI -> CTRL ** : SNSUserVaccineScheduleController()
+activate CTRL
+CTRL -> APP : app = getInstance()
+activate APP
+deactivate APP
+CTRL -> COMP : vaccineTypeStore = getVaccineTypeStore()
+activate COMP
+deactivate COMP
+CTRL -> COMP: vaccinationCenterStore = getVaccinationCenterStore()
+activate COMP
+deactivate COMP
+deactivate CTRL
+UI -> CTRL : getUserSNSNumber()
+note right : This method is represented in "US001_SD_GetUserSNSNumber"
+activate CTRL
+deactivate CTRL
+UI -> CTRL:  vaccineTypeListDto = getVaccineTypeList()
+activate CTRL
+CTRL -> SVT : vaccineTypeList = getVaccineTypeList()
+activate SVT
+deactivate SVT
+CTRL -> MVT : vaccineTypeListDto = toDTO(vaccineTypeList)
+note right : This method is represented in "US001_SD_VaccineTypeListToDTO"
+activate MVT
+UI --> Rec : shows vaccine type list
+deactivate MVT
+deactivate SVT
+deactivate CTRL
+deactivate UI
+
+
+Rec -> UI : selects vaccine type
+activate UI
+UI -> CTRL : obtainVaccineType(index)
+activate CTRL
+CTRL -> SVT : vt = getVaccineTypeFromStore(index)
+activate SVT
+deactivate SVT
+deactivate CTRL
+UI -> CTRL: vaccinationCenterListDto = getVaccinationCenterList()
+activate CTRL
+alt if checkIfOngoingOutbreakIsTheChosenVaccineType(vaccineType) is false
+CTRL -> SVC : vaccinationCenterList = getHealthcareCentersList()
+activate SVC
+deactivate SVC
+else else
+CTRL -> SVC : vaccinationCenterList = getAllVaccinationCentersList()
+activate SVC
+deactivate SVC
+end
+CTRL -> MVC : vaccinationCenterDto = toDTO(vaccinationCenterList)
+note right : This method is represented in "US001_SD_VaccinationCentersListToDTO"
+activate MVC
+deactivate MVC
+UI --> Rec : shows vaccination center list
+deactivate UI
+deactivate CTRL
+
+
+Rec -> UI : selects vaccination center
+activate UI
+UI -> CTRL : vaccinationCenter = obtainVaccinationCenter()
+activate CTRL
+CTRL -> SVC : getVaccinationCenterFromStore(index,flag)
+activate SVC
+deactivate SVC
+deactivate CTRL
+UI --> Rec : requests data (date, time)
+deactivate UI
+
+
+
+Rec -> UI : types requested data
+activate UI
+UI -> CTRL : createVaccineSchedule(date,time)
+activate CTRL
+CTRL -> DtoVS ** : scheduleDTO = createDTO(snsNumber,vaccineType,date,time)
+deactivate APP
+CTRL -> VC : vaccineScheduleStore = getVaccineScheduleStore()
+activate VC
+deactivate VC
+deactivate COMP
+
+CTRL -> SVS : vaccineSchedule = createVaccineSchedule(scheduleDTO)
+activate SVS
+SVS -> MVS : toModel(scheduleDTO)
+activate MVS
+MVS -> DtoVS : snsNumber = getSnsNumber()
+
+activate DtoVS
+deactivate DtoVS
+MVS -> DtoVS : vaccineType = getVaccineType()
+activate DtoVS
+deactivate DtoVS
+MVS -> DtoVS : date = getDate()
+activate DtoVS
+deactivate DtoVS
+MVS -> DtoVS : time = getTime()
+activate DtoVS
+deactivate DtoVS
+MVS -> VS **  : vs = create(snsNumber, vaccineType, date, time)
+deactivate MVS
+deactivate MVS
+deactivate SVC
+deactivate SVS
+deactivate VC
+deactivate CTRL
+UI -> CTRL : validateVaccineSchedule()
+activate CTRL
+
+CTRL -> SVC : checkForDuplicateSchedules(vaccineSchedule)
+activate SVC
+deactivate SVC
+CTRL -> SVS : checkForMaxSchedulesQuantity(vaccineSchedule)
+activate SVS
+deactivate SVS
+CTRL -> SVS : checkForSchedulesAtSameTime(vaccineSchedule)
+activate SVS
+deactivate SVS
+CTRL -> SVS : checkForSchedulesOutOfCenterWorkingHours(vaccineSchedule)
+activate SVS
+deactivate SVS
+CTRL -> SVS : checkForSchedulesBeforeNow(vaccineSchedule)
+activate SVS
+deactivate SVS
+deactivate CTRL
+UI -> CTRL : getScheduleInfo()
+activate CTRL
+deactivate CTRL
+UI --> Rec : shows all data and requests confirmation
+deactivate UI
+
+
+
+Rec -> UI : confirms the data
+activate UI
+UI -> CTRL : saveVaccineSchedule()
+activate CTRL
+CTRL -> SVS : addVaccineSchedule(vaccineSchedule)
+activate SVS
+deactivate SVS
+deactivate CTRL
+UI --> Rec : informs operation success and asks if user \nwants to receive a SMS notification
+deactivate UI
+
+
+
+Rec -> UI : chooses option
+activate UI
+UI --> Rec : informs operation success
+deactivate Rec
+@enduml

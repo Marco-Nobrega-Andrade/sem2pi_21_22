@@ -1,0 +1,5 @@
+Vaccination Center: matosinhos
+SNS user: 123456789
+Vaccine type: covid
+Date: 28-5-2022
+Time: 20:20

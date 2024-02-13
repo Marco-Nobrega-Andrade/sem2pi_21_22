@@ -1,0 +1,46 @@
+@startuml
+
+class Company{
+- designation
++ getVaccineStore()
+}
+class NewVaccineUI
+class NewVaccineController{
++ createNewVaccine()
++ saveNewVaccine()
++verifyConditionVaccineTypeExist()
++getVaccineTypeList()
++validateInputNumberOfDoses (int numberOfDoses)
++validateInputAgeGroup(int ageGroup)
++validateInputNumDifAgeGroup(int numDifAgeGroup)
++validateInputIntervalBetweenDose(int intervalBetweenDose)
++validateInputDosage(double dosage)
+}
+
+class VaccineStore{
++ createNewVaccine(brand, ageGroup,dosage, intervalDosage)
++validateInputNumberOfDoses (int numberOfDoses)
++validateInputAgeGroup(int ageGroup)
++validateInputNumDifAgeGroup(int numDifAgeGroup)
++validateInputIntervalBetweenDoses(int intervalBetweenDoses)
++validateInputDosage(double dosage)
++saveVaccine(Vaccine nv)
++ validateNewVaccine(nv)
++ addNewVaccine(nv)
+}
+class Vaccine{
+- vaccineType
+- brand
+- numberOfDoses
+- numDifAgeGroup
+- ageGroup
+- dosageList
+- intervalBetweenDosesList
+}
+
+NewVaccineUI .> NewVaccineController
+NewVaccineController ..> Company
+NewVaccineController ..> Vaccine
+Company"1" -->  "1"VaccineStore : uses
+VaccineStore"1" --> "*"Vaccine : knows
+@enduml

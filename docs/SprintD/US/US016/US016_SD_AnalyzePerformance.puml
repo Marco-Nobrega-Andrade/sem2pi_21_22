@@ -1,0 +1,97 @@
+@startuml
+autonumber
+
+participant ": VaccinationCenter" as VC
+participant ": Performance" as P
+participant ": User" as U
+participant ": VaccineAdministrationStore" as HRS
+participant ": VaccineAdministration" as VA
+participant ": BruteForceAlgorithm" as BFA
+participant ": BenchmarkAlgorithm" as BA
+
+[o-> VC : analyzePerformance(date, timeIntervals, algorithmUsed, usersList)
+activate VC
+VC -> P : analyzePerformance(date, timeIntervals, algorithmUsed, usersList, vaccinationCenterName)
+activate P
+P -> P : setTimeIntervals(timeIntervals)
+activate P
+deactivate P
+
+P -> P : setDate(date)
+activate P
+deactivate P
+P -> P : inOutList = createInOutList(usersList, vaccinationCenterName)
+activate P
+
+
+loop for each user in usersList
+P -> U : checkIfUserArrivedAtCenter(date, time, timeIntervals, vaccinationCenterName)
+activate U
+U -> HRS : checkIfUserArrivedAtCenter(date, time, timeIntervals, vaccinationCenterName)
+activate HRS
+
+loop for each vaccine administration of the user
+
+HRS -> VA : getVaccinationCenter()
+activate VA
+deactivate VA
+HRS -> VA : getArrivalDate()
+activate VA
+deactivate VA
+HRS -> VA : getArrivalTime()
+activate VA
+deactivate VA
+deactivate HRS
+deactivate U
+end loop
+
+
+P -> U : checkIfUserLeftTheCenter(date, time, timeIntervals, vaccinationCenterName)
+activate U
+U -> HRS : checkIfUserLeftTheCenter(date, time, timeIntervals, vaccinationCenterName)
+activate HRS
+loop for each vaccine administration of the user
+HRS -> VA : getVaccinationCenter()
+activate VA
+deactivate VA
+HRS -> VA : getLeavingDate()
+activate VA
+deactivate VA
+HRS -> VA : getLeavingTime()
+activate VA
+deactivate VA
+deactivate P
+deactivate HRS
+deactivate U
+end loop
+end loop
+deactivate HRS
+deactivate U
+
+P -> P : checkIfThereIsAnyUserInOutList()
+activate P
+deactivate P
+
+alt if algorithmUsed is "BruteForceAlgorithm"
+P -> BFA ** : BruteForceAlgorithm()
+P -> BFA : maxSumList = getMaxSumList(inOutList)
+activate BFA
+deactivate BFA
+
+else
+
+P -> BA ** : BenchmarkAlgorithm()
+P -> BA : maxSumList = getMaxSumList(inOutList)
+activate BA
+deactivate BA
+
+end
+P -> P : maxSumListIndexes = findMaxSumListIndexes(inOutList, maxSumList)
+activate P
+deactivate P
+P -> P : maxSum = calculateMaxSumOfList(maxSumList)
+activate P
+deactivate P
+deactivate P
+deactivate VC
+@enduml

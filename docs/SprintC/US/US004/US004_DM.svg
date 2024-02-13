@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="442px" preserveAspectRatio="none" style="width:246px;height:442px;background:#FFFFFF;" version="1.1" viewBox="0 0 246 442" width="246px" zoomAndPan="magnify"><defs><filter height="300%" id="f18wpn0j8mpdml" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[bbd32abb87742158d8b9937325662454]
+class Center--><rect codeLine="5" fill="#FEFECE" filter="url(#f18wpn0j8mpdml)" height="157.6172" id="Center" style="stroke:#A80036;stroke-width:1.5;" width="213" x="7" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="37" x="95" y="24.457">Center</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="219" y1="32.0938" y2="32.0938"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="40.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="27" x="27" y="47.5127">Name</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="53.9297"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="42" x="27" y="61.3486">Address</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="67.7656"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="27" y="75.1846">Phone number</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="81.6016"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="71" x="27" y="89.0205">E-mail address</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="95.4375"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57" x="27" y="102.8564">Fax number</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="109.2734"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="82" x="27" y="116.6924">Website address</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="123.1094"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="129" x="27" y="130.5283">Opening and closing hours</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="136.9453"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="60" x="27" y="144.3643">Slot duration</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="150.7813"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="187" x="27" y="158.2002">Max number of vaccines given per slot</text><!--MD5=[cd4ce1c0d44638ff9f42448de30e6b92]
+class VaccineSchedule--><rect codeLine="18" fill="#FEFECE" filter="url(#f18wpn0j8mpdml)" height="74.6016" id="VaccineSchedule" style="stroke:#A80036;stroke-width:1.5;" width="101" x="54" y="354"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="95" x="57" y="371.457">VaccineSchedule</text><line style="stroke:#A80036;stroke-width:1.5;" x1="55" x2="154" y1="379.0938" y2="379.0938"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="62" y="387.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="22" x="74" y="394.5127">Time</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="62" y="400.9297"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="22" x="74" y="408.3486">Date</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="62" y="414.7656"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="61" x="74" y="422.1846">SNS Number</text><!--MD5=[e8a0ea5a19ad3a152fb07fead0fc0529]
+class WaitingUser--><rect codeLine="24" fill="#FEFECE" filter="url(#f18wpn0j8mpdml)" height="33.0938" id="WaitingUser" style="stroke:#A80036;stroke-width:1.5;" width="74" x="133.5" y="243"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="68" x="136.5" y="260.457">WaitingUser</text><line style="stroke:#A80036;stroke-width:1.5;" x1="134.5" x2="206.5" y1="268.0938" y2="268.0938"/><!--MD5=[a77b5c621814f292dfab835fa1ca26e3]
+link Center to WaitingUser--><path codeLine="27" d="M139.5,165.22 C149.25,194.55 159.39,225.07 165.31,242.89 " fill="none" id="Center-WaitingUser" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21" x="155.5" y="209.4951">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="134.4336" y="186.2421">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="157.7627" y="232.2758">*</text><!--MD5=[f2ae3a60412c15b1eb339665f13c08ab]
+link WaitingUser to VaccineSchedule--><path codeLine="28" d="M162.54,276.18 C152.84,295.29 136.13,328.2 123.12,353.82 " fill="none" id="WaitingUser-VaccineSchedule" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="149.2364,319.6341,155.9518,312.8995,150.7108,310.2385,149.2364,319.6341" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="78" x="160.5" y="320.4951">depends from</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="137.9746" y="297.583">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="118.8133" y="343.2452">1</text><!--MD5=[a3df8a8de89ff0b81f8a244025d29099]
+link Center to VaccineSchedule--><path codeLine="29" d="M99.83,165.01 C95.27,199.03 91.75,239.42 93.5,276 C94.75,302.13 97.6,331.5 100.09,353.95 " fill="none" id="Center-VaccineSchedule" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21" x="94.5" y="264.9951">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="91.3545" y="186.0141">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="93.816" y="343.116">*</text><!--MD5=[1e1f206fd8067528fc87613e4c8d08d9]
+@startuml
+hide methods
+hide circles
+
+
+class Center{
+
+-Name
+-Address
+-Phone number
+-E-mail address
+-Fax number
+-Website address
+-Opening and closing hours
+-Slot duration
+-Max number of vaccines given per slot
+}
+
+class VaccineSchedule{
+- Time
+- Date
+- SNS Number
+}
+
+class WaitingUser{
+}
+
+Center "1"- - "*"WaitingUser :  has
+WaitingUser"1   "- - "1"VaccineSchedule : > depends from
+Center"1"- -"*"VaccineSchedule : has
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 GMT 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

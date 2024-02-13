@@ -1,0 +1,31 @@
+@startuml
+hide methods
+hide circles
+
+
+class Center{
+
+-Name
+-Address
+-Phone number
+-E-mail address
+-Fax number
+-Website address
+-Opening and closing hours
+-Slot duration
+-Max number of vaccines given per slot
+}
+
+class VaccineSchedule{
+- Time
+- Date
+- SNS Number
+}
+
+class WaitingUser{
+}
+
+Center "1"-- "*"WaitingUser :  has
+WaitingUser"1   "-- "1"VaccineSchedule : > depends from
+Center"1"--"*"VaccineSchedule : has
+@enduml

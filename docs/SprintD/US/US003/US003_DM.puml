@@ -1,0 +1,36 @@
+@startuml
+hide methods
+hide circle
+
+class Company{
+- Designation
+}
+class Receptionist{
+}
+
+class "SNS User"{
+- Name
+- Address
+- Email
+- Sex
+- Phone number
+- Birth date
+- SNS User number
+- Citizen card number
+
+}
+
+class Employee{
+-id
+-name
+-address
+-phone number
+-e-mail
+-citizen card number
+}
+
+Receptionist"1..*" -- "1"Employee : < plays as
+Company"1" -up- "1..*"Employee : > has
+Receptionist"1" -- "1..*" "SNS User" : > registers
+Company"1" -up- "1..*""SNS User" : > has
+@enduml

@@ -1,0 +1,29 @@
+@startuml
+hide methods
+hide circle
+
+class Company{
+- Designation
+}
+class Administrator{
+}
+
+class "Vaccination Center"{
+- name
+- address
+- phone number
+- e-mail address
+- fax number
+- website address
+- opening and closing hours
+- slot duration
+- maximum number vaccines per slot
+}
+
+
+
+
+Administrator"1" -- "1..*" "Vaccination Center" : registers
+Company"1" -- "1..*""Vaccination Center" : has
+Company"1" -- "1" "Administrator" : has
+@enduml

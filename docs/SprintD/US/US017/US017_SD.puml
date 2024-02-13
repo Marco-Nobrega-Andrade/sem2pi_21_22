@@ -1,0 +1,110 @@
+@startuml
+
+participant Coordinator as coord
+participant ImportLegacySystemDataUI as UI
+participant ImportLegacySystemDataController as CTRL
+participant ":App" as APP
+participant Company as COMP
+participant VaccineStore as VS
+participant UserStore as US
+participant User as U
+participant VaccineAdministrationStore as VAS
+participant VaccineAdministrationMapper as VAM
+participant VaccineAdministrationDTO as VADTO
+participant "sortingAlgorithm :SortingAlgorithm" as SA
+participant "vaccineAdministrationListToSort :ArrayList<VaccineAdministration>" as VALIST
+autonumber
+
+
+activate  coord
+
+coord -> UI : Asks to import data from a legacy system
+activate UI
+UI -> CTRL ** : ImportLegacySystemDataController()
+activate CTRL
+CTRL -> APP : app = getInstance()
+activate APP
+deactivate APP
+CTRL -> VALIST ** : vaccineAdministrationList = ArrayList<VaccineAdministration>()
+deactivate CTRL
+UI --> coord : Requests data (file path)
+deactivate UI
+
+
+
+coord -> UI : Types requested data
+activate UI
+UI -> CTRL : importVaccineAdministrations(vaccineAdministrationsStringList)
+activate CTRL
+CTRL -> "errorLines : ArrayList<Integer>" ** : errorLines = ArrayList<>()
+CTRL -> COMP : userStore = getUserStore()
+activate COMP
+deactivate COMP
+CTRL -> COMP : vaccineStore = getVaccineStore()
+activate COMP
+deactivate COMP
+loop for each String in vaccineAdministrationsStringList
+CTRL -> COMP : getActorCenter()
+activate COMP
+deactivate COMP
+CTRL -> US : user = getUserBySnsNumber(snsNumber)
+activate US
+deactivate US
+CTRL -> VS : vaccine = getVaccineByName(vaccineName)
+activate VS
+deactivate VS
+CTRL -> CTRL : doseNumber = getIntFromDoseString(doseString)
+CTRL -> VADTO ** : vaccineAdministrationDTO = VaccineAdministrationDTO(vaccinationCenter, snsNumber, vaccineName, doseNumber, lotNumber, scheduleData, scheduleTime, arrivalDate, arrivalTime, administrationDate, administrationTime, leavingDate, leavingTime)
+CTRL -> U : vaccineAdministration = createNewVaccineAdministration(vaccineAdministrationDTO)
+activate U
+U-> VAS : createNewVaccineAdministration(vaccineAdministrationDTO)
+activate VAS
+VAS -> VAM : toModel(vaccineAdministrationDTO)
+activate VAM
+deactivate VAM
+ref over VAM
+US017_SD_CreateVaccineAdministration
+end
+deactivate VAS
+deactivate U
+CTRL -> U : checkForDuplicateAdministration(vaccineAdministration)
+activate U
+U -> VAS : checkForDuplicateAdministration(vaccineAdministration)
+activate VAS
+deactivate VAS
+deactivate U
+CTRL -> U : saveNewVaccineAdministration(vaccineAdministration)
+activate U
+U->VAS : saveNewVaccineAdministration(vaccineAdministration)
+activate VAS
+deactivate VAS
+deactivate U
+CTRL -> VALIST :add(vaccineAdministration)
+activate VALIST
+deactivate VALIST
+end
+deactivate CTRL
+
+UI --> coord : Shows sorting criteria options
+deactivate UI
+
+coord -> UI : Chooses sorting criteria
+activate UI
+UI -> CTRL : vaccineAdministrationDTOList = sortVaccineAdministrations(criteriaOption)
+activate CTRL
+
+CTRL -> SA ** : SortingAlgorithm()
+
+CTRL -> SA : vaccineAdministrationListToSort = sortList(criteria,order,list)
+activate SA
+deactivate SA
+CTRL -> VAM : toDTO(vaccineAdministrationListToSort)
+activate VAM
+deactivate VAM
+ref over VAM
+US017_SD_VaccineAdministrationListToDTO
+end
+deactivate CTRL
+UI --> coord : Shows all data sorted
+deactivate UI
+@enduml

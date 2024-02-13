@@ -1,0 +1,54 @@
+@startuml
+title US017_SD_CreateVaccineAdministration
+participant VaccineAdministrationMapper as VAM
+participant VaccineAdministrationDTO as VADTO
+participant ":VaccineAdministration" as VA
+
+hide footbox
+autonumber
+
+[o-> VAM : toModel(vaccineAdministrationDTO)
+activate VAM
+VAM -> VADTO : vaccinationCenter = getVaccinationCenter()
+activate VADTO
+deactivate VADTO
+VAM -> VADTO : snsNumber = getSnsNumber()
+activate VADTO
+deactivate VADTO
+VAM -> VADTO : vaccineName = getVaccineName()
+activate VADTO
+deactivate VADTO
+VAM -> VADTO : doseNumber = getDoseNumber()
+activate VADTO
+deactivate VADTO
+VAM -> VADTO : lotNumber = getLotNumber()
+activate VADTO
+deactivate VADTO
+VAM -> VADTO : scheduleData = getScheduleData()
+activate VADTO
+deactivate VADTO
+VAM -> VADTO : scheduleTime = getScheduleTime()
+activate VADTO
+deactivate VADTO
+VAM -> VADTO : arrivalDate = getArrivalDate()
+activate VADTO
+deactivate VADTO
+VAM -> VADTO : arrivalTime = getArrivalTime()
+activate VADTO
+deactivate VADTO
+VAM -> VADTO : administrationDate = getAdministrationDate()
+activate VADTO
+deactivate VADTO
+VAM -> VADTO : administrationTime = getAdministrationTime()
+activate VADTO
+deactivate VADTO
+VAM -> VADTO : leavingDate = getLeavingDate()
+activate VADTO
+deactivate VADTO
+VAM -> VADTO : leavingTime = getLeavingDate()
+activate VADTO
+deactivate VADTO
+VAM -> VA ** : VaccineAdministration(vaccinationCenter, snsNumber,  vaccineName, doseNumber, lotNumber, scheduleData, scheduleTime, \narrivalDate, arrivalTime, administrationDate, administrationTime, leavingDate, leavingTime)
+deactivate VAM
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+"SNS User" -> System: 1: Chooses to schedule the vaccine
+"SNS User" <-- System: 1.1: request data(SNS number, vaccination center, date, time, type of vaccine)
+"SNS User" -> System: 2: Type the data
+"SNS User" <-- System: 2.1: Shows the data and request a confirmation
+"SNS User" -> System: 3: Confirms the data
+"SNS User" <-- System: 3.1: Shows the date, time, and vaccination center
+
+
+@enduml

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="400px" preserveAspectRatio="none" style="width:238px;height:400px;background:#FFFFFF;" version="1.1" viewBox="0 0 238 400" width="238px" zoomAndPan="magnify"><defs><filter height="300%" id="f1x0gbhd9qtol" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[02e4b9b7573f1156f41e60aa5b4e25a4]
+class Company--><rect codeLine="4" fill="#FEFECE" filter="url(#f1x0gbhd9qtol)" height="45.0879" id="Company" style="stroke:#A80036;stroke-width:1.5;" width="90" x="98.5" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="54" x="116.5" y="23.6016">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="99.5" x2="187.5" y1="31.1328" y2="31.1328"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="106.5" y="39.1328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="118.5" y="45.7676">Designation</text><!--MD5=[da547346deef918ea16944ba046651ef]
+class Administrator--><rect codeLine="7" fill="#FEFECE" filter="url(#f1x0gbhd9qtol)" height="32.1328" id="Administrator" style="stroke:#A80036;stroke-width:1.5;" width="84" x="17.5" y="129"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="78" x="20.5" y="145.6016">Administrator</text><line style="stroke:#A80036;stroke-width:1.5;" x1="18.5" x2="100.5" y1="153.1328" y2="153.1328"/><!--MD5=[fee6f4a72d04f14178f16c15b193a793]
+class Vaccination Center--><rect codeLine="10" fill="#FEFECE" filter="url(#f1x0gbhd9qtol)" height="148.7285" id="Vaccination Center" style="stroke:#A80036;stroke-width:1.5;" width="217" x="7" y="238"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="107" x="62" y="254.6016">Vaccination Center</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="223" y1="262.1328" y2="262.1328"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="270.1328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="29" x="27" y="276.7676">name</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="283.0879"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="43" x="27" y="289.7227">address</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="296.043"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="79" x="27" y="302.6777">phone number</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="308.998"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="80" x="27" y="315.6328">e-mail address</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="321.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="62" x="27" y="328.5879">fax number</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="334.9082"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="86" x="27" y="341.543">website address</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="347.8633"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="144" x="27" y="354.498">opening and closing hours</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="360.8184"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="27" y="367.4531">slot duration</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="373.7734"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="191" x="27" y="380.4082">maximum number vaccines per slot</text><!--MD5=[e1f8a3c7f48348bada9b2abb00b7ed2e]
+link Administrator to Vaccination Center--><path codeLine="25" d="M64.67,161.27 C70.62,178.88 80.85,209.09 90.57,237.82 " fill="none" id="Administrator-Vaccination Center" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="80.5" y="204.5684">registers</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="57.0576" y="181.7416">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="65.0331" y="227.3274">1..*</text><!--MD5=[c85088aaf5306b608aa313cd05040dc9]
+link Company to Vaccination Center--><path codeLine="26" d="M145.59,52.21 C148.39,85.8 152.16,152.28 144.5,208 C143.15,217.8 141.12,227.98 138.75,237.95 " fill="none" id="Company-Vaccination Center" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="149.5" y="150.0684">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="137.1006" y="72.5482">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="118.0133" y="227.087">1..*</text><!--MD5=[eaea43e34e45c5b9d20b595fc78f1f20]
+link Company to Administrator--><path codeLine="27" d="M127.5,52.12 C110.84,74.63 85.18,109.3 70.61,128.99 " fill="none" id="Company-Administrator" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="105.5" y="95.5684">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="114.125" y="72.813">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="65.1429" y="118.2146">1</text><!--MD5=[bf3f4b7153fb5945f5fc7ef201721eb3]
+@startuml
+hide methods
+hide circle
+
+class Company{
+- Designation
+}
+class Administrator{
+}
+
+class "Vaccination Center"{
+- name
+- address
+- phone number
+- e-mail address
+- fax number
+- website address
+- opening and closing hours
+- slot duration
+- maximum number vaccines per slot
+}
+
+
+
+
+Administrator"1" - - "1..*" "Vaccination Center" : registers
+Company"1" - - "1..*""Vaccination Center" : has
+Company"1" - - "1" "Administrator" : has
+@enduml
+
+PlantUML version 1.2022.1(Tue Feb 01 18:19:58 WET 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: PT
+--></g></svg>
